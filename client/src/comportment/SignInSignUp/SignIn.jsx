@@ -33,7 +33,7 @@ const SignIn = () => {
 
   return (
     <div>
-        <div className={`py-8 lg:px-20 px-8 bg-gray-200 lg:h-screen h-auto lg:w-full ${!Darkmode ? 'light-mode' : 'dark-mode'}`}>
+        <div className={`py-8 lg:px-20 px-8 lg:h-screen h-auto lg:w-full ${!Darkmode ? 'light-mode duration-500 bg-gray-200' : 'dark-mode duration-500 bg-[#2c3646]'}`}>
             {
                 !Darkmode ? 
                     <p onClick={() => headleDarkMode()}>LightMode</p>
