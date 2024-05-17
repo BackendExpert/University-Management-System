@@ -8,6 +8,15 @@ const SignIn = () => {
     const [Darkmode, SerDarkmode] = useState(false)
     localStorage.setItem("darkMode", Darkmode) 
 
+    // headleDarkMode
+    const headleDarkMode = () => {
+        SerDarkmode(true)
+    }
+    // headleLightMode
+    const headleLightMode = () => {
+        SerDarkmode(false)
+    }
+
     // data 
     const [SignInData, SetSignInData] = useState({
         email: '',
@@ -20,9 +29,18 @@ const SignIn = () => {
         
         // send data
     }
+
+
   return (
     <div>
-        <div className="py-8 lg:px-20 px-8 bg-gray-200 lg:h-screen h-auto lg:w-full">
+        <div className={`py-8 lg:px-20 px-8 bg-gray-200 lg:h-screen h-auto lg:w-full ${!Darkmode ? 'light-mode' : 'dark-mode'}`}>
+            {
+                !Darkmode ? 
+                    <p onClick={() => headleDarkMode()}>LightMode</p>
+                :
+                    <p onClick={() => headleLightMode()}>DarkMode</p>
+            }
+            
             <div className="">
                 <div className="lg:grid grid-cols-3 gap-2 lg:py-16">
                     <div className=""></div>
@@ -31,7 +49,7 @@ const SignIn = () => {
                         <div className="text-center my-8">
                             <p className="text-blue-500 text-4xl pt-8"><MyIcons name='school' size='large'></MyIcons></p>
                             <h1 className="text-2xl">Welcome Back</h1>
-                            <p className="lg:text-3xl text-gray-500 my-2">UMS</p>
+                            <p className="lg:text-3xl my-2">UMS</p>
                         </div>
                         <hr />
                         <div className="mx-8 ">
