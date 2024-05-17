@@ -67,7 +67,20 @@ const SignInSignUp = () => {
                     <div className={`lg:mx-20 my-16 py-8 rounded shadow-md ${!Darkmode ? 'light-mode duration-500 bg-white' : 'dark-mode duration-500 bg-[#2c3646]'}`}>
                         <div className="text-center my-8">
                             <p className="text-blue-500 text-4xl pt-8"><MyIcons name='school' size='large'></MyIcons></p>
-                            <h1 className="text-2xl">Welcome Back</h1>
+                            {
+                                (() => {
+                                    if(buttonValue === "SignIn"){
+                                        return (
+                                            <h1 className="text-2xl">Welcome Back</h1>
+                                        )
+                                    }
+                                    if(buttonValue === "SignUp"){
+                                        return (
+                                            <h1 className="text-2xl">Welcome To</h1>
+                                        )
+                                    }
+                                })()
+                            }
                             <p className="lg:text-3xl my-2">UMS</p>
                         </div>
                         <div className="mx-8 ">
@@ -98,7 +111,7 @@ const SignInSignUp = () => {
                                             <form onSubmit={headleSignUp}>
                                                 <div className="my-8">
                                                     <label htmlFor="" className='my-2 lg:text-2xl'>Username : </label>
-                                                    <input type="email" name="" id="" className={`my-2 text-xl h-16 w-full rounded pl-2 mr-4  ${!Darkmode ? 'bg-gray-200 light-mode duration-500' : 'dark-mode duration-500 bg-[#1e293b]'}`} required placeholder='Enter Email Address'
+                                                    <input type="email" name="" id="" className={`my-2 text-xl h-16 w-full rounded pl-2 mr-4  ${!Darkmode ? 'bg-gray-200 light-mode duration-500' : 'dark-mode duration-500 bg-[#1e293b]'}`} required placeholder='Enter Username'
                                                     onChange={e => SetSignUpData({...SignUpData, username:e.target.value})}/>
                                                 </div>
                                                 <div className="my-8">
