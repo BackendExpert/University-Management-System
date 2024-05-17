@@ -36,12 +36,19 @@ const SignInSignUp = () => {
         // send data
     }
 
+    // SignUp data
     const [SignUpData, SetSignUpData] = useState({
         username: '',
         SignUpemail: '',
         SignUppassword: ''
     })
 
+    // headleSignUp
+    const headleSignUp = (e) => {
+        e.preventDefault();
+        
+        // send data
+    }
 
   return (
     <div>
@@ -88,19 +95,24 @@ const SignInSignUp = () => {
 
                                     if(buttonValue === "SignUp"){
                                         return (
-                                            <form onSubmit={headleSignIn}>
+                                            <form onSubmit={headleSignUp}>
+                                                <div className="my-8">
+                                                    <label htmlFor="" className='my-2 lg:text-2xl'>Username : </label>
+                                                    <input type="email" name="" id="" className={`my-2 text-xl h-16 w-full rounded pl-2 mr-4  ${!Darkmode ? 'bg-gray-200 light-mode duration-500' : 'dark-mode duration-500 bg-[#1e293b]'}`} required placeholder='Enter Email Address'
+                                                    onChange={e => SetSignUpData({...SignUpData, username:e.target.value})}/>
+                                                </div>
                                                 <div className="my-8">
                                                     <label htmlFor="" className='my-2 lg:text-2xl'>Email : </label>
                                                     <input type="email" name="" id="" className={`my-2 text-xl h-16 w-full rounded pl-2 mr-4  ${!Darkmode ? 'bg-gray-200 light-mode duration-500' : 'dark-mode duration-500 bg-[#1e293b]'}`} required placeholder='Enter Email Address'
-                                                    onChange={e => SetSignInData({...SignInData, email:e.target.value})}/>
+                                                    onChange={e => SetSignUpData({...SignUpData, SignUpemail:e.target.value})}/>
                                                 </div>
                                                 <div className="my-8">
                                                     <label htmlFor="" className='my-2 lg:text-2xl'>Password : </label>
                                                     <input type="password" name="" id="" className={`my-2 text-xl h-16 w-full rounded pl-2 mr-4  ${!Darkmode ? 'bg-gray-200 light-mode duration-500' : 'dark-mode duration-500 bg-[#1e293b]'}`} required placeholder='Enter Password'
-                                                    onChange={e => SetSignInData({...SignInData, password:e.target.value})}/>
+                                                    onChange={e => SetSignUpData({...SignUpData, SignUppassword:e.target.value})}/>
                                                 </div>
                                                 <div className="">
-                                                    <button type='submit' className='w-full h-14 bg-blue-500 rounded text-white duration-500 hover:bg-blue-600'>SignIn</button>
+                                                    <button type='submit' className='w-full h-14 bg-blue-500 rounded text-white duration-500 hover:bg-blue-600'>SignUp</button>
                                                 </div>
                                             </form>
                                         )
