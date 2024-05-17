@@ -10,10 +10,10 @@ const SignIn = () => {
     <div>
         <div className="py-8 lg:px-20 px-8 bg-gray-200 lg:h-screen h-auto lg:w-full">
             <div className="">
-                <div className="lg:grid grid-cols-3 gap-2 py-16">
+                <div className="lg:grid grid-cols-3 gap-2 lg:py-16">
                     <div className=""></div>
 
-                    <div className="bg-white lg:mx-20 my-8 rounded shadow-md">
+                    <div className="bg-white lg:mx-20 my-16 py-8 rounded shadow-md">
                         <div className="text-center my-8">
                             <p className="text-blue-500 text-4xl pt-8"><MyIcons name='school' size='large'></MyIcons></p>
                             <h1 className="text-2xl">Welcome Back</h1>
@@ -30,7 +30,14 @@ const SignIn = () => {
                                     <label htmlFor="" className='my-2 lg:text-2xl'>Password : </label>
                                     <input type="password" name="" id="" className="my-2 text-xl h-16 w-full rounded bg-gray-200 pl-2 mr-4" required placeholder='Enter Password'/>
                                 </div>
+                                <div className="">
+                                    <button type='submit' className='w-full h-14 bg-blue-500 rounded text-white duration-500 hover:bg-blue-600'>SignIn</button>
+                                </div>
                             </form>
+
+                            <div className="">
+                                <span></span>
+                            </div>
                         </div>
                     </div>
 
