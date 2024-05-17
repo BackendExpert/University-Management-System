@@ -1,10 +1,18 @@
 import React, { useState } from 'react'
 import MyIcons from '@reacticons/ionicons'
+import { Link } from 'react-router-dom'
+
 
 const SignIn = () => {
     // sent darkMode
     const [Darkmode, SerDarkmode] = useState(false)
     localStorage.setItem("darkMode", Darkmode) 
+
+    // data 
+    const [SignInData, SetSignInData] = useState({
+        email: '',
+        password: ''
+    })
 
   return (
     <div>
@@ -17,7 +25,7 @@ const SignIn = () => {
                         <div className="text-center my-8">
                             <p className="text-blue-500 text-4xl pt-8"><MyIcons name='school' size='large'></MyIcons></p>
                             <h1 className="text-2xl">Welcome Back</h1>
-                            <p className="lg:text-3xl text-gray-500 my-2">University Management System</p>
+                            <p className="lg:text-3xl text-gray-500 my-2">UMS</p>
                         </div>
                         <hr />
                         <div className="mx-8 ">
@@ -35,8 +43,12 @@ const SignIn = () => {
                                 </div>
                             </form>
 
+                            <div className="my-1 mb-8">
+                                <span><Link><span className='text-blue-600'>Forget Password</span></Link></span>
+                            </div>
+                            <hr />
                             <div className="">
-                                <span></span>
+                                <p>Don't have an Account ? <span className='text-blue-600 cursor-pointer'>SignUp</span></p>
                             </div>
                         </div>
                     </div>
