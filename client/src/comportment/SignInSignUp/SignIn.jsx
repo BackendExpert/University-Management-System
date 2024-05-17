@@ -14,6 +14,12 @@ const SignIn = () => {
         password: ''
     })
 
+    // headleSignIn
+    const headleSignIn = (e) => {
+        e.preventDefault();
+        
+        // send data
+    }
   return (
     <div>
         <div className="py-8 lg:px-20 px-8 bg-gray-200 lg:h-screen h-auto lg:w-full">
@@ -29,14 +35,16 @@ const SignIn = () => {
                         </div>
                         <hr />
                         <div className="mx-8 ">
-                            <form>
+                            <form onSubmit={headleSignIn}>
                                 <div className="my-8">
                                     <label htmlFor="" className='my-2 lg:text-2xl'>Email : </label>
-                                    <input type="email" name="" id="" className="my-2 text-xl h-16 w-full rounded bg-gray-200 pl-2 mr-4" required placeholder='Enter Email Address'/>
+                                    <input type="email" name="" id="" className="my-2 text-xl h-16 w-full rounded bg-gray-200 pl-2 mr-4" required placeholder='Enter Email Address'
+                                    onChange={e => SetSignInData({...SignInData, email:e.target.value})}/>
                                 </div>
                                 <div className="my-8">
                                     <label htmlFor="" className='my-2 lg:text-2xl'>Password : </label>
-                                    <input type="password" name="" id="" className="my-2 text-xl h-16 w-full rounded bg-gray-200 pl-2 mr-4" required placeholder='Enter Password'/>
+                                    <input type="password" name="" id="" className="my-2 text-xl h-16 w-full rounded bg-gray-200 pl-2 mr-4" required placeholder='Enter Password'
+                                    onChange={e => SetSignInData({...SignInData, password:e.target.value})}/>
                                 </div>
                                 <div className="">
                                     <button type='submit' className='w-full h-14 bg-blue-500 rounded text-white duration-500 hover:bg-blue-600'>SignIn</button>
