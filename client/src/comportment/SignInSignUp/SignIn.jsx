@@ -8,7 +8,9 @@ const SignIn = () => {
 
   return (
     <div>
-        <div className="my-8 lg:mx-20 mx-8"></div>
+        <div className="my-8 lg:mx-20 mx-8 bg-gray-500">
+
+        </div>
     </div>
   )
 }
