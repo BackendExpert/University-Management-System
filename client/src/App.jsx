@@ -1,13 +1,11 @@
 import { BrowserRouter, Route, Routes } from "react-router-dom";
-import SignUp from "./comportment/SignInSignUp/SignUp";
-import SignIn from "./comportment/SignInSignUp/SignIn";
+import SignInSignUp from "./comportment/SignInSignUp/SignInSignUp";
 
 export default function App() {
   return (
     <BrowserRouter>
       <Routes>
-        <Route path="/" element={<SignIn />} />
-        <Route path="/SignUp" element={<SignUp />} />
+        <Route path="/" element={<SignInSignUp />} />
       </Routes>
     </BrowserRouter>
   )

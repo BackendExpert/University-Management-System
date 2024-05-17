@@ -3,7 +3,7 @@ import MyIcons from '@reacticons/ionicons'
 import { Link } from 'react-router-dom'
 
 
-const SignIn = () => {
+const SignInSignUp = () => {
     // sent darkMode
     const [Darkmode, SerDarkmode] = useState(false)
     localStorage.setItem("darkMode", Darkmode) 
@@ -93,4 +93,4 @@ const SignIn = () => {
   )
 }
 
-export default SignIn
+export default SignInSignUp
