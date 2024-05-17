@@ -17,6 +17,12 @@ const SignIn = () => {
         SerDarkmode(false)
     }
 
+    // headle button values
+    const [buttonValue, SetButtonValue] = useState(0)
+    const HeadleButtonClick = (clickValue) => {
+        SetButtonValue(clickValue)   
+    }
+
     // data 
     const [SignInData, SetSignInData] = useState({
         email: '',
@@ -36,9 +42,9 @@ const SignIn = () => {
         <div className={`py-8 lg:px-20 px-8 lg:h-screen h-auto lg:w-full ${!Darkmode ? 'light-mode duration-500 bg-gray-200' : 'dark-mode duration-500 bg-[#1e293b]'}`}>
             {
                 !Darkmode ? 
-                    <p onClick={() => headleDarkMode()}>LightMode</p>
+                    <p className='cursor-pointer' onClick={() => headleDarkMode()}>LightMode</p>
                 :
-                    <p onClick={() => headleLightMode()}>DarkMode</p>
+                    <p className='cursor-pointer' onClick={() => headleLightMode()}>DarkMode</p>
             }
             
             <div className="">
@@ -60,7 +66,7 @@ const SignIn = () => {
                                 </div>
                                 <div className="my-8">
                                     <label htmlFor="" className='my-2 lg:text-2xl'>Password : </label>
-                                    <input type="password" name="" id="" className="my-2 text-xl h-16 w-full rounded bg-gray-200 pl-2 mr-4" required placeholder='Enter Password'
+                                    <input type="password" name="" id="" className={`my-2 text-xl h-16 w-full rounded pl-2 mr-4  ${!Darkmode ? 'bg-gray-200 light-mode duration-500' : 'dark-mode duration-500 bg-[#1e293b]'}`} required placeholder='Enter Password'
                                     onChange={e => SetSignInData({...SignInData, password:e.target.value})}/>
                                 </div>
                                 <div className="">
