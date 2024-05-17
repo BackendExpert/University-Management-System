@@ -12,7 +12,21 @@ const SignIn = () => {
             <div className="bg-white mx-20">
                 <div className="lg:grid grid-cols-2 gap-2">
                     <div className="text-center">
-                        <MyIcons name='' size='large'></MyIcons>
+                        <p className="text-blue-500"><MyIcons name='school' size='large'></MyIcons></p>
+                        <h1 className="">Welcome Back</h1>
+                        <p className="">University Management System</p>
+                    </div>
+                    <div className="">
+                        <form>
+                            <div className="">
+                                <label htmlFor="">Email : </label>
+                                <input type="email" name="" id="" className="" required placeholder='Enter Email Address'/>
+                            </div>
+                            <div className="">
+                                <label htmlFor="">Password : </label>
+                                <input type="email" name="" id="" className="" required placeholder='Enter Password'/>
+                            </div>
+                        </form>
                     </div>
                 </div>
             </div>
