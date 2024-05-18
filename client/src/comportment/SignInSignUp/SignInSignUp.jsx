@@ -1,11 +1,14 @@
 import React, { useState } from 'react'
 import MyIcons from '@reacticons/ionicons'
-import { Link } from 'react-router-dom'
+import { Link, useNavigate } from 'react-router-dom'
 import axios from 'axios'
 import  secureLocalStorage  from  "react-secure-storage"
 
 
 const SignInSignUp = () => {
+    // use navigate
+    const navigate = useNavigate()
+
     // sent darkMode
     const [Darkmode, SerDarkmode] = useState(false)
     localStorage.setItem("darkMode", Darkmode) 
