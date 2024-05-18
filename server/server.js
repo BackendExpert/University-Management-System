@@ -101,7 +101,9 @@ app.post('/SignUp', (req, res) => {
 
 // signIn endpoint
 
-app.post('/')
+app.post('/SignIn', (req, res) => [
+    console.log(req.body)
+])
 
 // all endpoints end
 

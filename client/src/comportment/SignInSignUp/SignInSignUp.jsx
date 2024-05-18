@@ -30,12 +30,18 @@ const SignInSignUp = () => {
     })
 
     // headleSignIn
-    const headleSignIn = (e) => {
+    const headleSignIn = async (e) => {
         e.preventDefault();
 
+        try{
+            const res = await axios.post('http://localhost:8081/SignIn', SignInData)
+        }
+        catch(err){
+            console.log(err)
+        }
        
     }
-    
+
     // SignUp data
     const [SignUpData, SetSignUpData] = useState({
         username: '',
