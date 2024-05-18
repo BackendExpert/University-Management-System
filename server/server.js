@@ -126,7 +126,8 @@ app.post('/SignIn', (req, res) => {
                         'your-secret-key',
                         {expiresIn: '1h'}
                     );
-                    
+                    res.json({Token: token, Msg: "Success", LoginUser:result})
+                    console.log(result)
                 }
             })
         }
