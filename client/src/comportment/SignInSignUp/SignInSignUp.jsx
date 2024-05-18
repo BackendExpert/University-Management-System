@@ -32,10 +32,10 @@ const SignInSignUp = () => {
     // headleSignIn
     const headleSignIn = (e) => {
         e.preventDefault();
-        
+
        
     }
-
+    
     // SignUp data
     const [SignUpData, SetSignUpData] = useState({
         username: '',

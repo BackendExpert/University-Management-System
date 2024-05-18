@@ -55,7 +55,7 @@ app.post('/SignUp', (req, res) => {
 
     // check user is alredy in database
     const tableName = "users"
-    const columnData = { email: req.body.SignUpemail }
+    const columnData = { Email: req.body.SignUpemail }
 
     // console.log(tableName, columnData)
     JkMysql.SelectData(connection, tableName, columnData, (result) => {
@@ -75,7 +75,7 @@ app.post('/SignUp', (req, res) => {
                     const data = {
                         username: req.body.username, 
                         Email: req.body.SignUpemail,
-                        Password: req.body.SignUppassword,
+                        Password: PassHash,
                         Role: role,
                         is_active: is_active,
                         is_lock: is_lock,
@@ -98,6 +98,10 @@ app.post('/SignUp', (req, res) => {
     })
 
 })
+
+// signIn endpoint
+
+app.post('/')
 
 // all endpoints end
 
