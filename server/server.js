@@ -39,7 +39,7 @@ const upload = multer({
 const connection = JkMysql.ConnectToDatabase('localhost', 'root', '1234', 'db_cms')
 
 // configurate email sending 
-
+const transporter = JkMysql.SendEmailConfig("Gmail", process.env.EMAIL_USER, process.env.EMAIL_PASSWORD)
 
 // middleware
 app.use(express.json())
