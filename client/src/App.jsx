@@ -9,7 +9,9 @@ export default function App() {
       <Routes>
         <Route path="/" element={<SignInSignUp />} />
 
-        <Route path="/Dashboard" element={<PrivateRoute><Dashboard /></PrivateRoute>} />
+        <Route path="/Dashboard" element={<PrivateRoute><Dashboard /></PrivateRoute>} >
+          
+        </Route>
       </Routes>
     </BrowserRouter>
   )
