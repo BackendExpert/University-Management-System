@@ -120,7 +120,7 @@ const SignInSignUp = () => {
                                             <form onSubmit={headleSignUp}>
                                                 <div className="my-8">
                                                     <label htmlFor="" className='my-2 lg:text-2xl'>Username : </label>
-                                                    <input type="email" name="" id="" className={`my-2 text-xl h-16 w-full rounded pl-2 mr-4  ${!Darkmode ? 'bg-gray-200 light-mode duration-500' : 'dark-mode duration-500 bg-[#1e293b]'}`} required placeholder='Enter Username'
+                                                    <input type="text" name="" id="" className={`my-2 text-xl h-16 w-full rounded pl-2 mr-4  ${!Darkmode ? 'bg-gray-200 light-mode duration-500' : 'dark-mode duration-500 bg-[#1e293b]'}`} required placeholder='Enter Username'
                                                     onChange={e => SetSignUpData({...SignUpData, username:e.target.value})}/>
                                                 </div>
                                                 <div className="my-8">
