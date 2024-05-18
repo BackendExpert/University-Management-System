@@ -65,8 +65,9 @@ const SignInSignUp = () => {
                     navigate('/Dashboard');
                 }
             }
-
-
+            else{
+                alert(res.data.Error)
+            }
         }
         catch(err){
             console.log(err)
