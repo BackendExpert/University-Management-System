@@ -1,7 +1,7 @@
 import React, { useState } from 'react'
 import MyIcons from '@reacticons/ionicons'
 import { Link } from 'react-router-dom'
-
+import axios from 'axios'
 
 const SignInSignUp = () => {
     // sent darkMode
@@ -33,7 +33,7 @@ const SignInSignUp = () => {
     const headleSignIn = (e) => {
         e.preventDefault();
         
-        // send data
+       
     }
 
     // SignUp data
@@ -47,7 +47,16 @@ const SignInSignUp = () => {
     const headleSignUp = (e) => {
         e.preventDefault();
         
-        ax
+        axios.post('http://localhost:8081/SignUp', SignUpData)
+        .then(res => {
+            if(res.data.Status === "Success"){
+                alert("Rejestation Successfull")
+                window.location.reload()
+            }
+            else{
+                alert(res.data.Error)
+            }
+        })
     }
 
   return (
