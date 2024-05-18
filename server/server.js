@@ -20,6 +20,23 @@ const { stat } = require('fs');
 const app = express();
 const PORT = process.env.PORT || 8081
 
+//file  upload
+const storage = multer.diskStorage({
+    destination: (req, file, cb) => {
+      cb(null, 'public/images')
+    }, 
+    filename:(req, file, cb) => {
+      cb(null, file.fieldname + '_' + Date.now() + path.extname(file.originalname));
+    }
+})
+  
+const upload = multer({
+    storage:storage
+})
+
+
+// make connection between server and mysql database
+
 // all endpoint start
 
 
