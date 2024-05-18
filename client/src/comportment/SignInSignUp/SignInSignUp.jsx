@@ -35,6 +35,13 @@ const SignInSignUp = () => {
 
         try{
             const res = await axios.post('http://localhost:8081/SignIn', SignInData)
+
+            const loginToken = res.data.Token;
+
+            //store token in localstorage
+            localStorage.setItem('LoginToken', loginToken)
+
+            
         }
         catch(err){
             console.log(err)
