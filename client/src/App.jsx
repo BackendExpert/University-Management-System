@@ -7,6 +7,7 @@ export default function App() {
     <BrowserRouter>
       <Routes>
         <Route path="/" element={<SignInSignUp />} />
+        
         <Route path="/Dashboard" element={<Dashboard />} />
       </Routes>
     </BrowserRouter>
