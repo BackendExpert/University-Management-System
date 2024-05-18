@@ -13,7 +13,7 @@ export default function App() {
 
         <Route path="/Dashboard" element={<PrivateRoute><Dashboard /></PrivateRoute>} >
           <Route index element={<DashHome />} />
-          <Route path="/Profile" element={<DashProfile />} />
+          <Route path="/profile" element={<DashProfile />} />
         </Route>
       </Routes>
     </BrowserRouter>
