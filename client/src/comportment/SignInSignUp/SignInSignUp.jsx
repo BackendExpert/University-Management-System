@@ -47,7 +47,7 @@ const SignInSignUp = () => {
     const headleSignUp = (e) => {
         e.preventDefault();
         
-        // send data
+        ax
     }
 
   return (
