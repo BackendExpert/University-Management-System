@@ -8,14 +8,14 @@ const DashSide = () => {
             <h2 className="text-2xl font-bold">Admin Dashboard</h2>
           </div>
           <nav className="mt-10">
-            <Link to="/" className="block py-2.5 px-4 rounded transition duration-200 hover:bg-gray-700">
+            <Link to="/dashboard" className="block py-2.5 px-4 rounded transition duration-200 hover:bg-gray-700">
+                Home
+            </Link>
+            <Link to="home" className="block py-2.5 px-4 rounded transition duration-200 hover:bg-gray-700">
               Home
             </Link>
-            <Link to="/profile" className="block py-2.5 px-4 rounded transition duration-200 hover:bg-gray-700">
+            <Link to="profile" className="block py-2.5 px-4 rounded transition duration-200 hover:bg-gray-700">
               Profile
-            </Link>
-            <Link to="/settings" className="block py-2.5 px-4 rounded transition duration-200 hover:bg-gray-700">
-              Settings
             </Link>
           </nav>
         </div>
