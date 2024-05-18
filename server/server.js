@@ -41,6 +41,12 @@ const connection = JkMysql.ConnectToDatabase('localhost', 'root', '1234', 'db_cm
 // configurate email sending 
 
 
+// middleware
+app.use(express.json())
+app.use(cors())
+app.use(express.static('public')); 
+
+
 // all endpoint start
 
 
