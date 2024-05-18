@@ -54,7 +54,49 @@ app.post('/SignUp', (req, res) => {
     console.log(req.body)
 
     // check user is alredy in database
-    
+    const tableName = "users"
+    const columnData = { email: req.body.SignUpemail }
+
+    // console.log(tableName, columnData)
+    JkMysql.SelectData(connection, tableName, columnData, (result) => {
+        if(result.length === 0){
+            // console.log("good to go")
+
+            bcrypt.hash(req.body.SignUppassword, 10, (err, PassHash) => {
+                if(err) throw err
+
+                if(PassHash){
+                    const role = "user"
+                    const is_active = 0;
+                    const is_lock = 0;
+                    const join_at = new Date()
+
+                    const tableName = "users"
+                    const data = {
+                        username: req.body.username, 
+                        Email: req.body.SignUpemail,
+                        Password: req.body.SignUppassword,
+                        Role: role,
+                        is_active: is_active,
+                        is_lock: is_lock,
+                        join_at: join_at       
+                    }
+
+                    JkMysql.insertData(connection, tableName, data, (result) => {
+                        if(result){
+                            return res.json({Status: "Success"})
+                        }
+                    })
+                }
+            })
+
+        }
+        else{
+            return res.json({Error: "User Already in database"})
+        }
+        
+    })
+
 })
 
 // all endpoints end
