@@ -115,13 +115,13 @@ app.post('/SignIn', (req, res) => {
             return res.json({Error: "User Not Found in Database..."})
         }
         else{
-            console.log(result[0].join_at)
+            console.log(result[0].Password)
             // console.log("good to go")
             const password = req.body.password
-            bcrypt.compare(result[0].Password, password, (err, PassMatch) => {
-                if(err) {
-                    return res.json({Error: "Password not Match"})
-                }
+            
+            bcrypt.compare(password, result[0].Password, (err, PassMatch) => {
+                if(err) throw err
+
                 if(PassMatch) {
                     //generate JWT Token
                     const token = jwt.sign(
@@ -131,6 +131,9 @@ app.post('/SignIn', (req, res) => {
                     );
                     res.json({Token: token, Msg: "Success", LoginUser:result})
                     console.log(result)
+                }
+                else{
+                    return res.json({Error: "Password Not Match"})
                 }
             })
         }
