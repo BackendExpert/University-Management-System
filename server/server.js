@@ -52,6 +52,9 @@ app.use(express.static('public'));
 // signUp endpoint
 app.post('/SignUp', (req, res) => {
     console.log(req.body)
+
+    // check user is alredy in database
+    
 })
 
 // all endpoints end
