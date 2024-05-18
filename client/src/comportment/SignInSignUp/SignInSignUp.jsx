@@ -2,6 +2,8 @@ import React, { useState } from 'react'
 import MyIcons from '@reacticons/ionicons'
 import { Link } from 'react-router-dom'
 import axios from 'axios'
+import  secureLocalStorage  from  "react-secure-storage"
+
 
 const SignInSignUp = () => {
     // sent darkMode
@@ -41,7 +43,30 @@ const SignInSignUp = () => {
             //store token in localstorage
             localStorage.setItem('LoginToken', loginToken)
 
-            
+            if(res.data.Msg === "Success"){
+                if(res.data.LoginUser[0].is_active === 0 && res.data.LoginUser[0].is_lock === 1){
+                    alert('Your Account has been locked. Unauthorized activity has been detected.')
+                    localStorage.clear()
+                    navigate('/')
+                }
+                else if(res.data.LoginUser[0].is_active === 0){
+                    alert('Your Account is still not Activate Wait for Activate from Admin')
+                    localStorage.clear()
+                    navigate('/')
+                }
+                else{
+                    //get and store login user role and email
+                    const userRole = res.data.LoginUser[0].Role;
+                    const userEmail = res.data.LoginUser[0].Email;
+
+                    //store data in localstore so that use secureLocalStorage
+                    secureLocalStorage.setItem("Login1", userRole);
+                    secureLocalStorage.setItem("login2", userEmail);
+                    navigate('/Dashboard');
+                }
+            }
+
+
         }
         catch(err){
             console.log(err)
