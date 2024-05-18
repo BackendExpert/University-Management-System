@@ -8,6 +8,7 @@ const nodemailer = require('nodemailer');
 require('dotenv').config(); // Load environment variables
 const fs = require('fs');
 const { parse } = require('json2csv');
+const JkMysql = require('jkmysql-easy')
 
 const path = require('path')
 
