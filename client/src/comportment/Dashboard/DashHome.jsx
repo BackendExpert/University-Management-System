@@ -34,14 +34,11 @@ const DashHome = () => {
                         DashData.map((dataDash) => {
                             return (
                                 <div className="">
-                                    <div className={`py-12 px-8 text-white rounded-xl ${dataDash.style}`}>
+                                    <div className={`py-8 px-8 text-gray-500 rounded bg-white`}>
                                         <div className="flex">
-                                            <div className="text-5xl">
-                                                {dataDash.icon}
-                                            </div>
-                                            <div className="ml-4">
-                                                <h1 className="text-3xl">{dataDash.name}</h1>
-                                                <p className="text-xl">{dataDash.value}</p>
+                                            <div className="flex">
+                                                <h1 className="text-2xl">{dataDash.value}</h1>
+                                                <p className="">{dataDash.name}</p>
                                             </div>
                                         </div>
                                     </div>
