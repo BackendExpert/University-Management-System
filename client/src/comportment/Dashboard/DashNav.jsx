@@ -14,7 +14,15 @@ const DashNav = () => {
         return (
             <div>
                 <div className="flex">
-        
+                    {
+                        (() => {
+                            if(RoleUser === "SuperAdmin"){
+                                return (
+                                    <p className="text-gray-500">SuperAdmin Dashbord</p>
+                                )
+                            }
+                        })()
+                    }
                 </div>
             </div>
           )
