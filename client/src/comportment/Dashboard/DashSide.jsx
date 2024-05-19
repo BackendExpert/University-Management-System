@@ -34,15 +34,15 @@ const DashSide = () => {
         window.location.reload()
     }
     
-    const [ModeDark, SetModeDark] = useState(DarkMode)
+    const [ModeDark, SetModeDark] = useState(false)
 
     // for darkmode
     const healeDarkMode = () => {
-        SetModeDark(false)
+        SetModeDark(true)
     }
 
     const healeLightkMode = () => {
-        SetModeDark(true)
+        SetModeDark(false)
     }
 
     return (
@@ -104,7 +104,7 @@ const DashSide = () => {
                 </div>
                 <div className="">
                     {
-                        DarkMode === true ?
+                        !ModeDark ?
                             <p onClick={() => healeDarkMode()} className="cursor-pointer">DarkMode</p>
                         :
                             <p onClick={() => healeLightkMode()} className="cursor-pointer">LightMode</p>  
