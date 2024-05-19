@@ -7,7 +7,7 @@ const Dashboard = () => {
   return (
     <div className="flex">
       <DashSide />
-      <div className="flex-1 ml-64 p-6">
+      <div className="flex-1 p-6">
         <Outlet />
       </div>
     </div>
