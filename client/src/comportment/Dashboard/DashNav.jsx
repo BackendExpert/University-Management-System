@@ -11,18 +11,20 @@ const DashNav = () => {
     const DarkMode = localStorage.getItem('darkMode');
 
     if(RoleUser !== null && EmailUser !== null){
-
+        return (
+            <div>
+                <div className="flex">
+        
+                </div>
+            </div>
+          )
     }
     else{
-        
+        useEffect(() => {
+            localStorage.clear()
+            navigate('/')
+        }, [])
     }
-  return (
-    <div>
-        <div className="flex">
-
-        </div>
-    </div>
-  )
 }
 
 export default DashNav
