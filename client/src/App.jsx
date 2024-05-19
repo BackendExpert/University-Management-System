@@ -4,6 +4,7 @@ import Dashboard from "./comportment/Dashboard/Dashboard";
 import PrivateRoute from "./comportment/Security/PrivateRoute";
 import DashHome from "./comportment/Dashboard/DashHome";
 import Students from "./comportment/Students/Students";
+import Teachers from "./comportment/Teachers/Teachers";
 
 
 export default function App() {
@@ -15,6 +16,7 @@ export default function App() {
         <Route path="/Dashboard/" element={<PrivateRoute><Dashboard /></PrivateRoute>} >
           <Route path="Home" element={<PrivateRoute><DashHome /></PrivateRoute>} />
           <Route path="Students" element={<PrivateRoute><Students /></PrivateRoute>} />
+          <Route path="Teachers" element={<PrivateRoute><Teachers /></PrivateRoute>} />
         </Route>
       </Routes>
     </BrowserRouter>
