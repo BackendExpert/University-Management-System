@@ -14,6 +14,8 @@ const DashSide = () => {
     const EmailUser = secureLocalStorage.getItem("login2");
     const DarkMode = localStorage.getItem('darkMode');
 
+    // alert(DarkMode)
+
     const [sideOpen, SetsideOpen] = useState(true)
 
     const SideLink = [
@@ -34,7 +36,7 @@ const DashSide = () => {
 
     return (
         <div className="">
-            <div className={` ${sideOpen ? 'w-72' : 'w-20'} duration-500 bg-gray-800 h-screen px-4 text-white`}>
+            <div className={` ${sideOpen ? 'w-72' : 'w-20'} ${DarkMode === true ? 'bg-gray-800' : 'bg-gray-200 text-gray-500'} border-r-2 border-gray-400 duration-500 h-screen px-4 text-white`}>
                 <div className="lg:invisible visible">
                 {
                     sideOpen ? 
@@ -59,7 +61,7 @@ const DashSide = () => {
                     }
                     
                 </div>
-                <hr />
+                <hr className={` ${DarkMode ? 'border-gray-400' : 'border-white'}`}/>
                 
                 <div className="">
                     {
