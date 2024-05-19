@@ -90,7 +90,7 @@ const DashSide = () => {
                             }
                             else{
                                 return (
-                                    <Link>
+                                    <Link to={AdminLinks.link}>
                                         <div className="my-8 mx-2">
                                             <div className="flex">
                                                 <p className="text-3xl">{AdminLinks.icons}</p>
