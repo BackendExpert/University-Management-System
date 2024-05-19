@@ -11,7 +11,7 @@ const SignInSignUp = () => {
 
     // sent darkMode
     const [Darkmode, SerDarkmode] = useState(false)
-    localStorage.setItem("darkMode", Darkmode) 
+    // localStorage.setItem("darkMode", Darkmode) 
 
     // headleDarkMode
     const headleDarkMode = () => {

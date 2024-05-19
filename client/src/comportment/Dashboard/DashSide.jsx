@@ -103,15 +103,6 @@ const DashSide = () => {
                         })
                     }
                 </div>
-                <div className="">
-                    {
-                        !ModeDark ?
-                            <p onClick={() => healeDarkMode()} className="cursor-pointer">DarkMode</p>
-                        :
-                            <p onClick={() => healeLightkMode()} className="cursor-pointer">LightMode</p>  
-                    }
-                    
-                </div>
                 
             </div>
         </div>
