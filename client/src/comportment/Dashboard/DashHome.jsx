@@ -23,11 +23,17 @@ const DashHome = () => {
 
     if(RoleUser !== null && EmailUser !== null){
         return (
-            <div className=''>
+            <div className='mx-8'>
                 <div className="lg:grid grid-cols-4 gap-4">
-                    <div className="">
-
-                    </div>
+                    {
+                        DashData.map((dataDash) => {
+                            return (
+                                <div className="">
+                                    <h1 className="">{dataDash.name}</h1>
+                                </div>
+                            )
+                        })
+                    }
                 </div>
             </div>
         )
