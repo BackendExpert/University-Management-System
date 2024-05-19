@@ -18,7 +18,7 @@ export default function App() {
           <Route path="Home" element={<PrivateRoute><DashHome /></PrivateRoute>} />
           <Route path="Students" element={<PrivateRoute><Students /></PrivateRoute>} />
           <Route path="Teachers" element={<PrivateRoute><Teachers /></PrivateRoute>} />
-          <Route path="Subjects" element={<Subjects />} />
+          <Route path="Subjects" element={<PrivateRoute><Subjects /></PrivateRoute>} />
         </Route>
       </Routes>
     </BrowserRouter>
