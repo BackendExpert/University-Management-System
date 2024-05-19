@@ -4,7 +4,7 @@ import  secureLocalStorage  from  "react-secure-storage"
 import MyIcons from '@reacticons/ionicons'
 import SuperAdminImg from '../../assets/SuperAdminWhite.png'
 
-import { IconName } from "react-icons/bs";
+import { PiStudent } from "react-icons/pi";
 
 const DashSide = () => {
     const navigate = useNavigate()
@@ -15,7 +15,7 @@ const DashSide = () => {
     const [sideOpen, SetsideOpen] = useState(true)
 
     const SideLink = [
-        {name: "Dashboard", link: "#", icons: "person"},
+        {name: "Dashboard", link: "#", icons: <PiStudent />},
         {name: "Students", link: "#", icons: "person"},
         {name: "Teachers", link: "#", icons: "person"},
         {name: "Subjects", link: "#", icons: "person"},
