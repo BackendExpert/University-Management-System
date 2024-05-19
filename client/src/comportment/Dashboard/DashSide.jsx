@@ -19,7 +19,7 @@ const DashSide = () => {
     const [sideOpen, SetsideOpen] = useState(true)
 
     const SideLink = [
-        {name: "Dashboard", link: "#", icons: <BsSpeedometer2 />},
+        {name: "Dashboard", link: "Home", icons: <BsSpeedometer2 />},
         {name: "Students", link: "#", icons: <BsBackpack2Fill />},
         {name: "Teachers", link: "#", icons: <BsPersonVideo3 />},
         {name: "Subjects", link: "#", icons: <BsFileEarmarkText />},
