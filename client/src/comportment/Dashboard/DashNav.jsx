@@ -12,13 +12,13 @@ const DashNav = () => {
 
     if(RoleUser !== null && EmailUser !== null){
         return (
-            <div>
-                <div className="flex">
+            <div className='bg-gray-400'>
+                <div className="flex ">
                     {
                         (() => {
                             if(RoleUser === "SuperAdmin"){
                                 return (
-                                    <p className="text-gray-500">SuperAdmin Dashbord</p>
+                                    <p className="text-gray-500 text-2xl font-semibold">SuperAdmin Dashbord</p>
                                 )
                             }
                         })()
