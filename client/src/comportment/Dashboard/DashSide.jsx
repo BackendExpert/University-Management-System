@@ -15,9 +15,11 @@ const DashSide = () => {
     const SideLink = [
         {name: "Dashboard", link: "#", icons: "person"},
         {name: "Students", link: "#", icons: "person"},
-        {name: "Students", link: "#", icons: "person"},
-        {name: "Students", link: "#", icons: "person"},
-        {name: "Students", link: "#", icons: "person"},       
+        {name: "Teachers", link: "#", icons: "person"},
+        {name: "Subjects", link: "#", icons: "person"},
+        {name: "Staff", link: "#", icons: "person"},       
+        {name: "Profile", link: "#", icons: "person"},   
+         
         
     ]
 
