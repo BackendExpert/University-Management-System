@@ -24,6 +24,9 @@ const DashNav = () => {
                         })()
                     }
                 </div>
+                <div className="">
+                    Hi alll
+                </div>
             </div>
           )
     }
