@@ -9,13 +9,17 @@ const DashHome = () => {
     const EmailUser = secureLocalStorage.getItem("login2");
     // const DarkMode = localStorage.getItem('darkMode');
 
+    // dashdata
+    const DashData = [
+        {id: 1, name: "Students", icon: "", value: "", style: ""}
+    ]
 
     if(RoleUser !== null && EmailUser !== null){
         return (
             <div className=''>
                 <div className="lg:grid grid-cols-4 gap-4">
                     <div className="">
-        
+
                     </div>
                 </div>
             </div>
