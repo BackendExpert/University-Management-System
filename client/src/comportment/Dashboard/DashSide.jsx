@@ -4,7 +4,7 @@ import  secureLocalStorage  from  "react-secure-storage"
 import MyIcons from '@reacticons/ionicons'
 import SuperAdminImg from '../../assets/SuperAdminWhite.png'
 
-import { BsBackpack2Fill, BsSpeedometer2, BsPersonVideo3, BsFileEarmarkText, BsPeople, BsPersonGear } from "react-icons/bs";
+import { BsBackpack2Fill, BsSpeedometer2, BsPersonVideo3, BsFileEarmarkText, BsPeople, BsPersonGear, BsPower } from "react-icons/bs";
 
 
 const DashSide = () => {
@@ -21,10 +21,14 @@ const DashSide = () => {
         {name: "Teachers", link: "#", icons: <BsPersonVideo3 />},
         {name: "Subjects", link: "#", icons: <BsFileEarmarkText />},
         {name: "Staff", link: "#", icons: <BsPeople />},       
-        {name: "Profile", link: "#", icons: <BsPersonGear />},   
-
-        
+        {name: "Profile", link: "#", icons: <BsPersonGear />},  
+        {name: "LogOut", icons: <BsPower />},       
     ]
+
+    const headleLogOut = () => {
+        localStorage.clear()
+        navigate('/')
+    }
 
     return (
         <div className="">
@@ -58,16 +62,28 @@ const DashSide = () => {
                 <div className="">
                     {
                         SideLink.map((AdminLinks) => {
-                            return (
-                                <Link>
-                                    <div className="my-8 mx-2">
+                            if(AdminLinks.name === "LogOut"){
+                                return (
+                                    <div onClick={() => headleLogOut()} className="my-8 mx-2 text-red-500 cursor-pointer">
                                         <div className="flex">
                                             <p className="text-3xl">{AdminLinks.icons}</p>
                                             <p className={` ${sideOpen ? 'visible' : 'invisible'} py-1 pl-4 text-xl`}>{AdminLinks.name}</p>
                                         </div>
                                     </div>
-                                </Link>
-                            )
+                                )
+                            }
+                            else{
+                                return (
+                                    <Link>
+                                        <div className="my-8 mx-2">
+                                            <div className="flex">
+                                                <p className="text-3xl">{AdminLinks.icons}</p>
+                                                <p className={` ${sideOpen ? 'visible' : 'invisible'} py-1 pl-4 text-xl`}>{AdminLinks.name}</p>
+                                            </div>
+                                        </div>
+                                    </Link>
+                                )
+                            }
                         })
                     }
                 </div>
