@@ -28,6 +28,7 @@ const DashSide = () => {
     const headleLogOut = () => {
         localStorage.clear()
         navigate('/')
+        window.location.reload()
     }
 
     return (
