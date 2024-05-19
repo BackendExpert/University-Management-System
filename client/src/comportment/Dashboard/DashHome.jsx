@@ -28,7 +28,7 @@ const DashHome = () => {
                     {
                         DashData.map((dataDash) => {
                             return (
-                                <div className="">
+                                <div className="py-4 px-8 bg-blue-500 text-white">
                                     <h1 className="">{dataDash.name}</h1>
                                 </div>
                             )
