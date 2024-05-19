@@ -45,6 +45,7 @@ const DashSide = () => {
         SetModeDark(false)
     }
 
+    localStorage.setItem("darkMode", ModeDark) 
     return (
         <div className="">
             <div className={` ${sideOpen ? 'w-72' : 'w-20'} bg-gray-800 text-white border-r-2 border-gray-400 duration-500 h-screen px-4 shadow-md`}>
