@@ -65,7 +65,7 @@ const SignInSignUp = () => {
                     //store data in localstore so that use secureLocalStorage
                     secureLocalStorage.setItem("Login1", userRole);
                     secureLocalStorage.setItem("login2", userEmail);
-                    navigate('/Dashboard');
+                    navigate('/Dashboard/Home');
                 }
             }
             else{
