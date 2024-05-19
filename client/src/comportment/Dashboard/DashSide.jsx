@@ -34,6 +34,11 @@ const DashSide = () => {
         window.location.reload()
     }
 
+    // for darkmode
+    const healeDarkMode = () => {
+        DarkMode === false
+    }
+
     return (
         <div className="">
             <div className={` ${sideOpen ? 'w-72' : 'w-20'} bg-gray-800 text-white border-r-2 border-gray-400 duration-500 h-screen px-4 shadow-md`}>
@@ -90,6 +95,15 @@ const DashSide = () => {
                             }
                         })
                     }
+                </div>
+                <div className="">
+                    {
+                        DarkMode === true ?
+                            <div className="">Hi DarkMode</div>
+                        :
+                            <div className="">LightMode</div>    
+                    }
+                    <p onClick={() => healeDarkMode()} className="cursor-pointer">DarkMode</p>
                 </div>
                 
             </div>
