@@ -14,13 +14,13 @@ const DashHome = () => {
 
     // dashdata
     const DashData = [
-        {id: 1, name: "Students", icon: <BsBackpack2Fill />, value: <CountUp end={20} />, style: "bg-green-500"},
-        {id: 2, name: "Teachers", icon: <BsPersonVideo3 />, value: <CountUp end={20} />, style: "bg-blue-500"},
-        {id: 3, name: "Subjects", icon: <BsFileEarmarkText />, value: <CountUp end={20} />, style: "bg-yellow-500"},
-        {id: 4, name: "Staff", icon: <BsPeople />, value: <CountUp end={20} />, style: "bg-red-500"},
-        {id: 5, name: "Students", icon: <BsBackpack2Fill />, value: <CountUp end={20} />, style: "bg-purple-500"},
-        {id: 6, name: "Students", icon: <BsBackpack2Fill />, value: <CountUp end={20} />, style: "bg-yellow-500"},
-        {id: 7, name: "Students", icon: <BsBackpack2Fill />, value: <CountUp end={20} />, style: "bg-green-500"},
+        {id: 1, name: "Students", icon: <BsBackpack2Fill />, value: <CountUp end={20} />, style: "text-green-500"},
+        {id: 2, name: "Teachers", icon: <BsPersonVideo3 />, value: <CountUp end={20} />, style: "text-blue-500"},
+        {id: 3, name: "Subjects", icon: <BsFileEarmarkText />, value: <CountUp end={20} />, style: "text-yellow-500"},
+        {id: 4, name: "Staff", icon: <BsPeople />, value: <CountUp end={20} />, style: "text-red-500"},
+        {id: 5, name: "Students", icon: <BsBackpack2Fill />, value: <CountUp end={20} />, style: "text-purple-500"},
+        {id: 6, name: "Students", icon: <BsBackpack2Fill />, value: <CountUp end={20} />, style: "text-yellow-500"},
+        {id: 7, name: "Students", icon: <BsBackpack2Fill />, value: <CountUp end={20} />, style: "text-green-500"},
     ]
 
     if(RoleUser !== null && EmailUser !== null){
@@ -29,17 +29,23 @@ const DashHome = () => {
                 <div className="my-4">
                     <p>/ Dashbord /</p>
                 </div>
-                <div className="lg:grid grid-cols-4 gap-4">
+                <div className="lg:grid grid-cols-4 gap-4 my-2">
                     {
                         DashData.map((dataDash) => {
                             return (
                                 <div className="">
-                                    <div className={`py-8 px-8 text-gray-500 rounded bg-white`}>
-                                        <div className="flex">
-                                            <div className="flex">
-                                                <h1 className="text-2xl">{dataDash.value}</h1>
+                                    <div className={` text-gray-500 rounded bg-white shadow-md`}>
+                                        <div className="py-8 px-8 flex justify-between py-8">
+                                            <div className="">
+                                                <h1 className={`text-4xl py-2 font-semibold ${dataDash.style}`}>{dataDash.value}</h1>
                                                 <p className="">{dataDash.name}</p>
                                             </div>
+                                            <div className="">
+                                                <h1 className="text-5xl">{dataDash.icon}</h1>
+                                            </div>
+                                        </div>
+                                        <div className="py-4 pl-4 text-white font-semibold bg-gradient-to-r from-cyan-500 to-green-500">
+                                            All {dataDash.name}
                                         </div>
                                     </div>
                                 </div>
