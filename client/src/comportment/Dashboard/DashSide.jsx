@@ -4,6 +4,8 @@ import  secureLocalStorage  from  "react-secure-storage"
 import MyIcons from '@reacticons/ionicons'
 import SuperAdminImg from '../../assets/SuperAdminWhite.png'
 
+import { IconName } from "react-icons/bs";
+
 const DashSide = () => {
     const navigate = useNavigate()
     //curent login user
@@ -19,7 +21,7 @@ const DashSide = () => {
         {name: "Subjects", link: "#", icons: "person"},
         {name: "Staff", link: "#", icons: "person"},       
         {name: "Profile", link: "#", icons: "person"},   
-         
+
         
     ]
 
