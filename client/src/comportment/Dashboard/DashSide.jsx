@@ -36,7 +36,7 @@ const DashSide = () => {
 
     return (
         <div className="">
-            <div className={` ${sideOpen ? 'w-72' : 'w-20'} ${DarkMode === true ? 'bg-gray-800' : 'bg-gray-200 text-gray-500'} border-r-2 border-gray-400 duration-500 h-screen px-4 text-white`}>
+            <div className={` ${sideOpen ? 'w-72' : 'w-20'} bg-gray-800 text-white border-r-2 border-gray-400 duration-500 h-screen px-4 shadow-md`}>
                 <div className="lg:invisible visible">
                 {
                     sideOpen ? 
