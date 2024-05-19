@@ -18,7 +18,7 @@ const DashNav = () => {
     
     if(RoleUser !== null && EmailUser !== null){
         return (
-            <div className='bg-gray-200 py-4 px-8 rounded-xl shadow-xl mb-8'>
+            <div className='bg-white py-4 px-8 rounded-xl shadow-xl mb-8'>
                 <div className="flex ">
                     {
                         (() => {

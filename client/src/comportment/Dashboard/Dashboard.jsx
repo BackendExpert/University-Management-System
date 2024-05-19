@@ -8,7 +8,7 @@ const Dashboard = () => {
   return (
     <div className="flex">
       <DashSide />
-      <div className="flex-1 px-2 py-4 ">
+      <div className="flex-1 px-2 py-4 bg-gray-200">
         <DashNav />
         <Outlet />
       </div>
