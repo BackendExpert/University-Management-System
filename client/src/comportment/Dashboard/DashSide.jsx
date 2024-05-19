@@ -38,7 +38,11 @@ const DashSide = () => {
 
     // for darkmode
     const healeDarkMode = () => {
-        SetModeDark()
+        SetModeDark(false)
+    }
+
+    const healeLightkMode = () => {
+        SetModeDark(DarkMode)
     }
 
     return (
@@ -103,7 +107,7 @@ const DashSide = () => {
                         DarkMode === true ?
                             <p onClick={() => healeDarkMode()} className="cursor-pointer">DarkMode</p>
                         :
-                            <p onClick={() => healeLightkMode()} className="cursor-pointer">DarkMode</p>  
+                            <p onClick={() => healeLightkMode()} className="cursor-pointer">Li</p>  
                     }
                     
                 </div>
