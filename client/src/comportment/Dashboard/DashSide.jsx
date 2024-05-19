@@ -23,7 +23,7 @@ const DashSide = () => {
         {name: "Students", link: "Students", icons: <BsBackpack2Fill />},
         {name: "Teachers", link: "Teachers", icons: <BsPersonVideo3 />},
         {name: "Subjects", link: "Subjects", icons: <BsFileEarmarkText />},
-        {name: "Staff", link: "#", icons: <BsPeople />},       
+        {name: "Staff", link: "Staff", icons: <BsPeople />},       
         {name: "Profile", link: "#", icons: <BsPersonGear />},  
         {name: "LogOut", icons: <BsPower />},       
     ]
