@@ -7,6 +7,7 @@ import Students from "./comportment/Students/Students";
 import Teachers from "./comportment/Teachers/Teachers";
 import Subjects from "./comportment/Subjects/Subjects";
 import Staff from "./comportment/Staff/Staff";
+import MyProfile from "./comportment/MyStats/MyProfile";
 
 
 export default function App() {
@@ -21,6 +22,7 @@ export default function App() {
           <Route path="Teachers" element={<PrivateRoute><Teachers /></PrivateRoute>} />
           <Route path="Subjects" element={<PrivateRoute><Subjects /></PrivateRoute>} />
           <Route path="Staff" element={<PrivateRoute><Staff /></PrivateRoute>} />
+          <Route path="MyProfile" element={<PrivateRoute><MyProfile /></PrivateRoute>} />
         </Route>
       </Routes>
     </BrowserRouter>
