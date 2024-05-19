@@ -1,6 +1,7 @@
 import React, { useState } from 'react'
 import { Link, useNavigate } from 'react-router-dom';
 import  secureLocalStorage  from  "react-secure-storage"
+import CountUp from 'react-countup'
 
 const DashHome = () => {
     const navigate = useNavigate()
@@ -11,7 +12,13 @@ const DashHome = () => {
 
     // dashdata
     const DashData = [
-        {id: 1, name: "Students", icon: "", value: "", style: ""}
+        {id: 1, name: "Students", icon: "", value: <CountUp end={20} />, style: ""},
+        {id: 2, name: "Teachers", icon: "", value: <CountUp end={20} />, style: ""},
+        {id: 3, name: "Subjects", icon: "", value: <CountUp end={20} />, style: ""},
+        {id: 4, name: "Staff", icon: "", value: <CountUp end={20} />, style: ""},
+        {id: 5, name: "Students", icon: "", value: <CountUp end={20} />, style: ""},
+        {id: 6, name: "Students", icon: "", value: <CountUp end={20} />, style: ""},
+        {id: 7, name: "Students", icon: "", value: <CountUp end={20} />, style: ""},
     ]
 
     if(RoleUser !== null && EmailUser !== null){
