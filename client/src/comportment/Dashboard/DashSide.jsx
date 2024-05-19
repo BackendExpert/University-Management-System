@@ -4,7 +4,8 @@ import  secureLocalStorage  from  "react-secure-storage"
 import MyIcons from '@reacticons/ionicons'
 import SuperAdminImg from '../../assets/SuperAdminWhite.png'
 
-import { PiStudent } from "react-icons/pi";
+import { BsBackpack2Fill } from "react-icons/bs";
+
 
 const DashSide = () => {
     const navigate = useNavigate()
@@ -15,7 +16,7 @@ const DashSide = () => {
     const [sideOpen, SetsideOpen] = useState(true)
 
     const SideLink = [
-        {name: "Dashboard", link: "#", icons: <PiStudent />},
+        {name: "Dashboard", link: "#", icons: <BsBackpack2Fill />},
         {name: "Students", link: "#", icons: "person"},
         {name: "Teachers", link: "#", icons: "person"},
         {name: "Subjects", link: "#", icons: "person"},
@@ -61,8 +62,8 @@ const DashSide = () => {
                                 <Link>
                                     <div className="my-8 mx-2">
                                         <div className="flex">
-                                            <p className=""><MyIcons name={AdminLinks.icons} size='large'></MyIcons></p>
-                                            <p className={` ${sideOpen ? 'visible' : 'invisible'} py-2 pl-4 text-xl`}>{AdminLinks.name}</p>
+                                            <p className="text-3xl">{AdminLinks.icons}</p>
+                                            <p className={` ${sideOpen ? 'visible' : 'invisible'} py-1 pl-4 text-xl`}>{AdminLinks.name}</p>
                                         </div>
                                     </div>
                                 </Link>
