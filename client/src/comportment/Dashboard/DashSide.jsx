@@ -4,7 +4,7 @@ import  secureLocalStorage  from  "react-secure-storage"
 import MyIcons from '@reacticons/ionicons'
 import SuperAdminImg from '../../assets/SuperAdminWhite.png'
 
-import { BsBackpack2Fill } from "react-icons/bs";
+import { BsBackpack2Fill, BsSpeedometer2, BsPersonVideo3, BsFileEarmarkText, BsPeople, BsPersonGear } from "react-icons/bs";
 
 
 const DashSide = () => {
@@ -16,12 +16,12 @@ const DashSide = () => {
     const [sideOpen, SetsideOpen] = useState(true)
 
     const SideLink = [
-        {name: "Dashboard", link: "#", icons: <BsBackpack2Fill />},
-        {name: "Students", link: "#", icons: "person"},
-        {name: "Teachers", link: "#", icons: "person"},
-        {name: "Subjects", link: "#", icons: "person"},
-        {name: "Staff", link: "#", icons: "person"},       
-        {name: "Profile", link: "#", icons: "person"},   
+        {name: "Dashboard", link: "#", icons: <BsSpeedometer2 />},
+        {name: "Students", link: "#", icons: <BsBackpack2Fill />},
+        {name: "Teachers", link: "#", icons: <BsPersonVideo3 />},
+        {name: "Subjects", link: "#", icons: <BsFileEarmarkText />},
+        {name: "Staff", link: "#", icons: <BsPeople />},       
+        {name: "Profile", link: "#", icons: <BsPersonGear />},   
 
         
     ]
