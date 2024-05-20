@@ -10,6 +10,7 @@ import Staff from "./comportment/Staff/Staff";
 import MyProfile from "./comportment/MyStats/MyProfile";
 import Library from "./comportment/Library/Library";
 import MyMarks from "./comportment/MyStats/MyMarks";
+import Departments from "./comportment/Departments/Departments";
 
 
 export default function App() {
@@ -27,6 +28,7 @@ export default function App() {
           <Route path="MyProfile" element={<PrivateRoute><MyProfile /></PrivateRoute>} />
           <Route path="Library" element={<PrivateRoute><Library /></PrivateRoute>} />
           <Route path="MyMarks" element={<PrivateRoute><MyMarks /></PrivateRoute>} />
+          <Route path="Departments" element={<PrivateRoute><Departments /></PrivateRoute>} />
         </Route>
       </Routes>
     </BrowserRouter>
