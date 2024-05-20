@@ -43,20 +43,20 @@ const DashHome = () => {
                                                 <table border={0} className='mx-4'>
                                                     <tr className=''>
                                                         <td className='font-semibold'>Name: </td>
-                                                        <td>Jehan Weerasuriya </td>
+                                                        <td className='pl-4'>Jehan Weerasuriya </td>
                                                     </tr>
                                                     <tr>
-                                                        <td className='font-semibold'>Name: </td>
-                                                        <td>Jehan Weerasuriya </td>
+                                                        <td className='font-semibold'>Admission ID: </td>
+                                                        <td className='pl-4'>Jehan Weerasuriya </td>
                                                     </tr>
                                                     <tr>
-                                                        <td className='font-semibold'>Name: </td>
-                                                        <td>Jehan Weerasuriya </td>
+                                                        <td className='font-semibold'>Admission Date: </td>
+                                                        <td className='pl-4'>Jehan Weerasuriya </td>
                                                     </tr>
 
                                                     <tr>
                                                         <td className='font-semibold'>Name: </td>
-                                                        <td>Jehan Weerasuriya </td>
+                                                        <td className='pl-4'>Jehan Weerasuriya </td>
                                                     </tr>
                                                 </table>
                                             </div>
