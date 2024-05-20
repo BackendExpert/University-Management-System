@@ -4,7 +4,7 @@ import  secureLocalStorage  from  "react-secure-storage"
 import MyIcons from '@reacticons/ionicons'
 import SuperAdminImg from '../../assets/SuperAdminWhite.png'
 
-import { BsBackpack2Fill, BsSpeedometer2, BsPersonVideo3, BsFileEarmarkText, BsPeople, BsPersonGear, BsPower, BsBook, BsPatchCheck, BsBuilding } from "react-icons/bs";
+import { BsBackpack2Fill, BsSpeedometer2, BsPersonVideo3, BsFileEarmarkText, BsPeople, BsPersonGear, BsPower, BsBook, BsPatchCheck, BsBuilding, BsFile, BsMortarboard } from "react-icons/bs";
 
 
 
@@ -28,8 +28,8 @@ const DashSide = () => {
         {id: 6, name: "Library", link: "Library", icons: <BsBook />},   // for labrarian
         {id: 7, name: "My Marks", link: "MyMarks", icons: <BsPatchCheck />},  // student
         {id: 8, name: "Departments", link: "Departments", icons: <BsBuilding />},  
-        {id: 9, name: "Courses", link: "Courses", icons: <BsPersonGear />},  
-        {id: 10, name: "Batches", link: "Batches", icons: <BsPersonGear />},
+        {id: 9, name: "Courses", link: "Courses", icons: <BsMortarboard />},  
+        {id: 10, name: "Batches", link: "Batches", icons: <BsPeople />},
         {id: 11, name: "Profile", link: "MyProfile", icons: <BsPersonGear />},  
 
         {name: "LogOut", icons: <BsPower />},       
