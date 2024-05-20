@@ -30,40 +30,42 @@ const DashHome = () => {
                 <div className="my-4">
                     <p>/ Dashbord /</p>
                 </div>
-                <div className="lg:grid grid-cols-3 gap-4">
+
                 {
                         (() => {
                             if(RoleUser === "Student"){
                                 return (
-                                    <div className="mr-8 my-2 w-full">
-                                        <div className="bg-white  py-4 px-6 rounded shadow-md">
-                                            <h1 className="text-2xl font-semibold">My Information</h1>
-                                            <div className="py-8 px-6 lg:flex">
-                                                <img src="https://cdn-icons-png.flaticon.com/128/2641/2641333.png" alt="" className='h-40'/>
-                                                <table border={0} className='mx-4'>
-                                                    <tr className=''>
-                                                        <td className='font-semibold'>Name: </td>
-                                                        <td className='pl-4 text-gray-500'>Jehan Weerasuriya </td>
-                                                    </tr>
-                                                    <tr>
-                                                        <td className='font-semibold'>Admission ID: </td>
-                                                        <td className='pl-4 text-gray-500'>123456ABCD </td>
-                                                    </tr>
-                                                    <tr>
-                                                        <td className='font-semibold'>Admission Date: </td>
-                                                        <td className='pl-4 text-gray-500'>25/12/2021 </td>
-                                                    </tr>
+                                    <div className="lg:grid grid-cols-3 gap-4">
+                                        <div className="mr-8 my-2 w-full">
+                                            <div className="bg-white  py-4 px-6 rounded shadow-md">
+                                                <h1 className="text-2xl font-semibold">My Information</h1>
+                                                <div className="py-8 px-6 lg:flex">
+                                                    <img src="https://cdn-icons-png.flaticon.com/128/2641/2641333.png" alt="" className='h-40'/>
+                                                    <table border={0} className='mx-4'>
+                                                        <tr className=''>
+                                                            <td className='font-semibold'>Name: </td>
+                                                            <td className='pl-4 text-gray-500'>Jehan Weerasuriya </td>
+                                                        </tr>
+                                                        <tr>
+                                                            <td className='font-semibold'>Admission ID: </td>
+                                                            <td className='pl-4 text-gray-500'>123456ABCD </td>
+                                                        </tr>
+                                                        <tr>
+                                                            <td className='font-semibold'>Admission Date: </td>
+                                                            <td className='pl-4 text-gray-500'>25/12/2021 </td>
+                                                        </tr>
 
-                                                    <tr>
-                                                        <td className='font-semibold'>Gender: </td>
-                                                        <td className='pl-4 text-gray-500'>Male </td>
-                                                    </tr>
-                                                </table>
-                                            </div>
-                                            <div className="">
-                                                <Link>
-                                                    <button className='bg-'></button>
-                                                </Link>
+                                                        <tr>
+                                                            <td className='font-semibold'>Gender: </td>
+                                                            <td className='pl-4 text-gray-500'>Male </td>
+                                                        </tr>
+                                                    </table>
+                                                </div>
+                                                <div className="">
+                                                    <Link>
+                                                        <button className='bg-'></button>
+                                                    </Link>
+                                                </div>
                                             </div>
                                         </div>
                                     </div>
@@ -72,9 +74,23 @@ const DashHome = () => {
                             if(RoleUser === "SuperAdmin") {
                                 return (
                                     <div className="">
-                                        <div className="bg-white rounded shadow-md">
-                                            
+                                        <div className="lg:grid grid-cols-4 gap-4">
+                                            {
+                                                DashData.map((dataDash) => {
+                                                    return (
+                                                        <div className="bg-white rounded shadow-md py-8 px-8">
+                                                            <div className="flex w-full">
+                                                                <div className="">
+                                                                    <h1 className={`text-4xl ${dataDash.style}`}>{dataDash.value}</h1>
+                                                                    <p className="py-2 text-xl">{dataDash.name}</p>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                    )
+                                                })
+                                            }
                                         </div>
+
                                     </div>
                                 )
                             }
@@ -83,7 +99,7 @@ const DashHome = () => {
 
                     
 
-                </div>
+                
 
             </div>
         )
