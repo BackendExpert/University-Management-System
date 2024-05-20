@@ -80,6 +80,11 @@ const DashSide = () => {
                                                 <p>Student</p>
                                             )
                                         }
+                                        if(RoleUser === "Hod"){
+                                            return (
+                                                <p>Hend of Dept</p>
+                                            )
+                                        }
                                     })()
                                 }
                                 
