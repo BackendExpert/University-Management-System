@@ -118,8 +118,8 @@ const DashHome = () => {
                                                     <hr  className='mt-4'/>                                              
                                                     <div className="py-8 px-6 lg:flex">
                                                         <img src="https://cdn-icons-png.flaticon.com/128/3755/3755243.png" alt="" className='h-40'/>
-                                                        <div className="">
-                                                            <p className="">3.25</p>
+                                                        <div className="text-center w-full">
+                                                            <p className="text-5xl">3.25</p>
                                                             <p className="">OverRoll GPA</p>
                                                             <p className="">Second Upper</p>
                                                         </div>
