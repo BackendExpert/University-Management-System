@@ -27,6 +27,11 @@ const DashNav = () => {
                                     <p className="text-gray-500 text-2xl font-semibold">SuperAdmin Dashbord</p>
                                 )
                             }
+                            if(RoleUser === "Student"){
+                                return (
+                                    <p className="text-gray-500 text-2xl font-semibold">Student Dashbord</p>
+                                )
+                            }
                         })()
                     }
                 </div>
