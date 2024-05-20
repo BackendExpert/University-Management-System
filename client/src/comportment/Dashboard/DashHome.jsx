@@ -167,7 +167,7 @@ const DashHome = () => {
                                                             </div>
                                                         </div>
                                                         <div className="text-white py-6 px-8 bg-gradient-to-r from-indigo-500 via-purple-500 to-pink-500 rounded">
-                                                            All Students
+                                                            All {dataDash.name}
                                                         </div>
                                                     </div>
                                                     )
@@ -199,7 +199,7 @@ const DashHome = () => {
                                                                     </div>
                                                                 </div>
                                                                 <div className="text-white py-6 px-8 bg-gradient-to-r from-indigo-500 via-purple-500 to-pink-500 rounded">
-                                                                    All Students
+                                                                    All {dataDash.name}
                                                                 </div>
                                                             </div>
                                                         )
