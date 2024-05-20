@@ -4,7 +4,7 @@ import  secureLocalStorage  from  "react-secure-storage"
 import CountUp from 'react-countup'
 import UserImg from '../../assets/SuperAdmin.png'
 
-import { BsBackpack2Fill, BsSpeedometer2, BsPersonVideo3, BsFileEarmarkText, BsPeople, BsPersonGear, BsPower, BsMortarboard } from "react-icons/bs";
+import { BsBackpack2Fill, BsSpeedometer2, BsPersonVideo3, BsFileEarmarkText, BsPeople, BsPersonGear, BsPower, BsMortarboard, BsBuilding } from "react-icons/bs";
 
 const DashHome = () => {
     const navigate = useNavigate()
@@ -20,7 +20,7 @@ const DashHome = () => {
         {id: 3, name: "Subjects", icon: <BsFileEarmarkText />, value: <CountUp end={20} />, style: "text-yellow-500"},
         {id: 4, name: "Staff", icon: <BsPeople />, value: <CountUp end={20} />, style: "text-red-500"},
         {id: 5, name: "Courses", icon: <BsMortarboard />, value: <CountUp end={20} />, style: "text-purple-500"},
-        {id: 6, name: "Departments", icon: <BsBackpack2Fill />, value: <CountUp end={20} />, style: "text-yellow-500"},
+        {id: 6, name: "Departments", icon: <BsBuilding />, value: <CountUp end={20} />, style: "text-yellow-500"},
 
     ]
 
@@ -35,36 +35,59 @@ const DashHome = () => {
                         (() => {
                             if(RoleUser === "Student"){
                                 return (
-                                    <div className="lg:grid grid-cols-3 gap-4">
-                                        <div className="mr-8 my-2 w-full">
-                                            <div className="bg-white  py-4 px-6 rounded shadow-md">
-                                                <h1 className="text-2xl font-semibold">My Information</h1>
-                                                <div className="py-8 px-6 lg:flex">
-                                                    <img src="https://cdn-icons-png.flaticon.com/128/2641/2641333.png" alt="" className='h-40'/>
-                                                    <table border={0} className='mx-4'>
-                                                        <tr className=''>
-                                                            <td className='font-semibold'>Name: </td>
-                                                            <td className='pl-4 text-gray-500'>Jehan Weerasuriya </td>
-                                                        </tr>
-                                                        <tr>
-                                                            <td className='font-semibold'>Admission ID: </td>
-                                                            <td className='pl-4 text-gray-500'>123456ABCD </td>
-                                                        </tr>
-                                                        <tr>
-                                                            <td className='font-semibold'>Admission Date: </td>
-                                                            <td className='pl-4 text-gray-500'>25/12/2021 </td>
-                                                        </tr>
+                                    <div className="">
+                                        <div className="lg:grid grid-cols-3 gap-4">
+                                            <div className="mr-8 my-2 w-full">
+                                                <div className="bg-white py-4 px-6 rounded shadow-md">
+                                                    <h1 className="text-2xl font-semibold text-gray-500">My Information</h1>
+                                                    <div className="py-8 px-6 lg:flex">
+                                                        <img src="https://cdn-icons-png.flaticon.com/128/2641/2641333.png" alt="" className='h-40'/>
+                                                        <table border={0} className='mx-4'>
+                                                            <tr className=''>
+                                                                <td className='font-semibold'>Name: </td>
+                                                                <td className='pl-4 text-gray-500'>Jehan Weerasuriya </td>
+                                                            </tr>
+                                                            <tr>
+                                                                <td className='font-semibold'>Admission ID: </td>
+                                                                <td className='pl-4 text-gray-500'>123456ABCD </td>
+                                                            </tr>
+                                                            <tr>
+                                                                <td className='font-semibold'>Admission Date: </td>
+                                                                <td className='pl-4 text-gray-500'>25/12/2021 </td>
+                                                            </tr>
 
-                                                        <tr>
-                                                            <td className='font-semibold'>Gender: </td>
-                                                            <td className='pl-4 text-gray-500'>Male </td>
-                                                        </tr>
-                                                    </table>
+                                                            <tr>
+                                                                <td className='font-semibold'>Gender: </td>
+                                                                <td className='pl-4 text-gray-500'>Male </td>
+                                                            </tr>
+                                                        </table>
+                                                    </div>
+                                                    <div className="">
+                                                        <Link to={'/Dashboard/MyProfile'}>
+                                                            <button type="button" class="rounded text-white bg-gradient-to-r from-indigo-500 via-purple-500 to-pink-500 duration-500 py-2 px-6 hover:shadow-md">
+                                                                More
+                                                            </button>
+                                                        </Link>
+                                                    </div>
                                                 </div>
-                                                <div className="">
-                                                    <Link>
-                                                        <button className='bg-'></button>
-                                                    </Link>
+                                            </div>
+                                            <div className="mr-8 my-2 w-full">
+                                                <div className="bg-white h-full shadow-md py-4 px-6 rounded ">                                                    
+                                                    <h1 className="text-2xl font-semibold text-gray-500">My Course</h1>
+                                                    <div className="py-8 px-6 lg:flex">
+                                                        <img src="https://cdn-icons-png.flaticon.com/128/2641/2641333.png" alt="" className='h-40'/>
+                                                        
+                                                    </div>
+                                                    
+                                                </div>
+                                            </div>
+                                            <div className="mr-8 my-2 w-full">
+                                                <div className="bg-white h-full shadow-md py-4 px-6 rounded">
+                                                    <h1 className="text-2xl font-semibold text-gray-500">Current GPA</h1>                                                    
+                                                    <div className="py-8 px-6 lg:flex">
+                                                        <img src="https://cdn-icons-png.flaticon.com/128/2641/2641333.png" alt="" className='h-40'/>
+                                                    
+                                                    </div> 
                                                 </div>
                                             </div>
                                         </div>
@@ -78,6 +101,7 @@ const DashHome = () => {
                                             {
                                                 DashData.map((dataDash) => {
                                                     return (
+                                                    <div className="">
                                                         <div className="bg-white rounded shadow-md py-12 px-8">
                                                             <div className="flex w-full justify-between">
                                                                 <div className="">
@@ -89,6 +113,10 @@ const DashHome = () => {
                                                                 </div>
                                                             </div>
                                                         </div>
+                                                        <div className="text-white py-6 px-8 bg-gradient-to-r from-indigo-500 via-purple-500 to-pink-500 rounded">
+                                                            All Students
+                                                        </div>
+                                                    </div>
                                                     )
                                                 })
                                             }
