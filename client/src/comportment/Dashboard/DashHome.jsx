@@ -40,6 +40,7 @@ const DashHome = () => {
                                             <div className="mr-8 my-2 w-full">
                                                 <div className="bg-white py-4 px-6 rounded shadow-md">
                                                     <h1 className="text-2xl font-semibold text-gray-500">My Information</h1>
+                                                    <hr  className='mt-4'/>
                                                     <div className="py-8 px-6 lg:flex">
                                                         <img src="https://cdn-icons-png.flaticon.com/128/2641/2641333.png" alt="" className='h-40'/>
                                                         <table border={0} className='mx-4'>
@@ -74,18 +75,38 @@ const DashHome = () => {
                                             <div className="mr-8 my-2 w-full">
                                                 <div className="bg-white h-full shadow-md py-4 px-6 rounded ">                                                    
                                                     <h1 className="text-2xl font-semibold text-gray-500">My Course</h1>
+                                                    <hr  className='mt-4'/>
                                                     <div className="py-8 px-6 lg:flex">
-                                                        <img src="https://cdn-icons-png.flaticon.com/128/2641/2641333.png" alt="" className='h-40'/>
-                                                        
+                                                        <img src="https://cdn-icons-png.flaticon.com/128/2997/2997322.png" alt="" className='h-40'/>
+                                                        <table border={0} className='mx-4'>
+                                                            <tr className=''>
+                                                                <td className='font-semibold'>Course Name: </td>
+                                                                <td className='pl-4 text-gray-500'> </td>
+                                                            </tr>
+                                                            <tr>
+                                                                <td className='font-semibold'>Course Code: </td>
+                                                                <td className='pl-4 text-gray-500'>IT5/BSC </td>
+                                                            </tr>
+                                                            <tr>
+                                                                <td className='font-semibold'>Batch No: </td>
+                                                                <td className='pl-4 text-gray-500'>BSC/IT/01 </td>
+                                                            </tr>
+
+                                                            <tr>
+                                                                <td className='font-semibold'>Registation No: </td>
+                                                                <td className='pl-4 text-gray-500'>ABC/123/23D </td>
+                                                            </tr>
+                                                        </table>
                                                     </div>
                                                     
                                                 </div>
                                             </div>
                                             <div className="mr-8 my-2 w-full">
                                                 <div className="bg-white h-full shadow-md py-4 px-6 rounded">
-                                                    <h1 className="text-2xl font-semibold text-gray-500">Current GPA</h1>                                                    
+                                                    <h1 className="text-2xl font-semibold text-gray-500">Current GPA</h1>      
+                                                    <hr  className='mt-4'/>                                              
                                                     <div className="py-8 px-6 lg:flex">
-                                                        <img src="https://cdn-icons-png.flaticon.com/128/2641/2641333.png" alt="" className='h-40'/>
+                                                        <img src="https://cdn-icons-png.flaticon.com/128/3755/3755243.png" alt="" className='h-40'/>
                                                     
                                                     </div> 
                                                 </div>
