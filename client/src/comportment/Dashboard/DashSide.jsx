@@ -26,7 +26,7 @@ const DashSide = () => {
         {id: 4, name: "Subjects", link: "Subjects", icons: <BsFileEarmarkText />}, 
         {id: 5, name: "Staff", link: "Staff", icons: <BsPeople />},       
         {id: 6, name: "Library", link: "Library", icons: <BsBook />},   // for labrarian
-        {id: 7, name: "My Marks", link: "MyMarks", icons: <BsPersonGear />},  // student
+        {id: 7, name: "My Marks", link: "MyMarks", icons: <BsPatchCheck />},  // student
         {id: 8, name: "Profile", link: "MyProfile", icons: <BsPersonGear />},  
 
         {name: "LogOut", icons: <BsPower />},       
@@ -120,7 +120,7 @@ const DashSide = () => {
                                     )
                                 }
                                 if(RoleUser === "Student"){
-                                    if(AdminLinks.id === 1){
+                                    if(AdminLinks.id === 1 || AdminLinks.id === 7 || AdminLinks.id === 8){
                                         return (
                                             <Link to={AdminLinks.link}>
                                                 <div className="my-8 mx-2">
