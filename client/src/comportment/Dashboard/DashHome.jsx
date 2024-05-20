@@ -43,23 +43,37 @@ const DashHome = () => {
                                                 <table border={0} className='mx-4'>
                                                     <tr className=''>
                                                         <td className='font-semibold'>Name: </td>
-                                                        <td className='pl-4'>Jehan Weerasuriya </td>
+                                                        <td className='pl-4 text-gray-500'>Jehan Weerasuriya </td>
                                                     </tr>
                                                     <tr>
                                                         <td className='font-semibold'>Admission ID: </td>
-                                                        <td className='pl-4'>Jehan Weerasuriya </td>
+                                                        <td className='pl-4 text-gray-500'>123456ABCD </td>
                                                     </tr>
                                                     <tr>
                                                         <td className='font-semibold'>Admission Date: </td>
-                                                        <td className='pl-4'>Jehan Weerasuriya </td>
+                                                        <td className='pl-4 text-gray-500'>25/12/2021 </td>
                                                     </tr>
 
                                                     <tr>
-                                                        <td className='font-semibold'>Name: </td>
-                                                        <td className='pl-4'>Jehan Weerasuriya </td>
+                                                        <td className='font-semibold'>Gender: </td>
+                                                        <td className='pl-4 text-gray-500'>Male </td>
                                                     </tr>
                                                 </table>
                                             </div>
+                                            <div className="">
+                                                <Link>
+                                                    <button className='bg-'></button>
+                                                </Link>
+                                            </div>
+                                        </div>
+                                    </div>
+                                )
+                            }
+                            if(RoleUser === "SuperAdmin") {
+                                return (
+                                    <div className="">
+                                        <div className="bg-white rounded shadow-md">
+                                            
                                         </div>
                                     </div>
                                 )
