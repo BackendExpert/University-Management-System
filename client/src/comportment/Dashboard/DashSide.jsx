@@ -26,7 +26,7 @@ const DashSide = () => {
         {id: 4, name: "Subjects", link: "Subjects", icons: <BsFileEarmarkText />}, 
         {id: 5, name: "Staff", link: "Staff", icons: <BsPeople />},       
         {id: 6, name: "Library", link: "Library", icons: <BsBook />},   // for labrarian
-        {id: 7, name: "My Marks", link: "MyMarks", icons: <BsPatchCheck />},  // student
+        {id: 7, name: "Marks", link: "MyMarks", icons: <BsPatchCheck />},  // student
         {id: 8, name: "Departments", link: "Departments", icons: <BsBuilding />},  
         {id: 9, name: "Courses", link: "Courses", icons: <BsMortarboard />},  
         {id: 10, name: "Batches", link: "Batches", icons: <BsPeople />},
