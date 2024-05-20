@@ -78,11 +78,14 @@ const DashHome = () => {
                                             {
                                                 DashData.map((dataDash) => {
                                                     return (
-                                                        <div className="bg-white rounded shadow-md py-8 px-8">
-                                                            <div className="flex w-full">
+                                                        <div className="bg-white rounded shadow-md py-12 px-8">
+                                                            <div className="flex w-full justify-between">
                                                                 <div className="">
                                                                     <h1 className={`text-4xl ${dataDash.style}`}>{dataDash.value}</h1>
                                                                     <p className="py-2 text-xl">{dataDash.name}</p>
+                                                                </div>
+                                                                <div className="">
+                                                                    <p className="text-5xl text-gray-500">{dataDash.icon}</p>
                                                                 </div>
                                                             </div>
                                                         </div>
