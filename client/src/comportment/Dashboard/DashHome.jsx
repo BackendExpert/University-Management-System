@@ -30,7 +30,7 @@ const DashHome = () => {
                 <div className="my-4">
                     <p>/ Dashbord /</p>
                 </div>
-                <div className={` ${RoleUser === "Student" ? 'lg:flex' : ''}`}>
+                <div className="lg:grid grid-cols-3 gap-4">
                 {
                         (() => {
                             if(RoleUser === "Student"){
@@ -66,30 +66,7 @@ const DashHome = () => {
                         })()
                     }
 
-                    <div className={`lg:grid ${RoleUser === "Student" ? ' grid-cols-2 w-full' : ' grid-cols-4' } gap-4 my-2`}>
-                        {
-                            DashData.map((dataDash) => {
-                                return (
-                                    <div className="">
-                                        <div className={` text-gray-500 rounded bg-white shadow-md`}>
-                                            <div className="py-8 px-8 flex justify-between py-8">
-                                                <div className="">
-                                                    <h1 className={`text-4xl py-2 font-semibold ${dataDash.style}`}>{dataDash.value}</h1>
-                                                    <p className="">{dataDash.name}</p>
-                                                </div>
-                                                <div className="">
-                                                    <h1 className="text-5xl">{dataDash.icon}</h1>
-                                                </div>
-                                            </div>
-                                            <div className="py-4 pl-4 text-white font-semibold bg-gradient-to-r from-cyan-500 to-green-500">
-                                                All {dataDash.name}
-                                            </div>
-                                        </div>
-                                    </div>
-                                )
-                            })
-                        }
-                    </div>
+                    
 
                 </div>
 
