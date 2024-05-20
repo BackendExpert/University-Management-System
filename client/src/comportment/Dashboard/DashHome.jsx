@@ -81,7 +81,7 @@ const DashHome = () => {
                                                         <table border={0} className='mx-4'>
                                                             <tr className=''>
                                                                 <td className='font-semibold'>Course Name: </td>
-                                                                <td className='pl-4 text-gray-500'> </td>
+                                                                <td className='pl-4 text-gray-500'>BSc in IT </td>
                                                             </tr>
                                                             <tr>
                                                                 <td className='font-semibold'>Course Code: </td>
@@ -98,6 +98,13 @@ const DashHome = () => {
                                                             </tr>
                                                         </table>
                                                     </div>
+                                                    <div className="">
+                                                        <Link to={'#'}>
+                                                            <button type="button" class="rounded text-white bg-gradient-to-r from-indigo-500 via-purple-500 to-pink-500 duration-500 py-2 px-6 hover:shadow-md">
+                                                                More
+                                                            </button>
+                                                        </Link>
+                                                    </div>
                                                     
                                                 </div>
                                             </div>
@@ -107,8 +114,33 @@ const DashHome = () => {
                                                     <hr  className='mt-4'/>                                              
                                                     <div className="py-8 px-6 lg:flex">
                                                         <img src="https://cdn-icons-png.flaticon.com/128/3755/3755243.png" alt="" className='h-40'/>
-                                                    
+                                                        <table border={0} className='mx-4'>
+                                                            <tr className=''>
+                                                                <td className='font-semibold'>Year: </td>
+                                                                <td className='pl-4 text-gray-500'>2nd </td>
+                                                            </tr>
+                                                            <tr>
+                                                                <td className='font-semibold'>Semester: </td>
+                                                                <td className='pl-4 text-gray-500'>3rd </td>
+                                                            </tr>
+                                                            <tr>
+                                                                <td className='font-semibold'>Semester GPA: </td>
+                                                                <td className='pl-4 text-gray-500'>3.62 </td>
+                                                            </tr>
+
+                                                            <tr>
+                                                                <td className='font-semibold'>OverRoll GPA: </td>
+                                                                <td className='pl-4 text-gray-500'>3.30 </td>
+                                                            </tr>
+                                                        </table>
                                                     </div> 
+                                                    <div className="">
+                                                        <Link to={'#'}>
+                                                            <button type="button" class="rounded text-white bg-gradient-to-r from-indigo-500 via-purple-500 to-pink-500 duration-500 py-2 px-6 hover:shadow-md">
+                                                                More
+                                                            </button>
+                                                        </Link>
+                                                    </div>
                                                 </div>
                                             </div>
                                         </div>
