@@ -38,8 +38,26 @@ const DashHome = () => {
                                     <div className="mr-8 my-2 w-full">
                                         <div className="bg-white  py-4 px-6 rounded shadow-md">
                                             <h1 className="text-2xl font-semibold">My Information</h1>
-                                            <div className="py-8 px-6">
+                                            <div className="py-8 px-6 flex">
                                                 <img src="https://cdn-icons-png.flaticon.com/128/2641/2641333.png" alt="" className='h-40'/>
+                                                <div className="mx-8">
+                                                    <div className="flex">
+                                                        <p className="">Name : </p>
+                                                        <p className="">Jehan Weerasuriya</p>
+                                                    </div>
+                                                    <div className="flex">
+                                                        <p className="">Name : </p>
+                                                        <p className="">Jehan Weerasuriya</p>
+                                                    </div>
+                                                    <div className="flex">
+                                                        <p className="">Name : </p>
+                                                        <p className="">Jehan Weerasuriya</p>
+                                                    </div>
+                                                    <div className="flex">
+                                                        <p className="">Name : </p>
+                                                        <p className="">Jehan Weerasuriya</p>
+                                                    </div>
+                                                </div>
                                             </div>
                                         </div>
                                     </div>
