@@ -118,25 +118,11 @@ const DashHome = () => {
                                                     <hr  className='mt-4'/>                                              
                                                     <div className="py-8 px-6 lg:flex">
                                                         <img src="https://cdn-icons-png.flaticon.com/128/3755/3755243.png" alt="" className='h-40'/>
-                                                        <table border={0} className='mx-4'>
-                                                            <tr className=''>
-                                                                <td className='font-semibold'>Year: </td>
-                                                                <td className='pl-4 text-gray-500'>2nd </td>
-                                                            </tr>
-                                                            <tr>
-                                                                <td className='font-semibold'>Semester: </td>
-                                                                <td className='pl-4 text-gray-500'>3rd </td>
-                                                            </tr>
-                                                            <tr>
-                                                                <td className='font-semibold'>Semester GPA: </td>
-                                                                <td className='pl-4 text-gray-500'>3.62 </td>
-                                                            </tr>
-
-                                                            <tr>
-                                                                <td className='font-semibold'>OverRoll GPA: </td>
-                                                                <td className='pl-4 text-gray-500'>3.30 </td>
-                                                            </tr>
-                                                        </table>
+                                                        <div className="">
+                                                            <p className="">3.25</p>
+                                                            <p className="">OverRoll GPA</p>
+                                                            <p className="">Second Upper</p>
+                                                        </div>
                                                     </div> 
                                                     <div className="">
                                                         <Link to={'#'}>
