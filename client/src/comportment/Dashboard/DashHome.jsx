@@ -40,24 +40,12 @@ const DashHome = () => {
                                             <h1 className="text-2xl font-semibold">My Information</h1>
                                             <div className="py-8 px-6 flex">
                                                 <img src="https://cdn-icons-png.flaticon.com/128/2641/2641333.png" alt="" className='h-40'/>
-                                                <div className="mx-8">
-                                                    <div className="flex">
-                                                        <p className="">Name : </p>
-                                                        <p className="">Jehan Weerasuriya</p>
-                                                    </div>
-                                                    <div className="flex">
-                                                        <p className="">Name : </p>
-                                                        <p className="">Jehan Weerasuriya</p>
-                                                    </div>
-                                                    <div className="flex">
-                                                        <p className="">Name : </p>
-                                                        <p className="">Jehan Weerasuriya</p>
-                                                    </div>
-                                                    <div className="flex">
-                                                        <p className="">Name : </p>
-                                                        <p className="">Jehan Weerasuriya</p>
-                                                    </div>
-                                                </div>
+                                                <table border={0} className='-mt-28'>
+                                                    <tr>
+                                                        <td>Name: </td>
+                                                        <td>Jehan Weerasuriya </td>
+                                                    </tr>
+                                                </table>
                                             </div>
                                         </div>
                                     </div>
