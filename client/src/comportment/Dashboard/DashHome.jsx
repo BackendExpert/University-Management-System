@@ -54,9 +54,9 @@ const DashHome = () => {
                             })
                         }
                     </div>
-                    <div className="mx-4 my-2">
-                        <div className="bg-white w-full py-4 px-6 rounded shadow-md">
-                            Lorem, ipsum dolor sit amet consectetur adipisicing elit. Voluptatibus hic praesentium tenetur odio mollitia? Ut doloremque, repellat maiores ipsam assumenda, sint voluptatem, eaque ipsum dolor beatae rerum laboriosam iure tenetur.
+                    <div className="mx-4 my-2 w-full">
+                        <div className="bg-white  py-4 px-6 rounded shadow-md">
+                            <h1 className="text-2xl font-semibold">My Information</h1>
                         </div>
                     </div>
                 </div>
