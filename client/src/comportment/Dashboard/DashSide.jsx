@@ -4,7 +4,7 @@ import  secureLocalStorage  from  "react-secure-storage"
 import MyIcons from '@reacticons/ionicons'
 import SuperAdminImg from '../../assets/SuperAdminWhite.png'
 
-import { BsBackpack2Fill, BsSpeedometer2, BsPersonVideo3, BsFileEarmarkText, BsPeople, BsPersonGear, BsPower, BsBook, BsPatchCheck } from "react-icons/bs";
+import { BsBackpack2Fill, BsSpeedometer2, BsPersonVideo3, BsFileEarmarkText, BsPeople, BsPersonGear, BsPower, BsBook, BsPatchCheck, BsBuilding } from "react-icons/bs";
 
 
 
@@ -27,7 +27,10 @@ const DashSide = () => {
         {id: 5, name: "Staff", link: "Staff", icons: <BsPeople />},       
         {id: 6, name: "Library", link: "Library", icons: <BsBook />},   // for labrarian
         {id: 7, name: "My Marks", link: "MyMarks", icons: <BsPatchCheck />},  // student
-        {id: 8, name: "Profile", link: "MyProfile", icons: <BsPersonGear />},  
+        {id: 8, name: "Departments", link: "Departments", icons: <BsBuilding />},  
+        {id: 9, name: "Courses", link: "Courses", icons: <BsPersonGear />},  
+        {id: 10, name: "Batches", link: "Batches", icons: <BsPersonGear />},
+        {id: 11, name: "Profile", link: "MyProfile", icons: <BsPersonGear />},  
 
         {name: "LogOut", icons: <BsPower />},       
     ]
@@ -125,6 +128,20 @@ const DashSide = () => {
                                     )
                                 }
                                 if(RoleUser === "Student"){
+                                    if(AdminLinks.id === 1 || AdminLinks.id === 7 || AdminLinks.id === 11){
+                                        return (
+                                            <Link to={AdminLinks.link}>
+                                                <div className="my-8 mx-2">
+                                                    <div className="flex">
+                                                        <p className="text-3xl">{AdminLinks.icons}</p>
+                                                        <p className={` ${sideOpen ? 'visible' : 'invisible'} py-1 pl-4 text-xl`}>{AdminLinks.name}</p>
+                                                    </div>
+                                                </div>
+                                            </Link>
+                                        )
+                                    }
+                                }
+                                if(RoleUser === "Hod"){
                                     if(AdminLinks.id === 1 || AdminLinks.id === 7 || AdminLinks.id === 8){
                                         return (
                                             <Link to={AdminLinks.link}>
