@@ -18,7 +18,7 @@ const DashNav = () => {
     
     if(RoleUser !== null && EmailUser !== null){
         return (
-            <div className='bg-white py-4 px-8 rounded-xl shadow-xl mb-8'>
+            <div className='bg-white py-8 px-8 rounded-xl shadow-xl mb-8'>
                 <div className="flex ">
                     {
                         (() => {
@@ -30,6 +30,11 @@ const DashNav = () => {
                             if(RoleUser === "Student"){
                                 return (
                                     <p className="text-gray-500 text-2xl font-semibold">Student Dashbord</p>
+                                )
+                            }
+                            if(RoleUser === "Hod"){
+                                return (
+                                    <p className="text-gray-500 text-2xl font-semibold">Head of Dept Dashbord</p>
                                 )
                             }
                         })()
