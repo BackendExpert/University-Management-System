@@ -178,6 +178,39 @@ const DashHome = () => {
                                     </div>
                                 )
                             }
+                            if(RoleUser === "Hod") {
+                                return (
+                                    <div className="">
+                                        <div className="lg:grid grid-cols-4 gap-4">
+                                            {
+                                                DashData.map((dataDash) => {
+                                                    if(dataDash.id !== 4 && dataDash.id !== 6){
+                                                        return (
+                                                            <div className="">
+                                                                <div className="bg-white rounded shadow-md py-12 px-8">
+                                                                    <div className="flex w-full justify-between">
+                                                                        <div className="">
+                                                                            <h1 className={`text-4xl ${dataDash.style}`}>{dataDash.value}</h1>
+                                                                            <p className="py-2 text-xl">{dataDash.name}</p>
+                                                                        </div>
+                                                                        <div className="">
+                                                                            <p className="text-5xl text-gray-500">{dataDash.icon}</p>
+                                                                        </div>
+                                                                    </div>
+                                                                </div>
+                                                                <div className="text-white py-6 px-8 bg-gradient-to-r from-indigo-500 via-purple-500 to-pink-500 rounded">
+                                                                    All Students
+                                                                </div>
+                                                            </div>
+                                                        )
+                                                    }
+                                                })
+                                            }
+                                        </div>
+
+                                    </div>
+                                )
+                            }
                         })()
                     }
 
