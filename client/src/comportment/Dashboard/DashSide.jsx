@@ -104,16 +104,18 @@ const DashSide = () => {
                                 )
                             }
                             else{
-                                return (
-                                    <Link to={AdminLinks.link}>
-                                        <div className="my-8 mx-2">
-                                            <div className="flex">
-                                                <p className="text-3xl">{AdminLinks.icons}</p>
-                                                <p className={` ${sideOpen ? 'visible' : 'invisible'} py-1 pl-4 text-xl`}>{AdminLinks.name}</p>
+                                if(RoleUser === "SuperAdmin"){
+                                    return (
+                                        <Link to={AdminLinks.link}>
+                                            <div className="my-8 mx-2">
+                                                <div className="flex">
+                                                    <p className="text-3xl">{AdminLinks.icons}</p>
+                                                    <p className={` ${sideOpen ? 'visible' : 'invisible'} py-1 pl-4 text-xl`}>{AdminLinks.name}</p>
+                                                </div>
                                             </div>
-                                        </div>
-                                    </Link>
-                                )
+                                        </Link>
+                                    )
+                                }
                             }
                         })
                     }
