@@ -2,6 +2,7 @@ import React, { useState } from 'react'
 import { Link, useNavigate } from 'react-router-dom';
 import  secureLocalStorage  from  "react-secure-storage"
 import CountUp from 'react-countup'
+import UserImg from '../../assets/SuperAdmin.png'
 
 import { BsBackpack2Fill, BsSpeedometer2, BsPersonVideo3, BsFileEarmarkText, BsPeople, BsPersonGear, BsPower } from "react-icons/bs";
 
@@ -57,6 +58,9 @@ const DashHome = () => {
                     <div className="mx-4 my-2 w-full">
                         <div className="bg-white  py-4 px-6 rounded shadow-md">
                             <h1 className="text-2xl font-semibold">My Information</h1>
+                            <div className="py-8 px-6">
+                                <img src="https://cdn-icons-png.flaticon.com/128/2641/2641333.png" alt="" className='h-40'/>
+                            </div>
                         </div>
                     </div>
                 </div>
