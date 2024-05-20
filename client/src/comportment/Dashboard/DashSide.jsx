@@ -19,13 +19,13 @@ const DashSide = () => {
     const [sideOpen, SetsideOpen] = useState(true)
 
     const SideLink = [
-        {name: "Dashboard", link: "Home", icons: <BsSpeedometer2 />},
-        {name: "Students", link: "Students", icons: <BsBackpack2Fill />},
-        {name: "Teachers", link: "Teachers", icons: <BsPersonVideo3 />},
-        {name: "Subjects", link: "Subjects", icons: <BsFileEarmarkText />}, 
-        {name: "Staff", link: "Staff", icons: <BsPeople />},       
-        {name: "Library", link: "Library", icons: <BsBook />},   // for labrarian
-        {name: "Profile", link: "MyProfile", icons: <BsPersonGear />},  
+        {id: 1, name: "Dashboard", link: "Home", icons: <BsSpeedometer2 />},
+        {id: 2, name: "Students", link: "Students", icons: <BsBackpack2Fill />},
+        {id: 3, name: "Teachers", link: "Teachers", icons: <BsPersonVideo3 />},
+        {id: 4, name: "Subjects", link: "Subjects", icons: <BsFileEarmarkText />}, 
+        {id: 5, name: "Staff", link: "Staff", icons: <BsPeople />},       
+        {id: 6, name: "Library", link: "Library", icons: <BsBook />},   // for labrarian
+        {id: 7, name: "Profile", link: "MyProfile", icons: <BsPersonGear />},  
         {name: "LogOut", icons: <BsPower />},       
     ]
 
@@ -115,6 +115,20 @@ const DashSide = () => {
                                             </div>
                                         </Link>
                                     )
+                                }
+                                if(RoleUser === "Student"){
+                                    if(AdminLinks.id === 1){
+                                        return (
+                                            <Link to={AdminLinks.link}>
+                                                <div className="my-8 mx-2">
+                                                    <div className="flex">
+                                                        <p className="text-3xl">{AdminLinks.icons}</p>
+                                                        <p className={` ${sideOpen ? 'visible' : 'invisible'} py-1 pl-4 text-xl`}>{AdminLinks.name}</p>
+                                                    </div>
+                                                </div>
+                                            </Link>
+                                        )
+                                    }
                                 }
                             }
                         })
