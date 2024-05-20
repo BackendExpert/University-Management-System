@@ -65,7 +65,21 @@ const DashSide = () => {
                         sideOpen ? 
                             <div className="my-4">
                                 <h1 className="text-2xl my-2 pl-2">ABC Campus</h1>
-                                <p>SuperAdmin</p>
+                                {
+                                    (() => {
+                                        if(RoleUser === "SuperAdmin"){
+                                            return (
+                                                <p>SuperAdmin</p>
+                                            )
+                                        }
+                                        if(RoleUser === "Student"){
+                                            return (
+                                                <p>Student</p>
+                                            )
+                                        }
+                                    })()
+                                }
+                                
                             </div>
 
                         :
