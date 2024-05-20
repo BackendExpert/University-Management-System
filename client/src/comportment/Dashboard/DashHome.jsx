@@ -24,6 +24,10 @@ const DashHome = () => {
 
     ]
 
+    const studentData = [
+        {id: 1, name: "", icons: '', value: <CountUp end={20} />, style: ""}
+    ]
+
     if(RoleUser !== null && EmailUser !== null){
         return (
             <div className='mx-8'>
