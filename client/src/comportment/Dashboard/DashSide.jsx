@@ -121,7 +121,7 @@ const DashSide = () => {
                                             <div className="my-8 mx-2">
                                                 <div className="flex">
                                                     <p className="text-3xl">{AdminLinks.icons}</p>
-                                                    <p className={` ${!isOpen ? 'visible' : 'invisible'} py-1 pl-4 text-xl`}>{AdminLinks.name}</p>
+                                                    <p className={` py-1 pl-4 text-xl`}>{AdminLinks.name}</p>
                                                 </div>
                                             </div>
                                         </Link>
@@ -148,7 +148,7 @@ const DashSide = () => {
                                                 <div className="my-8 mx-2">
                                                     <div className="flex">
                                                         <p className="text-3xl">{AdminLinks.icons}</p>
-                                                        <p className={` ${!isOpen ? 'visible' : 'invisible'} py-1 pl-4 text-xl`}>{AdminLinks.name}</p>
+                                                        <p className={` py-1 pl-4 text-xl`}>{AdminLinks.name}</p>
                                                     </div>
                                                 </div>
                                             </Link>
