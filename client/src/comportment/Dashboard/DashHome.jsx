@@ -49,7 +49,7 @@ const DashHome = () => {
                                                     <hr  className='mt-4'/>
                                                     <div className="py-8 px-6">
                                                         <img src="https://cdn-icons-png.flaticon.com/128/2641/2641333.png" alt="" className='h-40'/>
-                                                        <table border={0} className='mx-4'>
+                                                        <table border={0} className=''>
                                                             <tr className=''>
                                                                 <td className='font-semibold'>Name: </td>
                                                                 <td className='pl-4 text-gray-500'>Jehan Weerasuriya </td>
