@@ -55,8 +55,8 @@ const DashSide = () => {
     localStorage.setItem("darkMode", ModeDark) 
     return (
         <div className="">
-            <div className={` ${sideOpen ? 'w-72' : 'w-20'} bg-gray-800 text-white border-r-2 border-gray-400 duration-500 h-screen px-4 shadow-md`}>
-                <div className="lg:invisible visible">
+            <div className={` ${sideOpen ? 'w-72' : 'w-20'} bg-gray-800 text-white border-r-2 border-gray-400 duration-500 h-full px-4 shadow-md`}>
+                <div className="">
                 {
                     sideOpen ? 
                         <p className="" onClick={() => SetsideOpen(false)}><MyIcons name='arrow-back-circle' size='large'></MyIcons></p>
