@@ -56,9 +56,16 @@ const DashSide = () => {
         SetModeDark(false)
     }
 
+
     localStorage.setItem("darkMode", ModeDark) 
     return (
         <div className="">
+            <button
+                className="md:hidden fixed top-4 left-4 z-50 bg-blue-500 text-white p-2 rounded"
+                onClick={toggleSidebar}
+            >
+                {isOpen ? 'Close' : 'Open'} Menu
+            </button>
             <div className={`lg:relative h-screen fixed top-0 left-0 h-full bg-gray-800 text-white w-64 transform ${isOpen ? 'translate-x-0' : '-translate-x-full'} md:translate-x-0 transition-transform duration-300 ease-in-out`}>
                 <div className="flex whitespace-nowrap">
                     <p className="text-2xl my-4 "><MyIcons name='school' size='large'></MyIcons></p>                    
@@ -129,7 +136,7 @@ const DashSide = () => {
                                                 <div className="my-8 mx-2">
                                                     <div className="flex">
                                                         <p className="text-3xl">{AdminLinks.icons}</p>
-                                                        <p className={` ${sideOpen ? 'visible' : 'invisible'} py-1 pl-4 text-xl`}>{AdminLinks.name}</p>
+                                                        <p className={` ${!isOpen ? 'visible' : 'invisible'} py-1 pl-4 text-xl`}>{AdminLinks.name}</p>
                                                     </div>
                                                 </div>
                                             </Link>
@@ -143,7 +150,7 @@ const DashSide = () => {
                                                 <div className="my-8 mx-2">
                                                     <div className="flex">
                                                         <p className="text-3xl">{AdminLinks.icons}</p>
-                                                        <p className={` ${sideOpen ? 'visible' : 'invisible'} py-1 pl-4 text-xl`}>{AdminLinks.name}</p>
+                                                        <p className={` ${!isOpen ? 'visible' : 'invisible'} py-1 pl-4 text-xl`}>{AdminLinks.name}</p>
                                                     </div>
                                                 </div>
                                             </Link>
