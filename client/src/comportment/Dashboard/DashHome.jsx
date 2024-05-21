@@ -27,6 +27,7 @@ const DashHome = () => {
         {id: 1, name: "Current Courses", icons: <BsMortarboard />, value: <CountUp end={20} />, style: "text-blue-500"},
         {id: 2, name: "Finished Courses", icons: <BsMortarboardFill />, value: <CountUp end={20} />, style: "text-red-500"},
         {id: 3, name: "Attendance", icons: <BsPersonCheck />, value: <CountUp end={94.2} />, style: "text-yellow-500"},
+        {id: 4, name: "Attendance", icons: <BsPersonCheck />, value: <CountUp end={94.2} />, style: "text-yellow-500"},
     ]
 
     if(RoleUser !== null && EmailUser !== null){
