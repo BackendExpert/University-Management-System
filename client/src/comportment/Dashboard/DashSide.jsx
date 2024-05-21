@@ -65,8 +65,8 @@ const DashSide = () => {
                 }
                 </div>
                 
-                <div className="flex">
-                    <p className="text-2xl my-4"><MyIcons name='school' size='large'></MyIcons></p>                    
+                <div className="flex whitespace-nowrap">
+                    <p className="text-2xl my-4 "><MyIcons name='school' size='large'></MyIcons></p>                    
                     {
                         sideOpen ? 
                             <div className="my-4">
