@@ -4,7 +4,7 @@ import  secureLocalStorage  from  "react-secure-storage"
 import CountUp from 'react-countup'
 import UserImg from '../../assets/SuperAdmin.png'
 
-import { BsBackpack2Fill, BsSpeedometer2, BsPersonVideo3, BsFileEarmarkText, BsPeople, BsPersonGear, BsPower, BsMortarboard, BsBuilding } from "react-icons/bs";
+import { BsBackpack2Fill, BsSpeedometer2, BsPersonVideo3, BsFileEarmarkText, BsPeople, BsPersonGear, BsPower, BsMortarboard, BsBuilding, BsMortarboardFill, BsPersonCheck } from "react-icons/bs";
 
 const DashHome = () => {
     const navigate = useNavigate()
@@ -21,13 +21,12 @@ const DashHome = () => {
         {id: 4, name: "Staff", icon: <BsPeople />, value: <CountUp end={20} />, style: "text-red-500"},
         {id: 5, name: "Courses", icon: <BsMortarboard />, value: <CountUp end={20} />, style: "text-purple-500"},
         {id: 6, name: "Departments", icon: <BsBuilding />, value: <CountUp end={20} />, style: "text-yellow-500"},
-
     ]
 
     const studentData = [
-        {id: 1, name: "Current Courses", icons: "", value: <CountUp end={20} />, style: "text-blue-500"},
-        {id: 2, name: "Finished Courses", icons: "", value: <CountUp end={20} />, style: "text-red-500"},
-        {id: 3, name: "Current Courses", icons: "", value: <CountUp end={20} />, style: "text-yellow-500"},
+        {id: 1, name: "Current Courses", icons: <BsMortarboard />, value: <CountUp end={20} />, style: "text-blue-500"},
+        {id: 2, name: "Finished Courses", icons: <BsMortarboardFill />, value: <CountUp end={20} />, style: "text-red-500"},
+        {id: 3, name: "Attendance", icons: <BsPersonCheck />, value: <CountUp end={94.2} />, style: "text-yellow-500"},
     ]
 
     if(RoleUser !== null && EmailUser !== null){
@@ -135,6 +134,40 @@ const DashHome = () => {
                                                     </div>
                                                 </div>
                                             </div>
+                                        </div>
+                                        <div className="lg:grid grid-cols-4 gap-4 my-4">
+                                            {
+                                                studentData.map((stdData) => {
+                                                    return (
+                                                        <div className="">
+                                                        <div className="bg-white rounded shadow-md py-12 px-8">
+                                                            <div className="flex w-full justify-between">
+                                                                <div className="">
+                                                                    <h1 className={`text-4xl ${stdData.style}`}>{stdData.value}
+                                                                        {
+                                                                            (() => {
+                                                                                if(stdData.name === "Attendance"){
+                                                                                    return (
+                                                                                        <span>%</span>
+                                                                                    )
+                                                                                }
+                                                                            })()
+                                                                        }
+                                                                    </h1>
+                                                                    <p className="py-2 text-xl">{stdData.name}</p>
+                                                                </div>
+                                                                <div className="">
+                                                                    <p className="text-5xl text-gray-500">{stdData.icons}</p>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                        <div className="text-white py-6 px-8 bg-gradient-to-r from-indigo-500 via-purple-500 to-pink-500 rounded">
+                                                            My {stdData.name} 
+                                                        </div>
+                                                    </div>
+                                                    )
+                                                })
+                                            }
                                         </div>
                                     </div>
                                 )
