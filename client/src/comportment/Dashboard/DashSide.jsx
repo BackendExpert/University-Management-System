@@ -17,7 +17,11 @@ const DashSide = () => {
 
     // alert(DarkMode)
 
-    const [sideOpen, SetsideOpen] = useState(true)
+    const [isOpen, setIsOpen] = useState(false);
+
+    const toggleSidebar = () => {
+      setIsOpen(!isOpen);
+    };
 
     const SideLink = [
         {id: 1, name: "Dashboard", link: "Home", icons: <BsSpeedometer2 />},
@@ -59,7 +63,7 @@ const DashSide = () => {
                 <div className="flex whitespace-nowrap">
                     <p className="text-2xl my-4 "><MyIcons name='school' size='large'></MyIcons></p>                    
                     {
-                        sideOpen ? 
+                        isOpen ? 
                             <div className="my-4">
                                 <h1 className="text-2xl my-2 pl-2">ABC Campus</h1>
                                 {
@@ -100,7 +104,7 @@ const DashSide = () => {
                                     <div onClick={() => headleLogOut()} className="my-8 mx-2 text-red-500 cursor-pointer">
                                         <div className="flex">
                                             <p className="text-3xl">{AdminLinks.icons}</p>
-                                            <p className={` ${sideOpen ? 'visible' : 'invisible'} py-1 pl-4 text-xl`}>{AdminLinks.name}</p>
+                                            <p className={` ${isOpen ? 'visible' : 'invisible'} py-1 pl-4 text-xl`}>{AdminLinks.name}</p>
                                         </div>
                                     </div>
                                 )
@@ -112,7 +116,7 @@ const DashSide = () => {
                                             <div className="my-8 mx-2">
                                                 <div className="flex">
                                                     <p className="text-3xl">{AdminLinks.icons}</p>
-                                                    <p className={` ${sideOpen ? 'visible' : 'invisible'} py-1 pl-4 text-xl`}>{AdminLinks.name}</p>
+                                                    <p className={` ${isOpen ? 'visible' : 'invisible'} py-1 pl-4 text-xl`}>{AdminLinks.name}</p>
                                                 </div>
                                             </div>
                                         </Link>
