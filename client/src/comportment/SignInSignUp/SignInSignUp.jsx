@@ -103,7 +103,7 @@ const SignInSignUp = () => {
 
   return (
     <div>
-        <div className={`py-8 lg:px-4 px-8 lg:h-screen h-auto lg:w-full ${!Darkmode ? 'light-mode duration-500 bg-gray-200' : 'dark-mode duration-500 bg-[#1e293b]'}`}>
+        <div className={`py-8 lg:px-4 px-8 lg:h-full h-auto lg:w-full ${!Darkmode ? 'light-mode duration-500 bg-gray-200' : 'dark-mode duration-500 bg-[#1e293b]'}`}>
             {
                 !Darkmode ? 
                     <p className='cursor-pointer' onClick={() => headleDarkMode()}>LightMode</p>
@@ -116,18 +116,18 @@ const SignInSignUp = () => {
                     <div className=""></div>
 
                     <div className={`lg:mx-[2%] my-[8%] py-8 rounded shadow-md ${!Darkmode ? 'light-mode duration-500 bg-white' : 'dark-mode duration-500 bg-[#2c3646]'}`}>
-                        <div className="text-center my-8">
-                            <p className="text-blue-500 text-4xl pt-8"><MyIcons name='school' size='large'></MyIcons></p>
+                        <div className="text-center">
+                            <p className="text-blue-500 text-xl"><MyIcons name='school' size='large'></MyIcons></p>
                             {
                                 (() => {
                                     if(buttonValue === "SignIn"){
                                         return (
-                                            <h1 className="text-2xl">Welcome Back</h1>
+                                            <h1 className="text-sm">Welcome Back</h1>
                                         )
                                     }
                                     if(buttonValue === "SignUp"){
                                         return (
-                                            <h1 className="text-2xl">Welcome To</h1>
+                                            <h1 className="text-sm">Welcome To</h1>
                                         )
                                     }
                                 })()
@@ -140,13 +140,13 @@ const SignInSignUp = () => {
                                     if(buttonValue === "SignIn"){
                                         return (
                                             <form onSubmit={headleSignIn}>
-                                                <div className="my-8">
-                                                    <label htmlFor="" className='my-2 lg:text-2xl'>Email : </label>
+                                                <div className="my-4">
+                                                    <label htmlFor="" className='my-2 lg:text-xl'>Email : </label>
                                                     <input type="email" name="" id="" className={`my-2 text-xl h-16 w-full rounded pl-2 mr-4  ${!Darkmode ? 'bg-gray-200 light-mode duration-500' : 'dark-mode duration-500 bg-[#1e293b]'}`} required placeholder='Enter Email Address'
                                                     onChange={e => SetSignInData({...SignInData, email:e.target.value})}/>
                                                 </div>
-                                                <div className="my-8">
-                                                    <label htmlFor="" className='my-2 lg:text-2xl'>Password : </label>
+                                                <div className="my-4">
+                                                    <label htmlFor="" className='my-2 lg:text-xl'>Password : </label>
                                                     <input type="password" name="" id="" className={`my-2 text-xl h-16 w-full rounded pl-2 mr-4  ${!Darkmode ? 'bg-gray-200 light-mode duration-500' : 'dark-mode duration-500 bg-[#1e293b]'}`} required placeholder='Enter Password'
                                                     onChange={e => SetSignInData({...SignInData, password:e.target.value})}/>
                                                 </div>
