@@ -13,6 +13,7 @@ import MyMarks from "./comportment/MyStats/MyMarks";
 import Departments from "./comportment/Departments/Departments";
 import Courses from "./comportment/Courses/Courses";
 import Batches from "./comportment/Batches/Batches";
+import Events from "./comportment/Events/Events";
 
 
 export default function App() {
@@ -33,6 +34,7 @@ export default function App() {
           <Route path="Departments" element={<PrivateRoute><Departments /></PrivateRoute>} />
           <Route path="Courses" element={<PrivateRoute><Courses /></PrivateRoute>} />
           <Route path="Batches" element={<PrivateRoute><Batches /></PrivateRoute>} />
+          <Route path="Events" element={<PrivateRoute><Events /></PrivateRoute>} />
         </Route>
       </Routes>
     </BrowserRouter>
