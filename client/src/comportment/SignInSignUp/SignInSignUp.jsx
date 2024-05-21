@@ -103,7 +103,7 @@ const SignInSignUp = () => {
 
   return (
     <div>
-        <div className={`py-8 lg:px-20 px-8 lg:h-screen h-auto lg:w-full ${!Darkmode ? 'light-mode duration-500 bg-gray-200' : 'dark-mode duration-500 bg-[#1e293b]'}`}>
+        <div className={`py-8 lg:px-4 px-8 lg:h-screen h-auto lg:w-full ${!Darkmode ? 'light-mode duration-500 bg-gray-200' : 'dark-mode duration-500 bg-[#1e293b]'}`}>
             {
                 !Darkmode ? 
                     <p className='cursor-pointer' onClick={() => headleDarkMode()}>LightMode</p>
@@ -112,10 +112,10 @@ const SignInSignUp = () => {
             }
             
             <div className="">
-                <div className="lg:grid grid-cols-3 gap-2 lg:py-16"> 
+                <div className="lg:grid grid-cols-3 gap-2 lg:py-[2%]"> 
                     <div className=""></div>
 
-                    <div className={`lg:mx-20 my-16 py-8 rounded shadow-md ${!Darkmode ? 'light-mode duration-500 bg-white' : 'dark-mode duration-500 bg-[#2c3646]'}`}>
+                    <div className={`lg:mx-[2%] my-[8%] py-8 rounded shadow-md ${!Darkmode ? 'light-mode duration-500 bg-white' : 'dark-mode duration-500 bg-[#2c3646]'}`}>
                         <div className="text-center my-8">
                             <p className="text-blue-500 text-4xl pt-8"><MyIcons name='school' size='large'></MyIcons></p>
                             {
