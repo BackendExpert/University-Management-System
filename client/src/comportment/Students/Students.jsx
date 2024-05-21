@@ -1,15 +1,24 @@
 import React from 'react'
-import { BsBag } from 'react-icons/bs'
-import { Link } from 'react-router-dom'
+import { BsBag, BsPeople, BsPersonAdd, BsPersonGear, BsPersonPlusFill, BsPersonSlash } from 'react-icons/bs'
+import { Link, useNavigate } from 'react-router-dom'
 import CountUp from 'react-countup'
 
+
 const Students = () => {
+    const navigate = useNavigate()
+    //curent login user
+    const RoleUser = secureLocalStorage.getItem("Login1");
+    const EmailUser = secureLocalStorage.getItem("login2");
+    const DarkMode = localStorage.getItem('darkMode');
+
     const studentData = [
-      {name: "Students", value: <CountUp end={20}/>, icon: <BsBag />, style: "text-green-500"},
-      {name: "Students", value: <CountUp end={20}/>, icon: <BsBag />, style: "text-green-500"},
-      {name: "Students", value: <CountUp end={20}/>, icon: <BsBag />, style: "text-green-500"},
-      {name: "Students", value: <CountUp end={20}/>, icon: <BsBag />, style: "text-green-500"},      
+      {name: "Students", value: <CountUp end={20}/>, icon: <BsPeople />, style: "text-green-500"},
+      {name: "Students Requests", value: <CountUp end={20}/>, icon: <BsPersonGear />, style: "text-green-500"},
+      {name: "Lock Students", value: <CountUp end={20}/>, icon: <BsPersonSlash />, style: "text-green-500"},
+      {name: "New Students", value: <BsPersonPlusFill />, icon: <BsPersonAdd />, style: "text-green-500"},      
     ]
+
+    
   return (
     <div className='mx-8'>
         <div className="my-4">
@@ -34,7 +43,12 @@ const Students = () => {
                             </div>
                         </div>
                         <div className="text-white py-6 px-8 bg-gradient-to-r from-indigo-500 via-purple-500 to-pink-500 rounded">
-                            All {dataStd.name} 
+                            All {dataStd.name} in
+                            {
+                              (() => {
+                                
+                              })()
+                            }
                         </div>
                     </div>
                 )
