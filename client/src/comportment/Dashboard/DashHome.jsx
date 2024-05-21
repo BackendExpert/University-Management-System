@@ -25,7 +25,9 @@ const DashHome = () => {
     ]
 
     const studentData = [
-        {id: 1, name: "", icons: '', value: <CountUp end={20} />, style: ""}
+        {id: 1, name: "Current Courses", icons: "", value: <CountUp end={20} />, style: "text-blue-500"},
+        {id: 2, name: "Finished Courses", icons: "", value: <CountUp end={20} />, style: "text-red-500"},
+        {id: 3, name: "Current Courses", icons: "", value: <CountUp end={20} />, style: "text-yellow-500"},
     ]
 
     if(RoleUser !== null && EmailUser !== null){
