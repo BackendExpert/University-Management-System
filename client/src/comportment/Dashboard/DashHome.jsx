@@ -4,7 +4,7 @@ import  secureLocalStorage  from  "react-secure-storage"
 import CountUp from 'react-countup'
 import UserImg from '../../assets/SuperAdmin.png'
 
-import { BsBackpack2Fill, BsSpeedometer2, BsPersonVideo3, BsFileEarmarkText, BsPeople, BsPersonGear, BsPower, BsMortarboard, BsBuilding, BsMortarboardFill, BsPersonCheck } from "react-icons/bs";
+import { BsBackpack2Fill, BsSpeedometer2, BsPersonVideo3, BsFileEarmarkText, BsPeople, BsPersonGear, BsPower, BsMortarboard, BsBuilding, BsMortarboardFill, BsPersonCheck, BsCashCoin } from "react-icons/bs";
 
 const DashHome = () => {
     const navigate = useNavigate()
@@ -27,7 +27,7 @@ const DashHome = () => {
         {id: 1, name: "Current Courses", icons: <BsMortarboard />, value: <CountUp end={20} />, style: "text-blue-500"},
         {id: 2, name: "Finished Courses", icons: <BsMortarboardFill />, value: <CountUp end={20} />, style: "text-red-500"},
         {id: 3, name: "Attendance", icons: <BsPersonCheck />, value: <CountUp end={94.2} />, style: "text-yellow-500"},
-        {id: 4, name: "Attendance", icons: <BsPersonCheck />, value: <CountUp end={94.2} />, style: "text-yellow-500"},
+        {id: 4, name: "Expenses", icons: <BsCashCoin />, value: <CountUp end={10000} />, style: "text-green-500"},
     ]
 
     if(RoleUser !== null && EmailUser !== null){
@@ -150,6 +150,11 @@ const DashHome = () => {
                                                                                 if(stdData.name === "Attendance"){
                                                                                     return (
                                                                                         <span>%</span>
+                                                                                    )
+                                                                                }
+                                                                                if(stdData.name === "Expenses"){
+                                                                                    return (
+                                                                                        <span>.00</span>
                                                                                     )
                                                                                 }
                                                                             })()
