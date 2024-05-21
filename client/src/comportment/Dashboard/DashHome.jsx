@@ -47,9 +47,9 @@ const DashHome = () => {
                                                 <div className="bg-white py-4 px-6 rounded shadow-md">
                                                     <h1 className="text-2xl font-semibold text-gray-500">My Information</h1>
                                                     <hr  className='mt-4'/>
-                                                    <div className="py-8 px-6 lg:flex">
+                                                    <div className="py-8 lg:px-6 px-0 lg:flex">
                                                         <img src="https://cdn-icons-png.flaticon.com/128/2641/2641333.png" alt="" className='h-40'/>
-                                                        <table border={0} className='mx-4'>
+                                                        <table border={0} className=''>
                                                             <tr className=''>
                                                                 <td className='font-semibold'>Name: </td>
                                                                 <td className='pl-4 text-gray-500'>Jehan Weerasuriya </td>
@@ -82,9 +82,9 @@ const DashHome = () => {
                                                 <div className="bg-white h-full shadow-md py-4 px-6 rounded ">                                                    
                                                     <h1 className="text-2xl font-semibold text-gray-500">My Course</h1>
                                                     <hr  className='mt-4'/>
-                                                    <div className="py-8 px-6 lg:flex">
+                                                    <div className="py-8 lg:px-6 px-0 lg:flex">
                                                         <img src="https://cdn-icons-png.flaticon.com/128/2997/2997322.png" alt="" className='h-40'/>
-                                                        <table border={0} className='mx-4'>
+                                                        <table border={0} className=''>
                                                             <tr className=''>
                                                                 <td className='font-semibold'>Course Name: </td>
                                                                 <td className='pl-4 text-gray-500'>BSc in IT </td>
@@ -118,7 +118,7 @@ const DashHome = () => {
                                                 <div className="bg-white h-full shadow-md py-4 px-6 rounded">
                                                     <h1 className="text-2xl font-semibold text-gray-500">Current GPA</h1>      
                                                     <hr  className='mt-4'/>                                              
-                                                    <div className="py-8 px-6 lg:flex">
+                                                    <div className="py-8 lg:px-6 px-0 lg:flex">
                                                         <img src="https://cdn-icons-png.flaticon.com/128/3755/3755243.png" alt="" className='h-40'/>
                                                         <div className="text-center w-full my-4">
                                                             <p className="text-5xl font-semibold text-yellow-500">3.25</p>
@@ -140,7 +140,7 @@ const DashHome = () => {
                                             {
                                                 studentData.map((stdData) => {
                                                     return (
-                                                        <div className="">
+                                                        <div className="lg:my-0 my-4">
                                                         <div className="bg-white rounded shadow-md py-12 px-8">
                                                             <div className="flex w-full justify-between">
                                                                 <div className="">
