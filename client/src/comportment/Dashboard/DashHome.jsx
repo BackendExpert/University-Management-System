@@ -42,14 +42,14 @@ const DashHome = () => {
                             if(RoleUser === "Student"){
                                 return (
                                     <div className="">
-                                        <div className="lg:grid grid-cols-3 gap-4">
-                                            <div className="mr-8 my-2 w-full">
+                                        <div className="lg:grid grid-cols-2 gap-4">
+                                            <div className="lg:mr-8 my-2 lg:w-full">
                                                 <div className="bg-white py-4 px-6 rounded shadow-md">
                                                     <h1 className="text-2xl font-semibold text-gray-500">My Information</h1>
                                                     <hr  className='mt-4'/>
-                                                    <div className="py-8 px-6">
+                                                    <div className="py-8 px-6 lg:flex">
                                                         <img src="https://cdn-icons-png.flaticon.com/128/2641/2641333.png" alt="" className='h-40'/>
-                                                        <table border={0} className=''>
+                                                        <table border={0} className='mx-4'>
                                                             <tr className=''>
                                                                 <td className='font-semibold'>Name: </td>
                                                                 <td className='pl-4 text-gray-500'>Jehan Weerasuriya </td>
