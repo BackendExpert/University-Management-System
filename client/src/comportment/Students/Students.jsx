@@ -43,10 +43,18 @@ const Students = () => {
                             </div>
                         </div>
                         <div className="text-white py-6 px-8 bg-gradient-to-r from-indigo-500 via-purple-500 to-pink-500 rounded">
-                            All {dataStd.name} in
                             {
                               (() => {
-                                
+                                if(RoleUser === "Hod"){
+                                  return (
+                                    <p className="">All {dataStd.name} in Dept</p>
+                                  )
+                                }
+                                if(RoleUser === "SuperAdmin"){
+                                  return (
+                                    <p className="">All {dataStd.name} </p>
+                                  )
+                                }
                               })()
                             }
                         </div>
