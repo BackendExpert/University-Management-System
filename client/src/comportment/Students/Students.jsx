@@ -2,7 +2,7 @@ import React from 'react'
 import { BsBag, BsPeople, BsPersonAdd, BsPersonGear, BsPersonPlusFill, BsPersonSlash } from 'react-icons/bs'
 import { Link, useNavigate } from 'react-router-dom'
 import CountUp from 'react-countup'
-
+import  secureLocalStorage  from  "react-secure-storage"
 
 const Students = () => {
     const navigate = useNavigate()
