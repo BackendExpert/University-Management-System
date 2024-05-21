@@ -61,7 +61,7 @@ const DashSide = () => {
     return (
         <div className="">
             <button
-                className="md:hidden fixed top-4 left-4 z-50 bg-blue-500 text-white p-2 rounded "
+                className="md:hidden fixed top-4 right-4 z-50 bg-blue-500 text-white p-2 rounded "
                 onClick={toggleSidebar}
             >
                 {isOpen ? 'Close' : 'Open'} Menu
