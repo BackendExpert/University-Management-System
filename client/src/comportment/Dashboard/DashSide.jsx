@@ -4,7 +4,7 @@ import  secureLocalStorage  from  "react-secure-storage"
 import MyIcons from '@reacticons/ionicons'
 import SuperAdminImg from '../../assets/SuperAdminWhite.png'
 
-import { BsBackpack2Fill, BsSpeedometer2, BsPersonVideo3, BsFileEarmarkText, BsPeople, BsPersonGear, BsPower, BsBook, BsPatchCheck, BsBuilding, BsFile, BsMortarboard } from "react-icons/bs";
+import { BsBackpack2Fill, BsSpeedometer2, BsPersonVideo3, BsFileEarmarkText, BsPeople, BsPersonGear, BsPower, BsBook, BsPatchCheck, BsBuilding, BsFile, BsMortarboard, BsList, BsX } from "react-icons/bs";
 
 
 
@@ -61,16 +61,17 @@ const DashSide = () => {
     return (
         <div className="">
             <button
-                className="md:hidden fixed top-4 right-4 z-50 bg-blue-500 text-white p-2 rounded "
+                className="md:hidden fixed top-4 right-4 z-50 bg-gray-600 text-white p-2 rounded font-semibold"
                 onClick={toggleSidebar}
             >
-                {isOpen ? 'Close' : 'Open'} Menu
+                {
+                    !isOpen ? <BsList /> : <BsX />
+                }
             </button>
             <div className={`lg:relative fixed top-0 left-0 h-full bg-gray-800 text-white w-64 transform ${isOpen ? 'translate-x-0' : '-translate-x-full'} md:translate-x-0 transition-transform duration-300 ease-in-out`}>
                 <div className="flex whitespace-nowrap">
                     <p className="text-2xl my-4 "><MyIcons name='school' size='large'></MyIcons></p>                    
-                    {
-                        isOpen ? 
+
                             <div className="my-4">
                                 <h1 className="text-2xl my-2 pl-2">ABC Campus</h1>
                                 {
@@ -95,10 +96,7 @@ const DashSide = () => {
                                 
                             </div>
 
-                        :
-                            <h1 className="text-2xl my-2 pl-2"></h1>
 
-                    }
                     
                 </div>
                 <hr className={` ${DarkMode ? 'border-gray-400' : 'border-white'}`}/>
