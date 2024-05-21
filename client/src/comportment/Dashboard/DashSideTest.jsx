@@ -18,7 +18,7 @@ const DashSideTest = () => {
       </button>
 
       {/* Sidebar */}
-      <div className={`lg:relative h-screen fixed top-0 left-0 h-full bg-gray-800 text-white w-64 transform ${isOpen ? 'translate-x-0' : '-translate-x-full'} md:translate-x-0 transition-transform duration-300 ease-in-out`}>
+      <div className={`lg:relative fixed top-0 left-0 h-auto bg-gray-800 text-white w-64 transform ${isOpen ? 'translate-x-0' : '-translate-x-full'} md:translate-x-0 transition-transform duration-300 ease-in-out`}>
         <div className="p-4">
           <h1 className="text-xl font-bold">Sidebar</h1>
           <nav>
