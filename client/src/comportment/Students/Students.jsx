@@ -32,22 +32,24 @@ const Students = () => {
             {
               studentData.map((dataStd) => {
                 if(RoleUser === "SuperAdmin") {
-                  return (
-                    <div className={`bg-white w-full mx-2 lg:my-0 my-2 duration-500 rounded shadow-md ${dataStd.style}`}>                                       
-                        <div className="flex py-6 px-8 w-full justify-between border border-gray-200 rounded">
-                            <div className="">
-                                <h1 className={`text-[180%] ${dataStd.style}`}>{dataStd.value}</h1>
-                                <p className="py-2 text-[120%]">{dataStd.name}</p>
-                            </div>
-                            <div className="">
-                                <p className="text-[200%] text-gray-500">{dataStd.icon}</p>
-                            </div>
-                        </div>
-                        <div className="text-white py-4 px-8 bg-gradient-to-r from-indigo-500 via-purple-500 to-pink-500 rounded">
-                            All {dataStd.name} 
-                        </div>
-                    </div> 
-                    )
+                  if(dataStd.id !== 4 && dataStd.id !== 5){
+                    return (
+                      <div className={`bg-white w-full mx-2 lg:my-0 my-2 duration-500 rounded shadow-md ${dataStd.style}`}>                                       
+                          <div className="flex py-6 px-8 w-full justify-between border border-gray-200 rounded">
+                              <div className="">
+                                  <h1 className={`text-[180%] ${dataStd.style}`}>{dataStd.value}</h1>
+                                  <p className="py-2 text-[120%]">{dataStd.name}</p>
+                              </div>
+                              <div className="">
+                                  <p className="text-[200%] text-gray-500">{dataStd.icon}</p>
+                              </div>
+                          </div>
+                          <div className="text-white py-4 px-8 bg-gradient-to-r from-indigo-500 via-purple-500 to-pink-500 rounded">
+                              All {dataStd.name} 
+                          </div>
+                      </div> 
+                      )
+                  }
                 }
                 if(RoleUser === "Hod"){
                   return (
