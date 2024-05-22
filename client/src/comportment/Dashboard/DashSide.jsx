@@ -129,7 +129,7 @@ const DashSide = () => {
                                     )
                                 }
                                 if(RoleUser === "Student"){
-                                    if(AdminLinks.id === 1 || AdminLinks.id === 7 || AdminLinks.id === 12){
+                                    if(AdminLinks.id === 1 || AdminLinks.id === 7 || AdminLinks.id === 11 || AdminLinks.id === 12){
                                         return (
                                             <Link to={AdminLinks.link}>
                                                 <div className="my-4 mx-2">
