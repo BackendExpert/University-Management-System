@@ -26,7 +26,7 @@ const DashSide = () => {
     const SideLink = [
         {id: 1, name: "Dashboard", link: "Home", icons: <BsSpeedometer2 />},
         {id: 2, name: "Students", link: "Students", icons: <BsBackpack2Fill />},
-        {id: 3, name: "Teachers", link: "Teachers", icons: <BsPersonVideo3 />},
+        {id: 3, name: "Lecturers", link: "Teachers", icons: <BsPersonVideo3 />},
         {id: 4, name: "Subjects", link: "Subjects", icons: <BsFileEarmarkText />}, 
         {id: 5, name: "Staff", link: "Staff", icons: <BsPeople />},       
         {id: 6, name: "Library", link: "Library", icons: <BsBook />},   // for labrarian
