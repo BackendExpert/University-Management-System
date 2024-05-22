@@ -143,7 +143,7 @@ const DashHome = () => {
                                                 <div className="bg-white h-full shadow-md py-4 px-6 rounded">
                                                     <h1 className="text-2xl font-semibold text-gray-500">Current GPA</h1>      
                                                     <hr  className='mt-4'/>                                              
-                                                    <div className="py-8 md:flex">
+                                                    <div className="py-8 flex">
                                                         <img src="https://cdn-icons-png.flaticon.com/128/3755/3755243.png" alt="" className='h-[20%] w-auto'/>
                                                         <div className="text-center w-full my-4">
                                                             <p className="text-2xl font-semibold text-yellow-500">3.25</p>
