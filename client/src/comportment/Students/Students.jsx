@@ -29,7 +29,7 @@ const Students = () => {
           <div className="md:grid grid-cols-4 gap-4">
             {
               studentData.map((dataStd) => {
-                if(dataStd === "SuperAdmin") {
+                if(RoleUser === "SuperAdmin") {
                   return (
                     <div className={`bg-white w-full mx-2 lg:my-0 my-2 duration-500 rounded shadow-md ${dataStd.style}`}>                                       
                         <div className="flex py-6 px-8 w-full justify-between border border-gray-200 rounded">
@@ -47,7 +47,7 @@ const Students = () => {
                     </div> 
                     )
                 }
-                if(dataStd === "Hod"){
+                if(RoleUser === "Hod"){
                   return (
                     <div className={`bg-white w-full mx-2 lg:my-0 my-2 duration-500 rounded shadow-md ${dataStd.style}`}>                                       
                         <div className="flex py-6 px-8 w-full justify-between border border-gray-200 rounded">
@@ -65,7 +65,7 @@ const Students = () => {
                     </div> 
                     )
                 }
-                if(dataStd === "Lec"){
+                if(RoleUser === "Lec"){
                   if(dataStd.id === 1){
                     return (
                       <div className={`bg-white w-full mx-2 lg:my-0 my-2 duration-500 rounded shadow-md ${dataStd.style}`}>                                       
