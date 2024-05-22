@@ -44,6 +44,7 @@ const EventsNotifications = () => {
                         }
 
                     <hr  className='my-4'/> 
+                </div>
                         {
                             (() => {
                                 if(buttonValue === 0){
@@ -53,7 +54,6 @@ const EventsNotifications = () => {
                                 }
                             })()
                         }
-                </div>
             </div>
         )
     }
