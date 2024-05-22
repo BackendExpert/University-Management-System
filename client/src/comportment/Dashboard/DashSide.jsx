@@ -79,17 +79,17 @@ const DashSide = () => {
                                     (() => {
                                         if(RoleUser === "SuperAdmin"){
                                             return (
-                                                <p>SuperAdmin</p>
+                                                <p className='text-sm'>SuperAdmin</p>
                                             )
                                         }
                                         if(RoleUser === "Student"){
                                             return (
-                                                <p>Student</p>
+                                                <p className='text-sm'>Student</p>
                                             )
                                         }
                                         if(RoleUser === "Hod"){
                                             return (
-                                                <p>Hend of Dept</p>
+                                                <p className='text-sm'>Hend of Dept</p>
                                             )
                                         }
                                     })()
