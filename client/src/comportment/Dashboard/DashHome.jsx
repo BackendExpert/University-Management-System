@@ -48,7 +48,7 @@ const DashHome = () => {
                                                 studentData.map((stdData) => {
                                                     return (
                                                         <Link to={stdData.link}>
-                                                            <div className={`bg-white w-full mx-2 lg:my-0 my-2 duration-500 rounded ${stdData.style}`}>                                       
+                                                            <div className={`bg-white w-full mx-2 lg:my-0 my-2 duration-500 rounded shadow-md ${stdData.style}`}>                                       
                                                                 <div className="flex py-6 px-8 w-full justify-between border border-gray-200 rounded">
                                                                     <div className="">
                                                                         <h1 className={`text-[180%] ${stdData.style}`}>{stdData.value}</h1>
