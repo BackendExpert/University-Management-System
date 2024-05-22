@@ -23,7 +23,7 @@ const MyProfile = () => {
                 <p>/ <Link to={'/Dashboard/Home'}> <span className='text-blue-500'>Dashbord</span></Link> / MyProfile </p>
             </div>
           
-          <div className="bg-white py-4 px-8 my-4 rounded shadow-md">
+          <div className="bg-white lg:py-8 py-4 px-8 my-4 rounded shadow-md lg:text-2xl">
             {
               (() => {
                 if(buttonValue === 0){
