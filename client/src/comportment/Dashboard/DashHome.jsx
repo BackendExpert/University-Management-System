@@ -202,22 +202,20 @@ const DashHome = () => {
                                                 DashData.map((dataDash) => {
                                                     if(dataDash.id !== 4 && dataDash.id !== 6){
                                                         return (
-                                                            <div className="">
-                                                                <div className="bg-white rounded shadow-md py-12 px-8">
-                                                                    <div className="flex w-full justify-between">
-                                                                        <div className="">
-                                                                            <h1 className={`text-4xl ${dataDash.style}`}>{dataDash.value}</h1>
-                                                                            <p className="py-2 text-xl">{dataDash.name}</p>
-                                                                        </div>
-                                                                        <div className="">
-                                                                            <p className="text-5xl text-gray-500">{dataDash.icon}</p>
-                                                                        </div>
+                                                            <div className={`bg-white w-full mx-2 lg:my-0 my-2 duration-500 rounded shadow-md ${dataDash.style}`}>                                       
+                                                                <div className="flex py-6 px-8 w-full justify-between border border-gray-200 rounded">
+                                                                    <div className="">
+                                                                        <h1 className={`text-[180%] ${dataDash.style}`}>{dataDash.value}</h1>
+                                                                        <p className="py-2 text-[120%]">{dataDash.name}</p>
+                                                                    </div>
+                                                                    <div className="">
+                                                                        <p className="text-[200%] text-gray-500">{dataDash.icon}</p>
                                                                     </div>
                                                                 </div>
-                                                                <div className="text-white py-6 px-8 bg-gradient-to-r from-indigo-500 via-purple-500 to-pink-500 rounded">
-                                                                    All {dataDash.name} in Department
+                                                                <div className="text-white py-4 px-8 bg-gradient-to-r from-indigo-500 via-purple-500 to-pink-500 rounded">
+                                                                    {dataDash.name} in Dept
                                                                 </div>
-                                                            </div>
+                                                            </div> 
                                                         )
                                                     }
                                                 })
