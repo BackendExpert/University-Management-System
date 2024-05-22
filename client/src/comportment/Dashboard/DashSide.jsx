@@ -4,7 +4,7 @@ import  secureLocalStorage  from  "react-secure-storage"
 import MyIcons from '@reacticons/ionicons'
 import SuperAdminImg from '../../assets/SuperAdminWhite.png'
 
-import { BsBackpack2Fill, BsSpeedometer2, BsPersonVideo3, BsFileEarmarkText, BsPeople, BsPersonGear, BsPower, BsBook, BsPatchCheck, BsBuilding, BsFile, BsMortarboard, BsList, BsX, BsCalendarEvent, BsBell, BsFilesAlt, BsFileText } from "react-icons/bs";
+import { BsBackpack2Fill, BsSpeedometer2, BsPersonVideo3, BsFileEarmarkText, BsPeople, BsPersonGear, BsPower, BsBook, BsPatchCheck, BsBuilding, BsFile, BsMortarboard, BsList, BsX, BsCalendarEvent, BsBell, BsFilesAlt, BsFileText, BsCashCoin } from "react-icons/bs";
 
 
 
@@ -40,7 +40,7 @@ const DashSide = () => {
         {id: 14, name: "Profile", link: "MyProfile", icons: <BsPersonGear />},
         {id: 15, name: "Semesters", link: "Semesters", icons: <BsFilesAlt />},
         {id: 16, name: "Exams", link: "Exams", icons: <BsFileText />},
-        {id: 17, name: "Expenses", link: "Expenses", icons: <BsFileText />},
+        {id: 17, name: "Expenses", link: "Expenses", icons: <BsCashCoin />},
         
         
           
@@ -130,7 +130,7 @@ const DashSide = () => {
                             }
                             else{
                                 if(RoleUser === "SuperAdmin"){
-                                    if(AdminLinks.id !== 12){
+                                    if(AdminLinks.id !== 12 || AdminLinks.id !== 17){
                                         return (
                                             <Link to={AdminLinks.link}>
                                                 <div className="my-4 mx-2">
@@ -144,7 +144,7 @@ const DashSide = () => {
                                     }
                                 }
                                 if(RoleUser === "Student"){
-                                    if(AdminLinks.id === 1 || AdminLinks.id === 6 || AdminLinks.id === 7 || AdminLinks.id === 11 || AdminLinks.id === 12 || AdminLinks.id === 13 || AdminLinks.id === 14){
+                                    if(AdminLinks.id === 1 || AdminLinks.id === 6 || AdminLinks.id === 7 || AdminLinks.id === 11 || AdminLinks.id === 12 || AdminLinks.id === 13 || AdminLinks.id === 14 || AdminLinks.id === 17){
                                         return (
                                             <Link to={AdminLinks.link}>
                                                 <div className="my-4 mx-2">
@@ -158,7 +158,7 @@ const DashSide = () => {
                                     }
                                 }
                                 if(RoleUser === "Hod"){
-                                    if(AdminLinks.id !== 5 && AdminLinks.id !== 8 && AdminLinks.id !== 12){
+                                    if(AdminLinks.id !== 5 && AdminLinks.id !== 8 && AdminLinks.id !== 12 && AdminLinks.id !== 17){
                                         return (
                                             <Link to={AdminLinks.link}>
                                                 <div className="my-4 mx-2">
