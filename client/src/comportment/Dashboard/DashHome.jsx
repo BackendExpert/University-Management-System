@@ -26,8 +26,8 @@ const DashHome = () => {
     ]
 
     const studentData = [
-        {id: 1, name: "Current Courses", icons: <BsMortarboard />, value: <CountUp end={20} />, style: "text-blue-500"},
-        {id: 2, name: "End Courses", icons: <BsMortarboardFill />, value: <CountUp end={20} />, style: "text-red-500"},
+        {id: 1, name: "My Course", icons: <BsMortarboard />, value: "Bsc Information Technologssssssssssssssy", style: "text-blue-500"},
+        {id: 2, name: "My Department", icons: <BsMortarboardFill />, value: "Computing", style: "text-red-500"},
         {id: 3, name: "Expenses", icons: <BsCashCoin />, value: <CountUp end={10000} />, style: "text-green-500"},
     ]
 
@@ -43,15 +43,15 @@ const DashHome = () => {
                             if(RoleUser === "Student"){
                                 return (
                                     <div className="">
-                                        <div className="md:grid grid-cols-3 gap-4 my-4 mr-4">
+                                        <div className="md:grid grid-cols-3 gap-4 my-4 mr-4 ">
                                             {
                                                 studentData.map((stdData) => {
                                                     return (
                                                         <Link to={stdData.link}>
-                                                            <div className={`bg-white w-full mx-2 lg:my-0 my-2 duration-500 rounded shadow-md ${stdData.style}`}>                                       
+                                                            <div className={`h-full bg-white w-full mx-2 lg:my-0 my-2 duration-500 rounded shadow-md ${stdData.style}`}>                                       
                                                                 <div className="flex py-6 px-8 w-full justify-between border border-gray-200 rounded">
                                                                     <div className="">
-                                                                        <h1 className={`text-[180%] ${stdData.style}`}>{stdData.value}</h1>
+                                                                        <h1 className={`text-[100%] ${stdData.style}`}>{stdData.value}</h1>
                                                                         <p className="py-2 text-[120%]">{stdData.name}</p>
                                                                     </div>
                                                                     <div className="">
@@ -59,7 +59,7 @@ const DashHome = () => {
                                                                     </div>
                                                                 </div>
                                                                 <div className="text-white py-4 px-8 bg-gradient-to-r from-indigo-500 via-purple-500 to-pink-500 rounded">
-                                                                    All {stdData.name} 
+                                                                    {stdData.name} 
                                                                 </div>
                                                             </div>  
                                                         </Link>
