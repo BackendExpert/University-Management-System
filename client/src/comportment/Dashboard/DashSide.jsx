@@ -165,6 +165,20 @@ const DashSide = () => {
                                         )
                                     }
                                 }
+                                if(RoleUser === "Lec"){
+                                    if(AdminLinks.id === 1 || AdminLinks.id === 2 || AdminLinks.id === 4 || AdminLinks.id === 6 || AdminLinks.id === 7){
+                                        return (
+                                            <Link to={AdminLinks.link}>
+                                                <div className="my-4 mx-2">
+                                                    <div className="flex">
+                                                        <p className="text-xl">{AdminLinks.icons}</p>
+                                                        <p className={`pl-4 `}>{AdminLinks.name}</p>
+                                                    </div>
+                                                </div>
+                                            </Link>
+                                        )
+                                    }
+                                }
                             }
                         })
                     }
