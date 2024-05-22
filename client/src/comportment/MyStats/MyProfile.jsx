@@ -1,4 +1,4 @@
-import React, { useState } from 'react'
+import React, { useEffect, useState } from 'react'
 import { Link, useNavigate } from 'react-router-dom';
 import  secureLocalStorage  from  "react-secure-storage"
 import CountUp from 'react-countup'
@@ -9,6 +9,16 @@ const MyProfile = () => {
     //curent login user
     const RoleUser = secureLocalStorage.getItem("Login1");
     const EmailUser = secureLocalStorage.getItem("login2");
+
+    if(RoleUser !== null && EmailUser !== null){
+
+    }
+    else{
+      useEffect(() => {
+        localStorage.clear()
+        navigate('/')
+      }, [])
+    }
   return (
     <div className='mx-2'>
         <div className="my-4">
