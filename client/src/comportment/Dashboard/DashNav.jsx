@@ -37,6 +37,11 @@ const DashNav = () => {
                                     <p className="text-gray-500 text-2xl font-semibold">Head of Dept Dashbord</p>
                                 )
                             }
+                            if(RoleUser === "Lec"){
+                                return (
+                                    <p className="text-gray-500 text-2xl font-semibold">Lecturer Dashbord</p>
+                                )
+                            }
                         })()
                     }
                 </div>
