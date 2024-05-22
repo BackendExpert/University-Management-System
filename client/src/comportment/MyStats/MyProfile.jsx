@@ -12,7 +12,17 @@ const MyProfile = () => {
     const EmailUser = secureLocalStorage.getItem("login2");
 
     if(RoleUser !== null && EmailUser !== null){
-        
+      return (
+        <div className='mx-2'>
+            <div className="my-4">
+                <p>/ <Link to={'/Dashboard/Home'}> <span className='text-blue-500'>Dashbord</span></Link> / MyProfile </p>
+            </div>
+          
+            
+    
+          <ProfileData />
+        </div>
+      )
     }
     else{
       useEffect(() => {
@@ -20,15 +30,6 @@ const MyProfile = () => {
         navigate('/')
       }, [])
     }
-  return (
-    <div className='mx-2'>
-        <div className="my-4">
-            <p>/ <Link to={'/Dashboard/Home'}> <span className='text-blue-500'>Dashbord</span></Link> / MyProfile </p>
-        </div>
-
-      <ProfileData />
-    </div>
-  )
 }
 
 export default MyProfile
