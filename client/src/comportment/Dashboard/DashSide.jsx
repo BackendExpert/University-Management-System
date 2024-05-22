@@ -120,10 +120,10 @@ const DashSide = () => {
                                 if(RoleUser === "SuperAdmin"){
                                     return (
                                         <Link to={AdminLinks.link}>
-                                            <div className="my-8 mx-2">
+                                            <div className="my-4 mx-2">
                                                 <div className="flex">
-                                                    <p className="">{AdminLinks.icons}</p>
-                                                    <p className={` py-1 pl-4 `}>{AdminLinks.name}</p>
+                                                    <p className="text-xl">{AdminLinks.icons}</p>
+                                                    <p className={`pl-4 `}>{AdminLinks.name}</p>
                                                 </div>
                                             </div>
                                         </Link>
