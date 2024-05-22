@@ -15,15 +15,7 @@ const EventsNotifications = () => {
     }
 
     // test notifications
-    const Notificationsss = [
-        {title: 'Subject', bodyN: 'The Subject 4894 has been Added', data: '2024/05/22 10:30'},
-        {title: 'Subject', bodyN: 'The Subject 894  has been Added', data: '2024/05/22 10:30'},
-        {title: 'Subject', bodyN: 'The Subject 4894 has been Added', data: '2024/05/22 10:30'},
-        {title: 'Subject', bodyN: 'The Subject 4894 has been Added', data: '2024/05/22 10:30'},
-        {title: 'Subject', bodyN: 'The Subject 4894 has been Added', data: '2024/05/22 10:30'},
-        {title: 'Subject', bodyN: 'The Subject 4894 has been Added', data: '2024/05/22 10:30'},
-        {title: 'Subject', bodyN: 'The Subject 4894 has been Added', data: '2024/05/22 10:30'},        
-    ]
+
 
     if(RoleUser !== null && EmailUser !== null) {
         return (
@@ -51,22 +43,7 @@ const EventsNotifications = () => {
                         }
 
                     <hr  className='my-4'/> 
-                    <p>{buttonValue}</p>
-
-                    
-                        {
-                                Notificationsss.map((noti, index) => {
-                                    if(buttonValue === 0){
-                                        return (
-                                            <div className="flex" key={index}>
-                                                hi Noftifications {noti.title}
-                                            </div>
-                                        )
-                                    }
-                                })
-
-
-                        }
+                   
                 </div>
             </div>
         )
