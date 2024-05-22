@@ -68,7 +68,7 @@ const DashSide = () => {
         
     localStorage.setItem("darkMode", ModeDark) 
     return (
-        <div className="w-[14%]">
+        <div className="">
             <button
                 className="md:hidden fixed top-4 right-4 z-50 bg-gray-600 text-white p-2 rounded font-semibold"
                 onClick={toggleSidebar}
@@ -123,7 +123,7 @@ const DashSide = () => {
                                     <div onClick={() => headleLogOut()} className="my-8 mx-2 text-red-500 cursor-pointer">
                                         <div className="flex">
                                             <p className="lg:text-3xl lg:my-2 text-xl">{AdminLinks.icons}</p>
-                                            <p className={`lg:text-2xl lg:pt-2 pl-4 `}>{AdminLinks.name}</p>
+                                            <p className={`lg:text-xl lg:pt-2 pl-4 `}>{AdminLinks.name}</p>
                                         </div>
                                     </div>
                                 )
@@ -135,8 +135,8 @@ const DashSide = () => {
                                             <Link to={AdminLinks.link}>
                                                 <div className="my-4 mx-2">
                                                     <div className="flex">
-                                                        <p className="text-xl">{AdminLinks.icons}</p>
-                                                        <p className={`pl-4 `}>{AdminLinks.name}</p>
+                                                        <p className="lg:text-3xl lg:my-2 text-xl">{AdminLinks.icons}</p>
+                                                        <p className={`lg:text-xl lg:pt-2 pl-4 `}>{AdminLinks.name}</p>
                                                     </div>
                                                 </div>
                                             </Link>
@@ -150,7 +150,7 @@ const DashSide = () => {
                                                 <div className="my-4 mx-2">
                                                     <div className="flex">
                                                         <p className="lg:text-3xl lg:my-2 text-xl">{AdminLinks.icons}</p>
-                                                        <p className={`lg:text-2xl lg:pt-2 pl-4 `}>{AdminLinks.name}</p>
+                                                        <p className={`lg:text-xl lg:pt-2 pl-4 `}>{AdminLinks.name}</p>
                                                     </div>
                                                 </div>
                                             </Link>
@@ -164,7 +164,7 @@ const DashSide = () => {
                                                 <div className="my-4 mx-2">
                                                     <div className="flex">
                                                         <p className="lg:text-3xl lg:my-2 text-xl">{AdminLinks.icons}</p>
-                                                        <p className={`lg:text-2xl lg:pt-2 pl-4 `}>{AdminLinks.name}</p>
+                                                        <p className={`lg:text-xl lg:pt-2 pl-4 `}>{AdminLinks.name}</p>
                                                     </div>
                                                 </div>
                                             </Link>
@@ -178,7 +178,7 @@ const DashSide = () => {
                                                 <div className="my-4 mx-2">
                                                     <div className="flex">
                                                         <p className="lg:text-3xl lg:my-2 text-xl">{AdminLinks.icons}</p>
-                                                        <p className={`lg:text-2xl lg:pt-2 pl-4 `}>{AdminLinks.name}</p>
+                                                        <p className={`lg:text-xl lg:pt-2 pl-4 `}>{AdminLinks.name}</p>
                                                     </div>
                                                 </div>
                                             </Link>
