@@ -102,15 +102,15 @@ const DashSide = () => {
                 </div>
                 <hr className={` ${DarkMode ? 'border-gray-400' : 'border-white'}`}/>
                 
-                <div className="">
+                <div className="my-8">
                     {
                         SideLink.map((AdminLinks) => {
                             if(AdminLinks.name === "LogOut"){
                                 return (
                                     <div onClick={() => headleLogOut()} className="my-8 mx-2 text-red-500 cursor-pointer">
                                         <div className="flex">
-                                            <p className="">{AdminLinks.icons}</p>
-                                            <p className={` py-1 pl-4`}>{AdminLinks.name}</p>
+                                            <p className="text-xl">{AdminLinks.icons}</p>
+                                            <p className={`pl-4`}>{AdminLinks.name}</p>
                                         </div>
                                     </div>
                                 )
@@ -132,10 +132,10 @@ const DashSide = () => {
                                     if(AdminLinks.id === 1 || AdminLinks.id === 7 || AdminLinks.id === 12){
                                         return (
                                             <Link to={AdminLinks.link}>
-                                                <div className="my-2 mx-2">
+                                                <div className="my-4 mx-2">
                                                     <div className="flex">
-                                                        <p className="">{AdminLinks.icons}</p>
-                                                        <p className={`py-1 pl-4 `}>{AdminLinks.name}</p>
+                                                        <p className="text-xl">{AdminLinks.icons}</p>
+                                                        <p className={`pl-4 `}>{AdminLinks.name}</p>
                                                     </div>
                                                 </div>
                                             </Link>
