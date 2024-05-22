@@ -3,6 +3,7 @@ import { Link, useNavigate } from 'react-router-dom';
 import  secureLocalStorage  from  "react-secure-storage"
 import MyIcons from '@reacticons/ionicons'
 import NotificationData from './NotificationData';
+import EventData from './EventData';
 
 const EventsNotifications = () => {
     const navigate = useNavigate()
@@ -50,6 +51,11 @@ const EventsNotifications = () => {
                                 if(buttonValue === 0){
                                     return (
                                         <NotificationData />
+                                    )
+                                }
+                                if(buttonValue === "Events"){
+                                    return (
+                                        <EventData />
                                     )
                                 }
                             })()
