@@ -27,8 +27,7 @@ const DashHome = () => {
     const studentData = [
         {id: 1, name: "Current Courses", icons: <BsMortarboard />, value: <CountUp end={20} />, style: "text-blue-500"},
         {id: 2, name: "End Courses", icons: <BsMortarboardFill />, value: <CountUp end={20} />, style: "text-red-500"},
-        {id: 3, name: "Attendance", icons: <BsPersonCheck />, value: <CountUp end={94.2} />, style: "text-yellow-500"},
-        {id: 4, name: "Expenses", icons: <BsCashCoin />, value: <CountUp end={10000} />, style: "text-green-500"},
+        {id: 3, name: "Expenses", icons: <BsCashCoin />, value: <CountUp end={10000} />, style: "text-green-500"},
     ]
 
     if(RoleUser !== null && EmailUser !== null){
@@ -43,7 +42,7 @@ const DashHome = () => {
                             if(RoleUser === "Student"){
                                 return (
                                     <div className="">
-                                        <div className="md:grid grid-cols-4 gap-4 my-4 mr-4">
+                                        <div className="md:grid grid-cols-3 gap-4 my-4 mr-4">
                                             {
                                                 studentData.map((stdData) => {
                                                     return (
@@ -103,7 +102,7 @@ const DashHome = () => {
                                                     </div>
                                                 </div>
                                             </div>
-                                            <div className="mr-8 my-2 w-full">
+                                            {/* <div className="mr-8 my-2 w-full">
                                                 <div className="bg-white h-full shadow-md py-4 px-6 rounded ">                                                    
                                                     <h1 className="text-2xl font-semibold text-gray-500">My Course</h1>
                                                     <hr  className='mt-4'/>
@@ -138,7 +137,7 @@ const DashHome = () => {
                                                     </div>
                                                     
                                                 </div>
-                                            </div>
+                                            </div> */}
                                             <div className="mr-8 my-2 w-full">
                                                 <div className="bg-white h-full shadow-md py-4 px-6 rounded">
                                                     <h1 className="text-2xl font-semibold text-gray-500">Current GPA</h1>      
