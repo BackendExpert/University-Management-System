@@ -57,7 +57,7 @@ const DashSide = () => {
         SetModeDark(false)
     }
 
-
+        
     localStorage.setItem("darkMode", ModeDark) 
     return (
         <div className="">
@@ -69,12 +69,12 @@ const DashSide = () => {
                     !isOpen ? <BsList /> : <BsX />
                 }
             </button>
-            <div className={`fixed top-0 left-0 h-full bg-gray-800 text-white w-64 transform ${isOpen ? 'translate-x-0' : '-translate-x-full'} transition-transform duration-300 ease-in-out`}>
+            <div className={`fixed top-0 left-0 h-full px-4 bg-gray-800 text-white w-auto transform ${isOpen ? 'translate-x-0' : '-translate-x-full'} transition-transform duration-300 ease-in-out`}>
                 <div className="flex whitespace-nowrap">
                     <p className="text-2xl my-4 "><MyIcons name='school' size='large'></MyIcons></p>                    
 
                             <div className="my-4">
-                                <h1 className="text-2xl my-2 pl-2">ABC Campus</h1>
+                                <h1 className="text-xl my-2 pl-2">ABC Campus</h1>
                                 {
                                     (() => {
                                         if(RoleUser === "SuperAdmin"){
@@ -109,8 +109,8 @@ const DashSide = () => {
                                 return (
                                     <div onClick={() => headleLogOut()} className="my-8 mx-2 text-red-500 cursor-pointer">
                                         <div className="flex">
-                                            <p className="text-3xl">{AdminLinks.icons}</p>
-                                            <p className={` py-1 pl-4 text-xl`}>{AdminLinks.name}</p>
+                                            <p className="">{AdminLinks.icons}</p>
+                                            <p className={` py-1 pl-4`}>{AdminLinks.name}</p>
                                         </div>
                                     </div>
                                 )
@@ -121,8 +121,8 @@ const DashSide = () => {
                                         <Link to={AdminLinks.link}>
                                             <div className="my-8 mx-2">
                                                 <div className="flex">
-                                                    <p className="text-3xl">{AdminLinks.icons}</p>
-                                                    <p className={` py-1 pl-4 text-xl`}>{AdminLinks.name}</p>
+                                                    <p className="">{AdminLinks.icons}</p>
+                                                    <p className={` py-1 pl-4 `}>{AdminLinks.name}</p>
                                                 </div>
                                             </div>
                                         </Link>
@@ -132,10 +132,10 @@ const DashSide = () => {
                                     if(AdminLinks.id === 1 || AdminLinks.id === 7 || AdminLinks.id === 12){
                                         return (
                                             <Link to={AdminLinks.link}>
-                                                <div className="my-8 mx-2">
+                                                <div className="my-2 mx-2">
                                                     <div className="flex">
-                                                        <p className="text-3xl">{AdminLinks.icons}</p>
-                                                        <p className={`py-1 pl-4 text-xl`}>{AdminLinks.name}</p>
+                                                        <p className="">{AdminLinks.icons}</p>
+                                                        <p className={`py-1 pl-4 `}>{AdminLinks.name}</p>
                                                     </div>
                                                 </div>
                                             </Link>
@@ -148,8 +148,8 @@ const DashSide = () => {
                                             <Link to={AdminLinks.link}>
                                                 <div className="my-8 mx-2">
                                                     <div className="flex">
-                                                        <p className="text-3xl">{AdminLinks.icons}</p>
-                                                        <p className={` py-1 pl-4 text-xl`}>{AdminLinks.name}</p>
+                                                        <p className="">{AdminLinks.icons}</p>
+                                                        <p className={` py-1 pl-4 `}>{AdminLinks.name}</p>
                                                     </div>
                                                 </div>
                                             </Link>
