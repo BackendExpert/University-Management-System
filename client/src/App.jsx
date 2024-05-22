@@ -16,6 +16,7 @@ import Batches from "./comportment/Batches/Batches";
 import Events from "./comportment/Events/Events";
 import MyCourses from "./comportment/MyStats/MyCourses";
 import Notifications from "./comportment/MyStats/Notifications";
+import Semesters from "./comportment/Semesters/Semesters";
 
 
 export default function App() {
@@ -39,6 +40,7 @@ export default function App() {
           <Route path="Events" element={<PrivateRoute><Events /></PrivateRoute>} />
           <Route path="MyCourses" element={<PrivateRoute><MyCourses /></PrivateRoute>} />
           <Route path="Notifications" element={<PrivateRoute><Notifications /></PrivateRoute>} />
+          <Route path="Semesters" element={<PrivateRoute><Semesters /></PrivateRoute>} />
         </Route>
       </Routes>
     </BrowserRouter>
