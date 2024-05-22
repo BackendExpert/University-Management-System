@@ -16,33 +16,47 @@
 /*!40111 SET @OLD_SQL_NOTES=@@SQL_NOTES, SQL_NOTES=0 */;
 
 --
--- Table structure for table `users`
+-- Table structure for table `students`
 --
 
-DROP TABLE IF EXISTS `users`;
+DROP TABLE IF EXISTS `students`;
 /*!40101 SET @saved_cs_client     = @@character_set_client */;
 /*!50503 SET character_set_client = utf8mb4 */;
-CREATE TABLE `users` (
+CREATE TABLE `students` (
   `ID` int NOT NULL AUTO_INCREMENT,
-  `username` varchar(100) NOT NULL,
-  `Email` varchar(150) NOT NULL,
-  `Password` varchar(150) NOT NULL,
-  `Role` varchar(45) NOT NULL,
-  `join_at` datetime NOT NULL,
-  `is_active` int NOT NULL,
-  `is_lock` int NOT NULL,
+  `RegNo` varchar(45) NOT NULL,
+  `Fname` varchar(100) NOT NULL,
+  `Lname` varchar(100) NOT NULL,
+  `Gender` varchar(10) NOT NULL,
+  `Address` varchar(255) DEFAULT NULL,
+  `NIC` varchar(15) NOT NULL,
+  `MotherName` varchar(100) DEFAULT NULL,
+  `Mmobile` varchar(15) DEFAULT NULL,
+  `MAddress` varchar(255) DEFAULT NULL,
+  `FatherName` varchar(100) DEFAULT NULL,
+  `Fmobile` varchar(15) DEFAULT NULL,
+  `FAddress` varchar(255) DEFAULT NULL,
+  `Gname` varchar(100) DEFAULT NULL,
+  `GAddress` varchar(255) DEFAULT NULL,
+  `Gmobile` varchar(15) DEFAULT NULL,
+  `EmailStd` varchar(60) DEFAULT NULL,
+  `MEmail` varchar(60) DEFAULT NULL,
+  `FEmail` varchar(60) DEFAULT NULL,
+  `GardEmail` varchar(60) DEFAULT NULL,
+  `Mobile` varchar(15) DEFAULT NULL,
+  `landLine` varchar(15) DEFAULT NULL,
+  `RegisterAt` date NOT NULL,
   PRIMARY KEY (`ID`)
-) ENGINE=InnoDB AUTO_INCREMENT=6 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
--- Dumping data for table `users`
+-- Dumping data for table `students`
 --
 
-LOCK TABLES `users` WRITE;
-/*!40000 ALTER TABLE `users` DISABLE KEYS */;
-INSERT INTO `users` VALUES (2,'jehan','jehan@456.com','$2a$10$cW.zH2X8dvgItUinF2vQXOHZviw9SeLPgZsXI9y3IBtSk6.YyDJRC','SuperAdmin','2024-05-18 17:46:18',1,0),(3,'jehanStd','jehanstd@123.com','$2a$10$H/Mp/iyHV9u1aEGAzHbYROI93L//svZJFZgaMc58zCf.8lH9crzVi','Student','2024-05-20 13:45:14',1,0),(4,'jehanHOD','jehanhod@123.com','$2a$10$yFnwK1iaXcvYuNvKI0c0guljGigz12QamoOhZpfMU6Uvhs0vX8Twm','Hod','2024-05-20 18:44:14',1,0),(5,'jehanlec','jehanlec@123.com','$2a$10$STEe42pVIbny9ElrSEyiZurQy096S/ArOL1ntoGSItlSAFy2505Re','Lec','2024-05-22 13:03:55',1,0);
-/*!40000 ALTER TABLE `users` ENABLE KEYS */;
+LOCK TABLES `students` WRITE;
+/*!40000 ALTER TABLE `students` DISABLE KEYS */;
+/*!40000 ALTER TABLE `students` ENABLE KEYS */;
 UNLOCK TABLES;
 /*!40103 SET TIME_ZONE=@OLD_TIME_ZONE */;
 
@@ -54,4 +68,4 @@ UNLOCK TABLES;
 /*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
 /*!40111 SET SQL_NOTES=@OLD_SQL_NOTES */;
 
--- Dump completed on 2024-05-22 15:15:32
+-- Dump completed on 2024-05-22 15:15:33
