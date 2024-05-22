@@ -9,11 +9,16 @@ const EventsNotifications = () => {
     const RoleUser = secureLocalStorage.getItem("Login1");
     const EmailUser = secureLocalStorage.getItem("login2");
 
+    const [buttonValue, SetButtonValue] = useState(0)
+    const HeadleButtonClick = (clickValue) => {
+        SetButtonValue(clickValue)   
+    }
+    
     if(RoleUser !== null && EmailUser !== null) {
         return (
             <div>
                 <div className="bg-white">
-                    
+
                 </div>
             </div>
         )
