@@ -26,8 +26,8 @@ const DashHome = () => {
     ]
 
     const studentData = [
-        {id: 1, name: "My Course", icons: <BsMortarboard />, value: "Bsc Information Technologssssssssssssssy", style: "text-blue-500"},
-        {id: 2, name: "My Department", icons: <BsMortarboardFill />, value: "Computing", style: "text-red-500"},
+        {id: 1, name: "My Course", icons: <BsMortarboard />, value: "Bsc Information Technology", style: "text-blue-500"},
+        {id: 2, name: "My Department", icons: <BsBuilding />, value: "Computing", style: "text-red-500"},
         {id: 3, name: "Expenses", icons: <BsCashCoin />, value: <CountUp end={10000} />, style: "text-green-500"},
     ]
 
