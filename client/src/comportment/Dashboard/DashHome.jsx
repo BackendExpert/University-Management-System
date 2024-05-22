@@ -33,7 +33,7 @@ const DashHome = () => {
 
     if(RoleUser !== null && EmailUser !== null){
         return (
-            <div className='mx-8'>
+            <div className='mx-2'>
                 <div className="my-4">
                     <p>/ Dashbord /</p>
                 </div>
@@ -43,22 +43,31 @@ const DashHome = () => {
                             if(RoleUser === "Student"){
                                 return (
                                     <div className="">
-                                        <div className="md:grid grid-cols-4 gap-4 my-4">
+                                        <div className="md:grid grid-cols-4 gap-4 my-4 mr-4">
                                             {
                                                 studentData.map((stdData) => {
                                                     return (
                                                         <Link to={stdData.link}>
-                                                            <div onClick={() => HeadleButtonClick(stdData.btnvalue)} className={`cursor-pointer text-center shadow-2xl bg-white border-2 border-gray-200 rounded py-8 px-8 w-full mx-2 lg:my-0 my-2 duration-500 hover:text-sm ${stdData.style}`}>                                       
-                                                                <p className="font-semibold text-xl">{stdData.icon}</p>   
-                                                                <p className="font-semibold pl-2 pt-2">{stdData.name}</p>
-                                                                <p className="font-semibold text-3xl pl-2 pt-1">{stdData.value}</p>
+                                                            <div className={`bg-white w-full mx-2 lg:my-0 my-2 duration-500 rounded ${stdData.style}`}>                                       
+                                                                <div className="flex py-6 px-8 w-full justify-between border border-gray-200 rounded">
+                                                                    <div className="">
+                                                                        <h1 className={`text-[180%] ${stdData.style}`}>{stdData.value}</h1>
+                                                                        <p className="py-2 text-[120%]">{stdData.name}</p>
+                                                                    </div>
+                                                                    <div className="">
+                                                                        <p className="text-[200%] text-gray-500">{stdData.icons}</p>
+                                                                    </div>
+                                                                </div>
+                                                                <div className="text-white py-4 px-8 bg-gradient-to-r from-indigo-500 via-purple-500 to-pink-500 rounded">
+                                                                    All {stdData.name} 
+                                                                </div>
                                                             </div>  
                                                         </Link>
                                                     )
                                                 })
                                             }
                                         </div>
-                                        <div className="md:grid grid-cols-2 gap-4">
+                                        {/* <div className="md:grid grid-cols-2 gap-4">
                                             <div className="md:mr-8 my-2 md:w-full">
                                                 <div className="bg-white py-4 px-6 rounded shadow-md">
                                                     <h1 className="text-2xl font-semibold text-gray-500">My Information</h1>
@@ -151,7 +160,7 @@ const DashHome = () => {
                                                     </div>
                                                 </div>
                                             </div>
-                                        </div>
+                                        </div> */}
 
                                     </div>
                                 )
