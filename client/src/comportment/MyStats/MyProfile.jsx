@@ -16,24 +16,34 @@ const MyProfile = () => {
         </div>
 
 
+        {
+          (() => {
+            if(RoleUser === "Student"){
+              return (
+                <div className="">
+                <div className="lg:flex ">
+                  <div className="w-full">
+                    <div className="bg-white py-4 px-8 rounded shadow-md">
+                      ashdkjh 
+                    </div>
+                    <div className="bg-white py-4 px-8 my-4 rounded shadow-md">
+                      ashdkjh
+                    </div>
+                  </div>
+                  <div className="md:mx-4 mx-0 w-full md:my-0 my-4">
+                    <div className="bg-white py-4 px-8  rounded shadow-md">
+                      ashdkjh
+                    </div>
+                  </div>
+                </div>
+              </div>
+              )
+            }
+          })()
+        }
 
-        <div className="">
-          <div className="lg:flex ">
-            <div className="w-full">
-              <div className="bg-white py-4 px-8 rounded shadow-md">
-                ashdkjh 
-              </div>
-              <div className="bg-white py-4 px-8 my-4 rounded shadow-md">
-                ashdkjh
-              </div>
-            </div>
-            <div className="md:mx-4 mx-0 w-full md:my-0 my-4">
-              <div className="bg-white py-4 px-8  rounded shadow-md">
-                ashdkjh
-              </div>
-            </div>
-          </div>
-        </div>
+
+
     </div>
   )
 }
