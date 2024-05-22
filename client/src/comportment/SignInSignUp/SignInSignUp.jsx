@@ -103,7 +103,7 @@ const SignInSignUp = () => {
 
   return (
     <div>
-        <div className={`py-8 lg:px-4 px-8 lg:h-full h-auto lg:w-full ${!Darkmode ? 'light-mode duration-500 bg-gray-200' : 'dark-mode duration-500 bg-[#1e293b]'}`}>
+        <div className={`py-8 md:px-4 px-8 md:h-full h-auto md:w-full ${!Darkmode ? 'light-mode duration-500 bg-gray-200' : 'dark-mode duration-500 bg-[#1e293b]'}`}>
             {
                 !Darkmode ? 
                     <p className='cursor-pointer' onClick={() => headleDarkMode()}>LightMode</p>
@@ -112,10 +112,10 @@ const SignInSignUp = () => {
             }
             
             <div className="">
-                <div className="lg:grid grid-cols-3 gap-2 lg:py-[2%]"> 
+                <div className="md:grid grid-cols-3 gap-2 md:py-[2%]"> 
                     <div className=""></div>
 
-                    <div className={`lg:mx-[2%] my-[8%] py-8 rounded shadow-md ${!Darkmode ? 'light-mode duration-500 bg-white' : 'dark-mode duration-500 bg-[#2c3646]'}`}>
+                    <div className={`md:mx-[2%] my-[8%] py-8 rounded shadow-md ${!Darkmode ? 'light-mode duration-500 bg-white' : 'dark-mode duration-500 bg-[#2c3646]'}`}>
                         <div className="text-center">
                             <p className="text-blue-500 text-xl"><MyIcons name='school' size='large'></MyIcons></p>
                             {
@@ -132,7 +132,7 @@ const SignInSignUp = () => {
                                     }
                                 })()
                             }
-                            <p className="lg:text-3xl my-2">UMS</p>
+                            <p className="md:text-3xl my-2">UMS</p>
                         </div>
                         <div className="mx-8 ">
                             {
@@ -141,12 +141,12 @@ const SignInSignUp = () => {
                                         return (
                                             <form onSubmit={headleSignIn}>
                                                 <div className="my-4">
-                                                    <label htmlFor="" className='my-2 lg:text-xl'>Email : </label>
+                                                    <label htmlFor="" className='my-2 md:text-xl'>Email : </label>
                                                     <input type="email" name="" id="" className={`my-2 text-xl h-16 w-full rounded pl-2 mr-4  ${!Darkmode ? 'bg-gray-200 light-mode duration-500' : 'dark-mode duration-500 bg-[#1e293b]'}`} required placeholder='Enter Email Address'
                                                     onChange={e => SetSignInData({...SignInData, email:e.target.value})}/>
                                                 </div>
                                                 <div className="my-4">
-                                                    <label htmlFor="" className='my-2 lg:text-xl'>Password : </label>
+                                                    <label htmlFor="" className='my-2 md:text-xl'>Password : </label>
                                                     <input type="password" name="" id="" className={`my-2 text-xl h-16 w-full rounded pl-2 mr-4  ${!Darkmode ? 'bg-gray-200 light-mode duration-500' : 'dark-mode duration-500 bg-[#1e293b]'}`} required placeholder='Enter Password'
                                                     onChange={e => SetSignInData({...SignInData, password:e.target.value})}/>
                                                 </div>
@@ -161,17 +161,17 @@ const SignInSignUp = () => {
                                         return (
                                             <form onSubmit={headleSignUp}>
                                                 <div className="my-8">
-                                                    <label htmlFor="" className='my-2 lg:text-2xl'>Username : </label>
+                                                    <label htmlFor="" className='my-2 md:text-2xl'>Username : </label>
                                                     <input type="text" name="" id="" className={`my-2 text-xl h-16 w-full rounded pl-2 mr-4  ${!Darkmode ? 'bg-gray-200 light-mode duration-500' : 'dark-mode duration-500 bg-[#1e293b]'}`} required placeholder='Enter Username'
                                                     onChange={e => SetSignUpData({...SignUpData, username:e.target.value})}/>
                                                 </div>
                                                 <div className="my-8">
-                                                    <label htmlFor="" className='my-2 lg:text-2xl'>Email : </label>
+                                                    <label htmlFor="" className='my-2 md:text-2xl'>Email : </label>
                                                     <input type="email" name="" id="" className={`my-2 text-xl h-16 w-full rounded pl-2 mr-4  ${!Darkmode ? 'bg-gray-200 light-mode duration-500' : 'dark-mode duration-500 bg-[#1e293b]'}`} required placeholder='Enter Email Address'
                                                     onChange={e => SetSignUpData({...SignUpData, SignUpemail:e.target.value})}/>
                                                 </div>
                                                 <div className="my-8">
-                                                    <label htmlFor="" className='my-2 lg:text-2xl'>Password : </label>
+                                                    <label htmlFor="" className='my-2 md:text-2xl'>Password : </label>
                                                     <input type="password" name="" id="" className={`my-2 text-xl h-16 w-full rounded pl-2 mr-4  ${!Darkmode ? 'bg-gray-200 light-mode duration-500' : 'dark-mode duration-500 bg-[#1e293b]'}`} required placeholder='Enter Password'
                                                     onChange={e => SetSignUpData({...SignUpData, SignUppassword:e.target.value})}/>
                                                 </div>
