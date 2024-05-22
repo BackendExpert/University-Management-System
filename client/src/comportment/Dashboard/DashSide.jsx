@@ -78,11 +78,11 @@ const DashSide = () => {
                 }
             </button>
             <div className={`md:relative fixed top-0 left-0 h-full px-4 bg-gray-800 text-white w-auto transform ${isOpen ? 'translate-x-0' : '-translate-x-full'} md:translate-x-0 transition-transform duration-300 ease-in-out`}>
-                <div className="flex whitespace-nowrap">
+                <div className="flex whitespace-nowrap lg:py-8">
                     <p className="text-2xl my-4 "><MyIcons name='school' size='large'></MyIcons></p>                    
 
                             <div className="my-4">
-                                <h1 className="text-xl my-2 pl-2">ABC Campus</h1>
+                                <h1 className="lg:text-2xl text-xl my-2 pl-2">ABC Campus</h1>
                                 {
                                     (() => {
                                         if(RoleUser === "SuperAdmin"){
@@ -122,8 +122,8 @@ const DashSide = () => {
                                 return (
                                     <div onClick={() => headleLogOut()} className="my-8 mx-2 text-red-500 cursor-pointer">
                                         <div className="flex">
-                                            <p className="text-xl">{AdminLinks.icons}</p>
-                                            <p className={`pl-4`}>{AdminLinks.name}</p>
+                                            <p className="lg:text-3xl lg:my-2 text-xl">{AdminLinks.icons}</p>
+                                            <p className={`lg:text-2xl lg:pt-2 pl-4 `}>{AdminLinks.name}</p>
                                         </div>
                                     </div>
                                 )
@@ -149,8 +149,8 @@ const DashSide = () => {
                                             <Link to={AdminLinks.link}>
                                                 <div className="my-4 mx-2">
                                                     <div className="flex">
-                                                        <p className="text-xl">{AdminLinks.icons}</p>
-                                                        <p className={`pl-4 `}>{AdminLinks.name}</p>
+                                                        <p className="lg:text-3xl lg:my-2 text-xl">{AdminLinks.icons}</p>
+                                                        <p className={`lg:text-2xl lg:pt-2 pl-4 `}>{AdminLinks.name}</p>
                                                     </div>
                                                 </div>
                                             </Link>
@@ -163,8 +163,8 @@ const DashSide = () => {
                                             <Link to={AdminLinks.link}>
                                                 <div className="my-4 mx-2">
                                                     <div className="flex">
-                                                        <p className="text-xl">{AdminLinks.icons}</p>
-                                                        <p className={`pl-4 `}>{AdminLinks.name}</p>
+                                                        <p className="lg:text-3xl lg:my-2 text-xl">{AdminLinks.icons}</p>
+                                                        <p className={`lg:text-2xl lg:pt-2 pl-4 `}>{AdminLinks.name}</p>
                                                     </div>
                                                 </div>
                                             </Link>
@@ -177,8 +177,8 @@ const DashSide = () => {
                                             <Link to={AdminLinks.link}>
                                                 <div className="my-4 mx-2">
                                                     <div className="flex">
-                                                        <p className="text-xl">{AdminLinks.icons}</p>
-                                                        <p className={`pl-4 `}>{AdminLinks.name}</p>
+                                                        <p className="lg:text-3xl lg:my-2 text-xl">{AdminLinks.icons}</p>
+                                                        <p className={`lg:text-2xl lg:pt-2 pl-4 `}>{AdminLinks.name}</p>
                                                     </div>
                                                 </div>
                                             </Link>
