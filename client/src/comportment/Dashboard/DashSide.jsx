@@ -94,6 +94,11 @@ const DashSide = () => {
                                                 <p className='text-sm'>Hend of Dept</p>
                                             )
                                         }
+                                        if(RoleUser === "Lec"){
+                                            return (
+                                                <p className='text-sm'>Lecturer</p>
+                                            )
+                                        }
                                     })()
                                 }
                                 
