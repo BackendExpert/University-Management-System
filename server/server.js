@@ -51,7 +51,7 @@ app.use(express.static('public'));
 
 // signUp endpoint
 app.post('/SignUp', (req, res) => {
-    console.log(req.body)
+    // console.log(req.body)
 
     // check user is alredy in database
     const tableName = "users"
