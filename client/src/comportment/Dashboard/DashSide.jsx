@@ -39,7 +39,7 @@ const DashSide = () => {
         {id: 13, name: "Notifications", link: "Notifications", icons: <BsBell />},         
         {id: 14, name: "Profile", link: "MyProfile", icons: <BsPersonGear />},
         {id: 15, name: "Semesters", link: "Semesters", icons: <BsFilesAlt />},
-        {id: 16, name: "Exams", link: "MyProfile", icons: <BsFileText />},
+        {id: 16, name: "Exams", link: "Exams", icons: <BsFileText />},
         
           
 
