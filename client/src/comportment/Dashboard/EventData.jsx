@@ -2,11 +2,10 @@ import React from 'react'
 
 const EventData = () => {
     const notifi = [
-        {title: "Notification 1", NBody: "Body of Notification", NDate: "2024/05/22 10:30"},
-        {title: "Notification 1", NBody: "Body of Notification", NDate: "2024/05/22 10:30"},
-        {title: "Notification 1", NBody: "Body of Notification", NDate: "2024/05/22 10:30"},
-        {title: "Notification 1", NBody: "Body of Notification", NDate: "2024/05/22 10:30"},
-        {title: "Notification 1", NBody: "Body of Notification", NDate: "2024/05/22 10:30"},
+        {title: "Events 1", NBody: "Body of Notification", NDate: "2024/05/22 10:30"},
+        {title: "Events 1", NBody: "Body of Notification", NDate: "2024/05/22 10:30"},
+        {title: "Events 1", NBody: "Body of Notification", NDate: "2024/05/22 10:30"},
+        {title: "Events 1", NBody: "Body of Notification", NDate: "2024/05/22 10:30"},
         
     ]
   return (
