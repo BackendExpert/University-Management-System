@@ -2,6 +2,7 @@ import React, { useEffect, useState } from 'react'
 import { Link, useNavigate } from 'react-router-dom';
 import  secureLocalStorage  from  "react-secure-storage"
 import MyIcons from '@reacticons/ionicons'
+import NotificationData from './NotificationData';
 
 const EventsNotifications = () => {
     const navigate = useNavigate()
@@ -43,7 +44,15 @@ const EventsNotifications = () => {
                         }
 
                     <hr  className='my-4'/> 
-                   
+                        {
+                            (() => {
+                                if(buttonValue === 0){
+                                    return (
+                                        <NotificationData />
+                                    )
+                                }
+                            })()
+                        }
                 </div>
             </div>
         )
