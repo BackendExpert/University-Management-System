@@ -5,6 +5,7 @@ import CountUp from 'react-countup'
 import UserImg from '../../assets/SuperAdmin.png'
 
 import { BsBackpack2Fill, BsSpeedometer2, BsPersonVideo3, BsFileEarmarkText, BsPeople, BsPersonGear, BsPower, BsMortarboard, BsBuilding, BsMortarboardFill, BsPersonCheck, BsCashCoin, BsCalendarEvent } from "react-icons/bs";
+import EventsNotifications from './EventsNotifications';
 
 const DashHome = () => {
     const navigate = useNavigate()
@@ -228,6 +229,10 @@ const DashHome = () => {
                             }
                         })()
                     }
+
+                    <div className="">
+                        <EventsNotifications />
+                    </div>
 
                     
 
