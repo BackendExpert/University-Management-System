@@ -4,7 +4,7 @@ import  secureLocalStorage  from  "react-secure-storage"
 import MyIcons from '@reacticons/ionicons'
 import SuperAdminImg from '../../assets/SuperAdminWhite.png'
 
-import { BsBackpack2Fill, BsSpeedometer2, BsPersonVideo3, BsFileEarmarkText, BsPeople, BsPersonGear, BsPower, BsBook, BsPatchCheck, BsBuilding, BsFile, BsMortarboard, BsList, BsX, BsCalendarEvent, BsBell } from "react-icons/bs";
+import { BsBackpack2Fill, BsSpeedometer2, BsPersonVideo3, BsFileEarmarkText, BsPeople, BsPersonGear, BsPower, BsBook, BsPatchCheck, BsBuilding, BsFile, BsMortarboard, BsList, BsX, BsCalendarEvent, BsBell, BsFilesAlt, BsFileText } from "react-icons/bs";
 
 
 
@@ -37,7 +37,11 @@ const DashSide = () => {
         {id: 11, name: "Events", link: "Events", icons: <BsCalendarEvent />}, 
         {id: 12, name: "My Courses", link: "MyCourses", icons: <BsMortarboard />}, 
         {id: 13, name: "Notifications", link: "Notifications", icons: <BsBell />},         
-        {id: 14, name: "Profile", link: "MyProfile", icons: <BsPersonGear />},  
+        {id: 14, name: "Profile", link: "MyProfile", icons: <BsPersonGear />},
+        {id: 15, name: "Semesters", link: "Semesters", icons: <BsFilesAlt />},
+        {id: 16, name: "Exams", link: "MyProfile", icons: <BsFileText />},
+        
+          
 
         {name: "LogOut", icons: <BsPower />},       
     ]
@@ -166,7 +170,7 @@ const DashSide = () => {
                                     }
                                 }
                                 if(RoleUser === "Lec"){
-                                    if(AdminLinks.id === 1 || AdminLinks.id === 2 || AdminLinks.id === 4 || AdminLinks.id === 6 || AdminLinks.id === 7){
+                                    if(AdminLinks.id === 1 || AdminLinks.id === 2 || AdminLinks.id === 4 || AdminLinks.id === 6 || AdminLinks.id === 7 || AdminLinks.id === 15 || AdminLinks.id === 14 || AdminLinks.id === 16){
                                         return (
                                             <Link to={AdminLinks.link}>
                                                 <div className="my-4 mx-2">
