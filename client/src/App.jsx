@@ -18,6 +18,7 @@ import MyCourses from "./comportment/MyStats/MyCourses";
 import Notifications from "./comportment/MyStats/Notifications";
 import Semesters from "./comportment/Semesters/Semesters";
 import Exams from "./comportment/Exams/Exams";
+import Expenses from "./comportment/Expenses/Expenses";
 
 
 export default function App() {
@@ -43,6 +44,7 @@ export default function App() {
           <Route path="Notifications" element={<PrivateRoute><Notifications /></PrivateRoute>} />
           <Route path="Semesters" element={<PrivateRoute><Semesters /></PrivateRoute>} />
           <Route path="Exams" element={<PrivateRoute><Exams /></PrivateRoute>} />
+          <Route path="Expenses" element={<PrivateRoute><Expenses /></PrivateRoute>} />
         </Route>
       </Routes>
     </BrowserRouter>
