@@ -130,7 +130,7 @@ const DashSide = () => {
                             }
                             else{
                                 if(RoleUser === "SuperAdmin"){
-                                    if(AdminLinks.id !== 12 || AdminLinks.id !== 17){
+                                    if(AdminLinks.id !== 12 && AdminLinks.id !== 17){
                                         return (
                                             <Link to={AdminLinks.link}>
                                                 <div className="my-4 mx-2">
