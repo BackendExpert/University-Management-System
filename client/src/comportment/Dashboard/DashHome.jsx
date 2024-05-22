@@ -49,13 +49,13 @@ const DashHome = () => {
                                                     return (
                                                         <Link to={stdData.link}>
                                                             <div className={`h-full bg-white w-full mx-2 md:my-0 my-2 duration-500 rounded shadow-md ${stdData.style}`}>                                       
-                                                                <div className="flex py-6 px-8 w-full justify-between border border-gray-200 rounded">
+                                                                <div className="lg:py-8 flex py-6 px-8 w-full justify-between border border-gray-200 rounded">
                                                                     <div className="">
                                                                         <h1 className={`text-[100%] ${stdData.style}`}>{stdData.value}</h1>
-                                                                        <p className="py-2 text-[120%]">{stdData.name}</p>
+                                                                        <p className="py-2 text-[120%] lg:text-3xl lg:mt-2">{stdData.name}</p>
                                                                     </div>
                                                                     <div className="">
-                                                                        <p className="text-[200%] text-gray-500">{stdData.icons}</p>
+                                                                        <p className="lg:text-5xl text-[200%] text-gray-500">{stdData.icons}</p>
                                                                     </div>
                                                                 </div>
                                                                 <div className="text-white py-4 px-8 bg-gradient-to-r from-indigo-500 via-purple-500 to-pink-500 rounded">
