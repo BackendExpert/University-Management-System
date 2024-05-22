@@ -62,14 +62,14 @@ const DashSide = () => {
     return (
         <div className="">
             <button
-                className="fixed top-4 right-4 z-50 bg-gray-600 text-white p-2 rounded font-semibold"
+                className="md:hidden fixed top-4 right-4 z-50 bg-gray-600 text-white p-2 rounded font-semibold"
                 onClick={toggleSidebar}
             >
                 {
                     !isOpen ? <BsList /> : <BsX />
                 }
             </button>
-            <div className={`fixed top-0 left-0 h-full px-4 bg-gray-800 text-white w-auto transform ${isOpen ? 'translate-x-0' : '-translate-x-full'} transition-transform duration-300 ease-in-out`}>
+            <div className={`md:relative fixed top-0 left-0 h-full px-4 bg-gray-800 text-white w-auto transform ${isOpen ? 'translate-x-0' : '-translate-x-full'} md:translate-x-0 transition-transform duration-300 ease-in-out`}>
                 <div className="flex whitespace-nowrap">
                     <p className="text-2xl my-4 "><MyIcons name='school' size='large'></MyIcons></p>                    
 
