@@ -13,12 +13,29 @@ const EventsNotifications = () => {
     const HeadleButtonClick = (clickValue) => {
         SetButtonValue(clickValue)   
     }
-    
+
     if(RoleUser !== null && EmailUser !== null) {
         return (
             <div>
-                <div className="bg-white">
-
+                <div className="bg-white py-4 px-6 my-4">
+                    <div className="flex">
+                        {
+                            (() => {
+                                if(buttonValue === 0){
+                                    return (
+                                        <div className="mx-2">Notifications</div>
+                                    )
+                                }
+                                if(buttonValue === "Events"){
+                                    return (
+                                        <div className="mx-2">Events</div>    
+                                    )
+                                }
+                            })()
+                        }
+                        <div className="mx-2">Notifications</div>
+                        <div className="mx-2">Events</div>                        
+                    </div>
                 </div>
             </div>
         )
