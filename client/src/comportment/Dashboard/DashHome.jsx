@@ -26,7 +26,7 @@ const DashHome = () => {
 
     const studentData = [
         {id: 1, name: "Current Courses", icons: <BsMortarboard />, value: <CountUp end={20} />, style: "text-blue-500"},
-        {id: 2, name: "Finished Courses", icons: <BsMortarboardFill />, value: <CountUp end={20} />, style: "text-red-500"},
+        {id: 2, name: "End Courses", icons: <BsMortarboardFill />, value: <CountUp end={20} />, style: "text-red-500"},
         {id: 3, name: "Attendance", icons: <BsPersonCheck />, value: <CountUp end={94.2} />, style: "text-yellow-500"},
         {id: 4, name: "Expenses", icons: <BsCashCoin />, value: <CountUp end={10000} />, style: "text-green-500"},
     ]
@@ -67,17 +67,17 @@ const DashHome = () => {
                                                 })
                                             }
                                         </div>
-                                        {/* <div className="md:grid grid-cols-2 gap-4">
+                                        <div className="md:grid grid-cols-2 gap-4">
                                             <div className="md:mr-8 my-2 md:w-full">
                                                 <div className="bg-white py-4 px-6 rounded shadow-md">
                                                     <h1 className="text-2xl font-semibold text-gray-500">My Information</h1>
                                                     <hr  className='mt-4'/>
-                                                    <div className="py-8 md:px-6 px-0 lg:flex">
+                                                    <div className="py-8 lg:flex">
                                                         <img src="https://cdn-icons-png.flaticon.com/128/2641/2641333.png" alt="" className='h-[20%] w-auto'/>
                                                         <table border={0} className='mx-2'>
                                                             <tr className=''>
                                                                 <td className='font-semibold'>Name: </td>
-                                                                <td className='pl-4 text-gray-500'>Jehan Weerasuriya </td>
+                                                                <td className='pl-4 text-gray-500'>J. Weerasuriya </td>
                                                             </tr>
                                                             <tr>
                                                                 <td className='font-semibold'>Admission ID: </td>
@@ -107,7 +107,7 @@ const DashHome = () => {
                                                 <div className="bg-white h-full shadow-md py-4 px-6 rounded ">                                                    
                                                     <h1 className="text-2xl font-semibold text-gray-500">My Course</h1>
                                                     <hr  className='mt-4'/>
-                                                    <div className="py-8 md:px-6 px-0 md:flex">
+                                                    <div className="py-8 md:flex">
                                                         <img src="https://cdn-icons-png.flaticon.com/128/2997/2997322.png" alt="" className='h-[20%] w-auto'/>
                                                         <table border={0} className=''>
                                                             <tr className=''>
@@ -143,7 +143,7 @@ const DashHome = () => {
                                                 <div className="bg-white h-full shadow-md py-4 px-6 rounded">
                                                     <h1 className="text-2xl font-semibold text-gray-500">Current GPA</h1>      
                                                     <hr  className='mt-4'/>                                              
-                                                    <div className="py-8 md:px-6 px-0 md:flex">
+                                                    <div className="py-8 md:flex">
                                                         <img src="https://cdn-icons-png.flaticon.com/128/3755/3755243.png" alt="" className='h-[20%] w-auto'/>
                                                         <div className="text-center w-full my-4">
                                                             <p className="text-2xl font-semibold text-yellow-500">3.25</p>
@@ -160,7 +160,7 @@ const DashHome = () => {
                                                     </div>
                                                 </div>
                                             </div>
-                                        </div> */}
+                                        </div>
 
                                     </div>
                                 )
