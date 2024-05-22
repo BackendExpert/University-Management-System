@@ -48,7 +48,7 @@ const DashHome = () => {
                                                 studentData.map((stdData) => {
                                                     return (
                                                         <Link to={stdData.link}>
-                                                            <div className={`h-full bg-white w-full mx-2 lg:my-0 my-2 duration-500 rounded shadow-md ${stdData.style}`}>                                       
+                                                            <div className={`h-full bg-white w-full mx-2 md:my-0 my-2 duration-500 rounded shadow-md ${stdData.style}`}>                                       
                                                                 <div className="flex py-6 px-8 w-full justify-between border border-gray-200 rounded">
                                                                     <div className="">
                                                                         <h1 className={`text-[100%] ${stdData.style}`}>{stdData.value}</h1>
@@ -72,7 +72,7 @@ const DashHome = () => {
                                                 <div className="bg-white py-4 px-6 rounded shadow-md">
                                                     <h1 className="text-2xl font-semibold text-gray-500">My Information</h1>
                                                     <hr  className='mt-4'/>
-                                                    <div className="py-8 lg:flex">
+                                                    <div className="py-8 md:flex">
                                                         <img src="https://cdn-icons-png.flaticon.com/128/2641/2641333.png" alt="" className='h-[20%] w-auto'/>
                                                         <table border={0} className='mx-2'>
                                                             <tr className=''>
@@ -172,7 +172,7 @@ const DashHome = () => {
                                             {
                                                 DashData.map((dataDash) => {
                                                     return (
-                                                    <div className={`bg-white w-full mx-2 lg:my-0 my-2 duration-500 rounded shadow-md ${dataDash.style}`}>                                       
+                                                    <div className={`bg-white w-full mx-2 md:my-0 my-2 duration-500 rounded shadow-md ${dataDash.style}`}>                                       
                                                         <div className="flex py-6 px-8 w-full justify-between border border-gray-200 rounded">
                                                             <div className="">
                                                                 <h1 className={`text-[180%] ${dataDash.style}`}>{dataDash.value}</h1>
@@ -202,7 +202,7 @@ const DashHome = () => {
                                                 DashData.map((dataDash) => {
                                                     if(dataDash.id !== 4 && dataDash.id !== 6){
                                                         return (
-                                                            <div className={`bg-white w-full mx-2 lg:my-0 my-2 duration-500 rounded shadow-md ${dataDash.style}`}>                                       
+                                                            <div className={`bg-white w-full mx-2 md:my-0 my-2 duration-500 rounded shadow-md ${dataDash.style}`}>                                       
                                                                 <div className="flex py-6 px-8 w-full justify-between border border-gray-200 rounded">
                                                                     <div className="">
                                                                         <h1 className={`text-[180%] ${dataDash.style}`}>{dataDash.value}</h1>

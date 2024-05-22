@@ -13,10 +13,10 @@ const ProfileData = () => {
     if(RoleUser === "Student"){
         return (
             <div className="">
-            <div className="lg:flex ">
+            <div className="md:flex ">
               <div className="w-full">
                 <div className="bg-white py-4 px-8 rounded shadow-md">
-                <div className="py-8 lg:flex">
+                <div className="py-8 md:flex">
                     <img src="https://cdn-icons-png.flaticon.com/128/2641/2641333.png" alt="" className='h-[20%] w-auto'/>
                       <table border={0} className='mx-2'>
                           <tr className=''>

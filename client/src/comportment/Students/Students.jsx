@@ -34,7 +34,7 @@ const Students = () => {
                 if(RoleUser === "SuperAdmin") {
                   if(dataStd.id !== 4 && dataStd.id !== 5){
                     return (
-                      <div className={`bg-white w-full mx-2 lg:my-0 my-2 duration-500 rounded shadow-md ${dataStd.style}`}>                                       
+                      <div className={`bg-white w-full mx-2 md:my-0 my-2 duration-500 rounded shadow-md ${dataStd.style}`}>                                       
                           <div className="flex py-6 px-8 w-full justify-between border border-gray-200 rounded">
                               <div className="">
                                   <h1 className={`text-[180%] ${dataStd.style}`}>{dataStd.value}</h1>
@@ -53,7 +53,7 @@ const Students = () => {
                 }
                 if(RoleUser === "Hod"){
                   return (
-                    <div className={`bg-white w-full mx-2 lg:my-0 my-2 duration-500 rounded shadow-md ${dataStd.style}`}>                                       
+                    <div className={`bg-white w-full mx-2 md:my-0 my-2 duration-500 rounded shadow-md ${dataStd.style}`}>                                       
                         <div className="flex py-6 px-8 w-full justify-between border border-gray-200 rounded">
                             <div className="">
                                 <h1 className={`text-[180%] ${dataStd.style}`}>{dataStd.value}</h1>
@@ -72,7 +72,7 @@ const Students = () => {
                 if(RoleUser === "Lec"){
                   if(dataStd.id === 1 || dataStd.id === 4 || dataStd.id === 5){
                     return (
-                      <div className={`bg-white w-full mx-2 lg:my-0 my-2 duration-500 rounded shadow-md ${dataStd.style}`}>                                       
+                      <div className={`bg-white w-full mx-2 md:my-0 my-2 duration-500 rounded shadow-md ${dataStd.style}`}>                                       
                           <div className="flex py-6 px-8 w-full justify-between border border-gray-200 rounded">
                               <div className="">
                                   <h1 className={`text-[180%] ${dataStd.style}`}>{dataStd.value}</h1>
