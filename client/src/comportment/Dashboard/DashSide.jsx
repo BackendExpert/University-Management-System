@@ -118,16 +118,18 @@ const DashSide = () => {
                             }
                             else{
                                 if(RoleUser === "SuperAdmin"){
-                                    return (
-                                        <Link to={AdminLinks.link}>
-                                            <div className="my-4 mx-2">
-                                                <div className="flex">
-                                                    <p className="text-xl">{AdminLinks.icons}</p>
-                                                    <p className={`pl-4 `}>{AdminLinks.name}</p>
+                                    if(AdminLinks.id !== 12){
+                                        return (
+                                            <Link to={AdminLinks.link}>
+                                                <div className="my-4 mx-2">
+                                                    <div className="flex">
+                                                        <p className="text-xl">{AdminLinks.icons}</p>
+                                                        <p className={`pl-4 `}>{AdminLinks.name}</p>
+                                                    </div>
                                                 </div>
-                                            </div>
-                                        </Link>
-                                    )
+                                            </Link>
+                                        )
+                                    }
                                 }
                                 if(RoleUser === "Student"){
                                     if(AdminLinks.id === 1 || AdminLinks.id === 7 || AdminLinks.id === 11 || AdminLinks.id === 12 || AdminLinks.id === 13){
