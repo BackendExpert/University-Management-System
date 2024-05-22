@@ -16,9 +16,9 @@ const ProfileData = () => {
             <div className="md:flex ">
               <div className="w-full">
                 <div className="bg-white py-4 px-8 rounded shadow-md">
-                <div className="py-8 md:flex">
-                    <img src="https://cdn-icons-png.flaticon.com/128/2641/2641333.png" alt="" className='h-[20%] w-auto'/>
-                      <table border={0} className='mx-2'>
+                <div className="lg:py-16 py-8 md:flex">
+                    <img src="https://cdn-icons-png.flaticon.com/128/2641/2641333.png" alt="" className='lg:h-56 h-[20%] w-auto'/>
+                      <table border={0} className='mx-2 lg:text-2xl'>
                           <tr className=''>
                               <td className='font-semibold'>Email: </td>
                               <td className='pl-4 text-gray-500'>jehan.w@example.com </td>
@@ -40,7 +40,11 @@ const ProfileData = () => {
                   </div>
                 </div>
                 <div className="bg-white py-4 px-8 my-4 rounded shadow-md">
-                  ashdkjh
+                  <h1 className="lg:text-2xl font-semibold text-gray-500 py-4">My Personal Data</h1>
+                  <hr />
+                  <div className="">
+                    
+                  </div>
                 </div>
               </div>
               <div className="md:mx-4 mx-0 w-full md:my-0 my-4">
