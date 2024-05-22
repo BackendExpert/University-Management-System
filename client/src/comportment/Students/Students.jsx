@@ -70,7 +70,7 @@ const Students = () => {
                     )
                 }
                 if(RoleUser === "Lec"){
-                  if(dataStd.id === 1){
+                  if(dataStd.id === 1 || dataStd.id === 4 || dataStd.id === 5){
                     return (
                       <div className={`bg-white w-full mx-2 lg:my-0 my-2 duration-500 rounded shadow-md ${dataStd.style}`}>                                       
                           <div className="flex py-6 px-8 w-full justify-between border border-gray-200 rounded">
