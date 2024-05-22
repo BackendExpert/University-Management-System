@@ -10,47 +10,49 @@ const ProfileData = () => {
     const RoleUser = secureLocalStorage.getItem("Login1");
     const EmailUser = secureLocalStorage.getItem("login2");
 
-    
-  return (
-    <div className="">
-    <div className="lg:flex ">
-      <div className="w-full">
-        <div className="bg-white py-4 px-8 rounded shadow-md">
-        <div className="py-8 lg:flex">
-            <img src="https://cdn-icons-png.flaticon.com/128/2641/2641333.png" alt="" className='h-[20%] w-auto'/>
-              <table border={0} className='mx-2'>
-                  <tr className=''>
-                      <td className='font-semibold'>Email: </td>
-                      <td className='pl-4 text-gray-500'>jehan.w@example.com </td>
-                  </tr>
-                  <tr>
-                      <td className='font-semibold'>Admission ID: </td>
-                      <td className='pl-4 text-gray-500'>123456ABCD </td>
-                  </tr>
-                  <tr>
-                      <td className='font-semibold'>Username: </td>
-                      <td className='pl-4 text-gray-500'>jehanstd </td>
-                  </tr>
-
-                  <tr>
-                      <td className='font-semibold'>Password: </td>
-                      <td className='pl-4 text-gray-500'>**********</td>
-                  </tr>
-              </table>
+    if(RoleUser === "Student"){
+        return (
+            <div className="">
+            <div className="lg:flex ">
+              <div className="w-full">
+                <div className="bg-white py-4 px-8 rounded shadow-md">
+                <div className="py-8 lg:flex">
+                    <img src="https://cdn-icons-png.flaticon.com/128/2641/2641333.png" alt="" className='h-[20%] w-auto'/>
+                      <table border={0} className='mx-2'>
+                          <tr className=''>
+                              <td className='font-semibold'>Email: </td>
+                              <td className='pl-4 text-gray-500'>jehan.w@example.com </td>
+                          </tr>
+                          <tr>
+                              <td className='font-semibold'>Admission ID: </td>
+                              <td className='pl-4 text-gray-500'>123456ABCD </td>
+                          </tr>
+                          <tr>
+                              <td className='font-semibold'>Username: </td>
+                              <td className='pl-4 text-gray-500'>jehanstd </td>
+                          </tr>
+        
+                          <tr>
+                              <td className='font-semibold'>Password: </td>
+                              <td className='pl-4 text-gray-500'>**********</td>
+                          </tr>
+                      </table>
+                  </div>
+                </div>
+                <div className="bg-white py-4 px-8 my-4 rounded shadow-md">
+                  ashdkjh
+                </div>
+              </div>
+              <div className="md:mx-4 mx-0 w-full md:my-0 my-4">
+                <div className="bg-white py-4 px-8  rounded shadow-md">
+                  ashdkjh
+                </div>
+              </div>
+            </div>
           </div>
-        </div>
-        <div className="bg-white py-4 px-8 my-4 rounded shadow-md">
-          ashdkjh
-        </div>
-      </div>
-      <div className="md:mx-4 mx-0 w-full md:my-0 my-4">
-        <div className="bg-white py-4 px-8  rounded shadow-md">
-          ashdkjh
-        </div>
-      </div>
-    </div>
-  </div>
-  )
+          )
+    }
+
 }
 
 export default ProfileData
