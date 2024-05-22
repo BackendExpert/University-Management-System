@@ -43,12 +43,27 @@ const DashHome = () => {
                             if(RoleUser === "Student"){
                                 return (
                                     <div className="">
+                                        <div className="md:grid grid-cols-4 gap-4 my-4">
+                                            {
+                                                studentData.map((stdData) => {
+                                                    return (
+                                                        <Link to={stdData.link}>
+                                                            <div onClick={() => HeadleButtonClick(stdData.btnvalue)} className={`cursor-pointer text-center shadow-2xl bg-white border-2 border-gray-200 rounded py-8 px-8 w-full mx-2 lg:my-0 my-2 duration-500 hover:text-sm ${stdData.style}`}>                                       
+                                                                <p className="font-semibold text-xl">{stdData.icon}</p>   
+                                                                <p className="font-semibold pl-2 pt-2">{stdData.name}</p>
+                                                                <p className="font-semibold text-3xl pl-2 pt-1">{stdData.value}</p>
+                                                            </div>  
+                                                        </Link>
+                                                    )
+                                                })
+                                            }
+                                        </div>
                                         <div className="md:grid grid-cols-2 gap-4">
                                             <div className="md:mr-8 my-2 md:w-full">
                                                 <div className="bg-white py-4 px-6 rounded shadow-md">
                                                     <h1 className="text-2xl font-semibold text-gray-500">My Information</h1>
                                                     <hr  className='mt-4'/>
-                                                    <div className="py-8 md:px-6 px-0 md:flex">
+                                                    <div className="py-8 md:px-6 px-0 lg:flex">
                                                         <img src="https://cdn-icons-png.flaticon.com/128/2641/2641333.png" alt="" className='h-[20%] w-auto'/>
                                                         <table border={0} className='mx-2'>
                                                             <tr className=''>
@@ -137,45 +152,7 @@ const DashHome = () => {
                                                 </div>
                                             </div>
                                         </div>
-                                        <div className="md:grid grid-cols-4 gap-4 my-4">
-                                            {
-                                                studentData.map((stdData) => {
-                                                    return (
-                                                        <div className="md:my-0 my-4">
-                                                        <div className="bg-white rounded shadow-md py-[10%] px-8">
-                                                            <div className="flex w-full justify-between">
-                                                                <div className="">
-                                                                    <h1 className={`text-[150%] ${stdData.style}`}>{stdData.value}
-                                                                        {
-                                                                            (() => {
-                                                                                if(stdData.name === "Attendance"){
-                                                                                    return (
-                                                                                        <span>%</span>
-                                                                                    )
-                                                                                }
-                                                                                if(stdData.name === "Expenses"){
-                                                                                    return (
-                                                                                        <span>.00</span>
-                                                                                    )
-                                                                                }
-                                                                            })()
-                                                                        }
-                                                                    </h1>
-                                                                    <p className="py-2 text-xl">{stdData.name}</p>
-                                                                </div>
-                                                                <div className="">
-                                                                    <p className="text-5xl text-gray-500">{stdData.icons}</p>
-                                                                </div>
-                                                            </div>
-                                                        </div>
-                                                        <div className="text-white py-[5%] px-8 bg-gradient-to-r from-indigo-500 via-purple-500 to-pink-500 rounded">
-                                                            My {stdData.name} 
-                                                        </div>
-                                                    </div>
-                                                    )
-                                                })
-                                            }
-                                        </div>
+
                                     </div>
                                 )
                             }
