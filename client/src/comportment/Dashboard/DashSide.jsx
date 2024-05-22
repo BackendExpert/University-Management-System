@@ -36,7 +36,8 @@ const DashSide = () => {
         {id: 10, name: "Batches", link: "Batches", icons: <BsPeople />},
         {id: 11, name: "Events", link: "Events", icons: <BsCalendarEvent />}, 
         {id: 12, name: "My Courses", link: "MyCourses", icons: <BsMortarboard />}, 
-        {id: 13, name: "Profile", link: "MyProfile", icons: <BsPersonGear />},  
+        {id: 13, name: "Notifications", link: "Notifications", icons: <BsMortarboard />},         
+        {id: 14, name: "Profile", link: "MyProfile", icons: <BsPersonGear />},  
 
         {name: "LogOut", icons: <BsPower />},       
     ]
