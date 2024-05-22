@@ -68,7 +68,7 @@ const DashSide = () => {
         
     localStorage.setItem("darkMode", ModeDark) 
     return (
-        <div className="">
+        <div className="w-[14%]">
             <button
                 className="md:hidden fixed top-4 right-4 z-50 bg-gray-600 text-white p-2 rounded font-semibold"
                 onClick={toggleSidebar}
