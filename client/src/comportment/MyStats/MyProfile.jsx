@@ -29,7 +29,7 @@ const MyProfile = () => {
                 if(buttonValue === 0){
                   return (
                       <div className="lg:flex">
-                          <div className="cursor-pointer mx-2 py-2 border-b-2 border-blue-500">My Information</div>
+                          <div className="cursor-pointer mx-2 py-2 border-b-2 border-blue-500 text-blue-500">My Information</div>
                           <div className="cursor-pointer mx-2 py-2" onClick={() => HeadleButtonClick("UpdatePass")}>Update Password</div>
                           <div className="cursor-pointer mx-2 py-2" onClick={() => HeadleButtonClick("UpdateMyData")}>Update My Data</div>  
                       </div>
@@ -39,26 +39,35 @@ const MyProfile = () => {
                     return (
                         <div className="lg:flex">
                             <div className="cursor-pointer mx-2 py-2 " onClick={() => HeadleButtonClick(0)}>My Information</div>
-                            <div className="cursor-pointer mx-2 py-2 border-b-2 border-blue-500">Update Password</div> 
+                            <div className="cursor-pointer mx-2 py-2 border-b-2 border-blue-500 text-blue-500">Update Password</div> 
                             <div className="cursor-pointer mx-2 py-2" onClick={() => HeadleButtonClick("UpdateMyData")}>Update My Data</div>  
                         </div>
                     )
                 }
-                if(buttonValue === "UpdatePass"){
+                if(buttonValue === "UpdateMyData"){
                   return (
                       <div className="lg:flex">
                           <div className="cursor-pointer mx-2 py-2 " onClick={() => HeadleButtonClick(0)}>My Information</div>
-                          <div className="cursor-pointer mx-2 py-2 border-b-2 border-blue-500">Update Password</div> 
-                          <div className="cursor-pointer mx-2 py-2" onClick={() => HeadleButtonClick("UpdateMyData")}>Update My Data</div>  
+                          <div className="cursor-pointer mx-2 py-2 " onClick={() => HeadleButtonClick("UpdatePass")}>Update Password</div> 
+                          <div className="cursor-pointer mx-2 py-2 border-b-2 border-blue-500 text-blue-500" >Update My Data</div>  
                       </div>
                   )
               }
               })()
             }
           </div>
-            
+          
+          {
+            (() => {
+              if(buttonValue === 0){
+                return (
+                  <ProfileData />
+                )
+              }
+            })()
+          }
     
-          <ProfileData />
+          
         </div>
       )
     }
