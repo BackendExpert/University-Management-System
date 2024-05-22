@@ -34,8 +34,9 @@ const DashSide = () => {
         {id: 8, name: "Departments", link: "Departments", icons: <BsBuilding />},  
         {id: 9, name: "Courses", link: "Courses", icons: <BsMortarboard />},  
         {id: 10, name: "Batches", link: "Batches", icons: <BsPeople />},
-        {id: 11, name: "Events", link: "Events", icons: <BsCalendarEvent />},  
-        {id: 12, name: "Profile", link: "MyProfile", icons: <BsPersonGear />},  
+        {id: 11, name: "Events", link: "Events", icons: <BsCalendarEvent />}, 
+        {id: 12, name: "My Courses", link: "MyCourses", icons: <BsMortarboard />}, 
+        {id: 13, name: "Profile", link: "MyProfile", icons: <BsPersonGear />},  
 
         {name: "LogOut", icons: <BsPower />},       
     ]
@@ -129,7 +130,7 @@ const DashSide = () => {
                                     )
                                 }
                                 if(RoleUser === "Student"){
-                                    if(AdminLinks.id === 1 || AdminLinks.id === 7 || AdminLinks.id === 11 || AdminLinks.id === 12){
+                                    if(AdminLinks.id === 1 || AdminLinks.id === 7 || AdminLinks.id === 11 || AdminLinks.id === 12 || AdminLinks.id === 13){
                                         return (
                                             <Link to={AdminLinks.link}>
                                                 <div className="my-4 mx-2">
