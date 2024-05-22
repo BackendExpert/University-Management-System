@@ -12,10 +12,10 @@ const Students = () => {
     const DarkMode = localStorage.getItem('darkMode');
 
     const studentData = [
-      {name: "Students", value: <CountUp end={20}/>, icon: <BsPeople />, style: "text-green-500"},
-      {name: "Requests", value: <CountUp end={20}/>, icon: <BsPersonGear />, style: "text-green-500"},
-      {name: "Lock Students", value: <CountUp end={20}/>, icon: <BsPersonSlash />, style: "text-green-500"},
-      {name: "New Students", value: "#", icon: <BsPersonAdd />, style: "text-green-500"},      
+      {id: 1, name: "Students", value: <CountUp end={20}/>, icon: <BsPeople />, style: "text-green-500"},
+      {id: 2, name: "Requests", value: <CountUp end={20}/>, icon: <BsPersonGear />, style: "text-green-500"},
+      {id: 3, name: "Lock Students", value: <CountUp end={20}/>, icon: <BsPersonSlash />, style: "text-green-500"},
+      {id: 4, name: "New Students", value: "#", icon: <BsPersonAdd />, style: "text-green-500"},      
     ]
 
     
@@ -29,22 +29,63 @@ const Students = () => {
           <div className="md:grid grid-cols-4 gap-4">
             {
               studentData.map((dataStd) => {
-                return (
-                  <div className={`bg-white w-full mx-2 lg:my-0 my-2 duration-500 rounded shadow-md ${dataStd.style}`}>                                       
-                      <div className="flex py-6 px-8 w-full justify-between border border-gray-200 rounded">
-                          <div className="">
-                              <h1 className={`text-[180%] ${dataStd.style}`}>{dataStd.value}</h1>
-                              <p className="py-2 text-[120%]">{dataStd.name}</p>
+                if(dataStd === "SuperAdmin") {
+                  return (
+                    <div className={`bg-white w-full mx-2 lg:my-0 my-2 duration-500 rounded shadow-md ${dataStd.style}`}>                                       
+                        <div className="flex py-6 px-8 w-full justify-between border border-gray-200 rounded">
+                            <div className="">
+                                <h1 className={`text-[180%] ${dataStd.style}`}>{dataStd.value}</h1>
+                                <p className="py-2 text-[120%]">{dataStd.name}</p>
+                            </div>
+                            <div className="">
+                                <p className="text-[200%] text-gray-500">{dataStd.icon}</p>
+                            </div>
+                        </div>
+                        <div className="text-white py-4 px-8 bg-gradient-to-r from-indigo-500 via-purple-500 to-pink-500 rounded">
+                            All {dataStd.name} 
+                        </div>
+                    </div> 
+                    )
+                }
+                if(dataStd === "Hod"){
+                  return (
+                    <div className={`bg-white w-full mx-2 lg:my-0 my-2 duration-500 rounded shadow-md ${dataStd.style}`}>                                       
+                        <div className="flex py-6 px-8 w-full justify-between border border-gray-200 rounded">
+                            <div className="">
+                                <h1 className={`text-[180%] ${dataStd.style}`}>{dataStd.value}</h1>
+                                <p className="py-2 text-[120%]">{dataStd.name}</p>
+                            </div>
+                            <div className="">
+                                <p className="text-[200%] text-gray-500">{dataStd.icon}</p>
+                            </div>
+                        </div>
+                        <div className="text-white py-4 px-8 bg-gradient-to-r from-indigo-500 via-purple-500 to-pink-500 rounded">
+                            All {dataStd.name} 
+                        </div>
+                    </div> 
+                    )
+                }
+                if(dataStd === "Lec"){
+                  if(dataStd.id === 1){
+                    return (
+                      <div className={`bg-white w-full mx-2 lg:my-0 my-2 duration-500 rounded shadow-md ${dataStd.style}`}>                                       
+                          <div className="flex py-6 px-8 w-full justify-between border border-gray-200 rounded">
+                              <div className="">
+                                  <h1 className={`text-[180%] ${dataStd.style}`}>{dataStd.value}</h1>
+                                  <p className="py-2 text-[120%]">{dataStd.name}</p>
+                              </div>
+                              <div className="">
+                                  <p className="text-[200%] text-gray-500">{dataStd.icon}</p>
+                              </div>
                           </div>
-                          <div className="">
-                              <p className="text-[200%] text-gray-500">{dataStd.icon}</p>
+                          <div className="text-white py-4 px-8 bg-gradient-to-r from-indigo-500 via-purple-500 to-pink-500 rounded">
+                              All {dataStd.name} 
                           </div>
-                      </div>
-                      <div className="text-white py-4 px-8 bg-gradient-to-r from-indigo-500 via-purple-500 to-pink-500 rounded">
-                          All {dataStd.name} 
-                      </div>
-                  </div> 
-                  )
+                      </div> 
+                      )
+                  }
+                }
+
               })
             }
           </div>
