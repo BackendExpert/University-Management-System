@@ -153,7 +153,6 @@ app.post('/AddStudent', (req, res) => {
             if(req.body.email.endsWith('@example.com')){
                 const tableName = "students"
                 const data = {
-                    username: req.body.username, 
                     EmailStd: req.body.email,
                     stdDept: req.body.dept,
                     Gender: req.body.gender,
@@ -162,7 +161,14 @@ app.post('/AddStudent', (req, res) => {
 
                 JkMysql.insertData(connection, tableName, data, (result) => {
                     if(result){
-                        
+                        bcrypt.hash(req.body.password, 10, (err, StdPass) => {
+                            if(StdPass){
+                                const tableName = "users"
+                                const data = {
+
+                                }
+                            }
+                        })
                     }
                 })
             }
