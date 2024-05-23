@@ -30,15 +30,24 @@ const AddStudent = () => {
 
                 <form>
                     <div className="lg:grid grid-cols-4 gap-4">
-                        <div className="my-2">
-                            <label htmlFor="">Username: </label>
-                            <input type="text" name="" id="" className="h-12 rounded pl-2 border-none bg-gray-200" required placeholder='Enter Username'
+                        <div className="">
+                            <label htmlFor="" className='lg:text-xl text-gray-500'>Username: </label>
+                            <input type="text" name="" id="" className="h-12 rounded pl-2 border-none bg-gray-200 w-full my-2" required placeholder='Enter Username'
                             onChange={e => SetStdData({...StdData, username:e.target.value})}/>
                         </div>
                         <div className="">
-                            <label htmlFor="">Email: </label>
-                            <input type="email" name="" id="" className="h-12 rounded pl-2 border-none bg-gray-200" required placeholder='Enter Email Address'
-                            onChange={e}/>
+                            <label htmlFor="" className='lg:text-xl text-gray-500'>Email: </label>
+                            <input type="email" name="" id="" className="h-12 rounded pl-2 border-none bg-gray-200 w-full my-2" required placeholder='Enter Email Address'
+                            onChange={e => SetStdData({...StdData, email:e.target.value})}/>
+                        </div>
+                        <div className="">
+                            <label htmlFor="" className='lg:text-xl text-gray-500'>Gender</label>
+                            <select name="" id="" className='h-12 rounded pl-2 border-none bg-gray-200 w-full my-2'
+                            onChange={e => SetStdData({...StdData, gender:e.target.value})}>
+                                <option>Select Option</option>
+                                <option value="male">Male</option>
+                                <option value="female">Female</option>
+                            </select>
                         </div>
                     </div>
                 </form>
