@@ -43,7 +43,7 @@ const AddStudent = () => {
                         <div className="">
                             <label htmlFor="" className='lg:text-xl text-gray-500'>Password: </label>
                             <input type="password" name="" id="" className="h-12 rounded pl-2 border-none bg-gray-200 w-full my-2" required placeholder='Enter Password'
-                            onChange={e => SetStdData({...StdData, email:e.target.value})}/>
+                            onChange={e => SetStdData({...StdData, password:e.target.value})}/>
                         </div>
                         <div className="">
                             <label htmlFor="" className='lg:text-xl text-gray-500'>Gender</label>
