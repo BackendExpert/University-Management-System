@@ -150,7 +150,12 @@ app.post('/AddStudent', (req, res) => {
     const columnData = { EmailStd: req.body.email }
     JkMysql.SelectData(connection, tableName, columnData, (result) => {
         if(result.length === 0){
-            if(req.body.email)
+            if(req.body.email.endsWith('@example.com')){
+                
+            }
+            else{
+                return res.json({Error: "Error on Email"})
+            }
         }
         else{
             return res.json({Error: "Student already Exists"})
