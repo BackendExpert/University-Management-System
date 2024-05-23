@@ -3,6 +3,7 @@ import { BsBag, BsPeople, BsPersonAdd, BsPersonGear, BsPersonPlusFill, BsPersonS
 import { Link, useNavigate } from 'react-router-dom'
 import CountUp from 'react-countup'
 import  secureLocalStorage  from  "react-secure-storage"
+import AddStudent from './AddStudent'
 
 
 const Students = () => {
@@ -101,7 +102,15 @@ const Students = () => {
               </div>
             </div>
             <div className="">
-              
+              {
+                (() => {
+                  if(buttonValue === "AddStudent"){
+                    return (
+                      <AddStudent />
+                    )
+                  }
+                })()
+              }
             </div>
         </div>
       )
