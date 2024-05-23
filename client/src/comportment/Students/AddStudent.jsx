@@ -3,6 +3,7 @@ import { BsBag, BsPeople, BsPersonAdd, BsPersonGear, BsPersonPlusFill, BsPersonS
 import { Link, useNavigate } from 'react-router-dom'
 import CountUp from 'react-countup'
 import  secureLocalStorage  from  "react-secure-storage"
+import axios from 'axios'
 
 const AddStudent = () => {
     const navigate = useNavigate()
@@ -21,6 +22,19 @@ const AddStudent = () => {
         gender: '',
     })
 
+    const headleSubmit = (e) => {
+        e.preventDefault();
+        axios.post('http://localhost:8081/AddStudent', StdData)
+        .then(res => {
+            if(res.data.Status === "Success"){
+                alert("Student Added Successfully")
+                window.location.reload()
+            }
+            else{
+                alert(res.data.Error)
+            }
+        })
+    }
 
     if(RoleUser !== null && EmailUser !== null && RoleUser !== "Student"){
         return (
@@ -28,7 +42,7 @@ const AddStudent = () => {
                 <h1 className="lg:text-3xl text-xl text-gray-500">Add New Student</h1>
                 <hr className='pb-4 pt-2'/>
 
-                <form>
+                <form onSubmit={headleSubmit}>
                     <div className="lg:grid grid-cols-4 gap-4">
                         <div className="">
                             <label htmlFor="" className='lg:text-xl text-gray-500'>Username: </label>
@@ -64,6 +78,9 @@ const AddStudent = () => {
                             <input type="text" name="" id="" className="h-12 rounded pl-2 border-none bg-gray-200 w-full my-2" required placeholder='Enter Admmision Number'
                             onChange={e => SetStdData({...StdData, AdmissionNo:e.target.value})}/>
                         </div>
+                    </div>
+                    <div className="">
+                        <button type='submit' className='bg-green-500 rounded py-4 px-8 my-4 text-white duration-500 hover:bg-green-600'>Add Student</button>
                     </div>
                 </form>
             </div>
