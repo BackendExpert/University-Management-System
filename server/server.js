@@ -173,6 +173,12 @@ app.post('/AddStudent', (req, res) => {
                                     is_active: 1,
                                     is_lock: 0
                                 }
+
+                                JkMysql.insertData(connection, tableName, data, (result) => {
+                                    if(result){
+                                        return req.json({Status: "Success"})
+                                    }
+                                })
                             }
                         })
                     }
