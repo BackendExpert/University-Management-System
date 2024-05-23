@@ -20,6 +20,7 @@ const AddStudent = () => {
         dept: '',
         AdmissionNo: '',
         gender: '',
+        nic: '',
     })
 
     const headleSubmit = (e) => {
@@ -48,6 +49,11 @@ const AddStudent = () => {
                             <label htmlFor="" className='lg:text-xl text-gray-500'>Username: </label>
                             <input type="text" name="" id="" className="h-12 rounded pl-2 border-none bg-gray-200 w-full my-2" required placeholder='Enter Username'
                             onChange={e => SetStdData({...StdData, username:e.target.value})}/>
+                        </div>
+                        <div className="">
+                            <label htmlFor="" className='lg:text-xl text-gray-500'>NIC No: </label>
+                            <input type="text" name="" id="" className="h-12 rounded pl-2 border-none bg-gray-200 w-full my-2" required placeholder='Enter NIC Number'
+                            onChange={e => SetStdData({...StdData, nic:e.target.value})}/>
                         </div>
                         <div className="">
                             <label htmlFor="" className='lg:text-xl text-gray-500'>Email: </label>
