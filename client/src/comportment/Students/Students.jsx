@@ -12,12 +12,12 @@ const Students = () => {
     const DarkMode = localStorage.getItem('darkMode');
 
     const studentData = [
-      {id: 1, name: "Students", value: <CountUp end={20}/>, icon: <BsPeople />, style: "text-green-500"},
-      {id: 2, name: "Requests", value: <CountUp end={20}/>, icon: <BsPersonGear />, style: "text-green-500"},
-      {id: 3, name: "Lock Students", value: <CountUp end={20}/>, icon: <BsPersonSlash />, style: "text-green-500"},
-      {id: 4, name: "My Subjects", value: <CountUp end={20}/>, icon: <BsPersonSlash />, style: "text-purple-500"},
-      {id: 5, name: "My Semesters", value: <CountUp end={20}/>, icon: <BsPersonSlash />, style: "text-green-500"},
-      {id: 6, name: "New Students", value: "#", icon: <BsPersonAdd />, style: "text-green-500"},      
+      {id: 1, btnValue: "", name: "Students", value: <CountUp end={20}/>, icon: <BsPeople />, style: "text-green-500"},
+      {id: 2, btnValue: "", name: "Requests", value: <CountUp end={20}/>, icon: <BsPersonGear />, style: "text-green-500"},
+      {id: 3, btnValue: "", name: "Lock Students", value: <CountUp end={20}/>, icon: <BsPersonSlash />, style: "text-green-500"},
+      {id: 4, btnValue: "", name: "My Subjects", value: <CountUp end={20}/>, icon: <BsPersonSlash />, style: "text-purple-500"},
+      {id: 5, btnValue: "", name: "My Semesters", value: <CountUp end={20}/>, icon: <BsPersonSlash />, style: "text-green-500"},
+      {id: 6, btnValue: "AddStudent", name: "New Students", value: "#", icon: <BsPersonAdd />, style: "text-green-500"},      
     ]
 
     
