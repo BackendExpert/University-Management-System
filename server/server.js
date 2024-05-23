@@ -147,7 +147,7 @@ app.post('/AddStudent', (req, res) => {
     // console.log(req.body)
 
     const tableName = 'students'
-    const columnData = { EmailStd: req.body.email , RegNo: req.body.AdmissionNo, NIC: req.body.nic }
+    const columnData = { EmailStd: req.body.email, RegNo: req.body.AdmissionNo, NIC: req.body.nic }
     JkMysql.SelectData(connection, tableName, columnData, (result) => {
         if(result.length === 0){
             if(req.body.email.endsWith('@example.com')){
