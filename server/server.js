@@ -151,7 +151,14 @@ app.post('/AddStudent', (req, res) => {
     JkMysql.SelectData(connection, tableName, columnData, (result) => {
         if(result.length === 0){
             if(req.body.email.endsWith('@example.com')){
-                
+                const tableName = "students"
+                const data = {
+                    username: req.body.username, 
+                    EmailStd: req.body.email,
+                    stdDept: req.body.dept,
+                    Gender: req.body.gender,
+                    RegNo: req.body.AdmissionNo,
+                }
             }
             else{
                 return res.json({Error: "Error on Email"})
