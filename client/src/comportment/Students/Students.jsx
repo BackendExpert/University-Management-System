@@ -1,4 +1,4 @@
-import React, { useState } from 'react'
+import React, { useEffect, useState } from 'react'
 import { BsBag, BsPeople, BsPersonAdd, BsPersonGear, BsPersonPlusFill, BsPersonSlash } from 'react-icons/bs'
 import { Link, useNavigate } from 'react-router-dom'
 import CountUp from 'react-countup'
@@ -26,7 +26,15 @@ const Students = () => {
       {id: 6, btnValue: "AddStudent", name: "New Students", value: "#", icon: <BsPersonAdd />, style: "text-green-500"},      
     ]
 
-    if(RoleUser !== null && EmailUser !== && RoleUser !== "")
+    if(RoleUser !== null && EmailUser !== null && RoleUser !== "Student"){
+
+    }
+    else{
+      useEffect(() => {
+        localStorage.clear()
+        navigate('/')
+      }, [])
+    }
   return (
     <div className='mx-4'>
         <div className="my-4">
