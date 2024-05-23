@@ -103,7 +103,7 @@ const SignInSignUp = () => {
 
   return (
     <div>
-        <div className={`py-8 md:px-4 px-8 md:h-full h-auto md:w-full ${!Darkmode ? 'light-mode duration-500 bg-gray-200' : 'dark-mode duration-500 bg-[#1e293b]'}`}>
+        <div className={`py-8 md:px-4 px-8 md:h-full lg:h-screen h-auto md:w-full ${!Darkmode ? 'light-mode duration-500 bg-gray-200' : 'dark-mode duration-500 bg-[#1e293b]'}`}>
             {
                 !Darkmode ? 
                     <p className='cursor-pointer' onClick={() => headleDarkMode()}>LightMode</p>
