@@ -157,6 +157,8 @@ app.post('/AddStudent', (req, res) => {
                     stdDept: req.body.dept,
                     Gender: req.body.gender,
                     RegNo: req.body.AdmissionNo,
+                    NIC: req.body.nic,
+                    RegisterAt: new Date()
                 }
 
                 JkMysql.insertData(connection, tableName, data, (result) => {
