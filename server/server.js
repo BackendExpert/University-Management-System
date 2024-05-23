@@ -150,6 +150,12 @@ app.post('/AddStudent', (req, res) => {
     const columnData = { EmailStd: req.body.email }
     JkMysql.SelectData(connection, tableName, columnData, (result) => {
         if(result.length === 0){
+            if(result[0].RegNo === req.body.AdmissionNo){
+                return res.json({Error: "Admission Number Already Exists"})
+            }
+            if(result[0].RegNo === req.body.NIC){
+                return res.json({Error: "NIC Number Already Exists"})
+            }
             if(req.body.email.endsWith('@example.com')){
                 const tableName = "students"
                 const data = {
