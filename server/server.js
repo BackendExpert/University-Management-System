@@ -165,7 +165,13 @@ app.post('/AddStudent', (req, res) => {
                             if(StdPass){
                                 const tableName = "users"
                                 const data = {
-
+                                    username: req.body.username,
+                                    Email: req.body.email,
+                                    Password: req.body.password,
+                                    Role: "Student",
+                                    join_at: new Date(),
+                                    is_active: 1,
+                                    is_lock: 0
                                 }
                             }
                         })
