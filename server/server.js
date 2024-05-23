@@ -159,6 +159,12 @@ app.post('/AddStudent', (req, res) => {
                     Gender: req.body.gender,
                     RegNo: req.body.AdmissionNo,
                 }
+
+                JkMysql.insertData(connection, tableName, data, (result) => {
+                    if(result){
+                        
+                    }
+                })
             }
             else{
                 return res.json({Error: "Error on Email"})
