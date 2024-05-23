@@ -138,8 +138,13 @@ app.post('/SignIn', (req, res) => {
             })
         }
     })
+})
 
+// Add new Stundet
+// AddStudent
 
+app.post('/AddStudent', (req, res) => {
+    console.log(req.body)
 })
 
 // all endpoints end
