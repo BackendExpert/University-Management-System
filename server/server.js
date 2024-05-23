@@ -169,7 +169,7 @@ app.post('/AddStudent', (req, res) => {
                                 const data = {
                                     username: req.body.username,
                                     Email: req.body.email,
-                                    Password: req.body.password,
+                                    Password: StdPass,
                                     Role: "Student",
                                     join_at: new Date(),
                                     is_active: 1,
@@ -178,7 +178,7 @@ app.post('/AddStudent', (req, res) => {
 
                                 JkMysql.insertData(connection, tableName, data, (result) => {
                                     if(result){
-                                        return req.json({Status: "Success"})
+                                        return res.json({Status: "Success"})
                                     }
                                 })
                             }
