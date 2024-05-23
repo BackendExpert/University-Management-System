@@ -11,9 +11,23 @@ const AddStudent = () => {
     const EmailUser = secureLocalStorage.getItem("login2");
     const DarkMode = localStorage.getItem('darkMode');
 
+    // student data
+    const [StdData, SetStdData] = useState({
+        username: '',
+        email: '',
+        password: '',
+        dept: '',
+        AdmissionNo: '',
+        gender: '',
+    })
+    
+
     if(RoleUser !== null && EmailUser !== null && RoleUser !== "Student"){
         return (
-            <div>AddStudent</div>
+            <div className='bg-white shadow-md rounded py-12 px-10 my-8'>
+                <h1 className="lg:text-3xl text-xl text-gray-500">Add New Student</h1>
+                <hr className='pb-4 pt-2'/>
+            </div>
         )
     }
     else{
