@@ -10,9 +10,18 @@ const AddStudent = () => {
     const RoleUser = secureLocalStorage.getItem("Login1");
     const EmailUser = secureLocalStorage.getItem("login2");
     const DarkMode = localStorage.getItem('darkMode');
-  return (
-    <div>AddStudent</div>
-  )
+
+    if(RoleUser !== null && EmailUser !== null && RoleUser !== "Student"){
+        return (
+            <div>AddStudent</div>
+        )
+    }
+    else{
+        useEffect(() => {
+            localStorage.clear()
+            navigate('/')
+        }, [])
+    }
 }
 
 export default AddStudent
