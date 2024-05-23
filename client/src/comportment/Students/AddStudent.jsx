@@ -49,6 +49,11 @@ const AddStudent = () => {
                                 <option value="female">Female</option>
                             </select>
                         </div>
+                        <div className="">
+                            <label htmlFor="">Department: </label>
+                            <input type="text" name="" id="" className="h-12 rounded pl-2 border-none bg-gray-200 w-full my-2" required placeholder='Enter Department'
+                            onChange={e => SetStdData({...StdData, dept:e.target.value})}/>
+                        </div>
                     </div>
                 </form>
             </div>
