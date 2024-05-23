@@ -59,6 +59,11 @@ const AddStudent = () => {
                             <input type="text" name="" id="" className="h-12 rounded pl-2 border-none bg-gray-200 w-full my-2" required placeholder='Enter Department'
                             onChange={e => SetStdData({...StdData, dept:e.target.value})}/>
                         </div>
+                        <div className="">
+                            <label htmlFor="" className='lg:text-xl text-gray-500'>Admission No: </label>
+                            <input type="text" name="" id="" className="h-12 rounded pl-2 border-none bg-gray-200 w-full my-2" required placeholder='Enter Admmision Number'
+                            onChange={e => SetStdData({...StdData, AdmissionNo:e.target.value})}/>
+                        </div>
                     </div>
                 </form>
             </div>
