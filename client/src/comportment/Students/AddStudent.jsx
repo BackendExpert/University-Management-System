@@ -86,7 +86,7 @@ const AddStudent = () => {
                         </div>
                     </div>
                     <div className="">
-                        <button type='submit' className='bg-green-500 rounded py-4 px-8 my-4 text-white duration-500 hover:bg-green-600'>Add Student</button>
+                        <button type='submit' className='bg-gradient-to-r from-indigo-500 via-purple-500 to-pink-500 rounded py-4 px-8 my-4 text-white duration-500'>Add Student</button>
                     </div>
                 </form>
             </div>
