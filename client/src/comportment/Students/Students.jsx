@@ -26,7 +26,7 @@ const Students = () => {
       {id: 6, btnValue: "AddStudent", name: "New Students", value: "#", icon: <BsPersonAdd />, style: "text-green-500"},      
     ]
 
-    
+    if(RoleUser !== null && EmailUser !== && RoleUser !== "")
   return (
     <div className='mx-4'>
         <div className="my-4">
