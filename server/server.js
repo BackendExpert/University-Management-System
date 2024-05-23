@@ -144,7 +144,18 @@ app.post('/SignIn', (req, res) => {
 // AddStudent
 
 app.post('/AddStudent', (req, res) => {
-    console.log(req.body)
+    // console.log(req.body)
+
+    const tableName = 'students'
+    const columnData = { EmailStd: req.body.email }
+    JkMysql.SelectData(connection, tableName, columnData, (result) => {
+        if(result.length === 0){
+            
+        }
+        else{
+            return res.json({Error: "Student already Exists"})
+        }
+    })
 })
 
 // all endpoints end
