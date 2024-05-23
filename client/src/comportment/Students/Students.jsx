@@ -1,8 +1,9 @@
-import React from 'react'
+import React, { useState } from 'react'
 import { BsBag, BsPeople, BsPersonAdd, BsPersonGear, BsPersonPlusFill, BsPersonSlash } from 'react-icons/bs'
 import { Link, useNavigate } from 'react-router-dom'
 import CountUp from 'react-countup'
 import  secureLocalStorage  from  "react-secure-storage"
+
 
 const Students = () => {
     const navigate = useNavigate()
@@ -10,6 +11,11 @@ const Students = () => {
     const RoleUser = secureLocalStorage.getItem("Login1");
     const EmailUser = secureLocalStorage.getItem("login2");
     const DarkMode = localStorage.getItem('darkMode');
+
+    const [buttonValue, SetButtonValue] = useState(0)
+    const HeadleButtonClick = (clickValue) => {
+        SetButtonValue(clickValue)   
+    }
 
     const studentData = [
       {id: 1, btnValue: "", name: "Students", value: <CountUp end={20}/>, icon: <BsPeople />, style: "text-green-500"},
@@ -34,7 +40,7 @@ const Students = () => {
                 if(RoleUser === "SuperAdmin") {
                   if(dataStd.id !== 4 && dataStd.id !== 5){
                     return (
-                      <div className={`bg-white w-full mx-2 md:my-0 my-2 duration-500 rounded shadow-md ${dataStd.style}`}>                                       
+                      <div onClick={() => HeadleButtonClick(dataStd.btnValue)} className={`cursor-pointer bg-white w-full mx-2 md:my-0 my-2 duration-500 rounded shadow-md ${dataStd.style}`}>                                       
                           <div className="flex py-6 px-8 w-full justify-between border border-gray-200 rounded">
                               <div className="">
                                   <h1 className={`text-[180%] ${dataStd.style}`}>{dataStd.value}</h1>
@@ -53,7 +59,7 @@ const Students = () => {
                 }
                 if(RoleUser === "Hod"){
                   return (
-                    <div className={`bg-white w-full mx-2 md:my-0 my-2 duration-500 rounded shadow-md ${dataStd.style}`}>                                       
+                    <div onClick={() => HeadleButtonClick(dataStd.btnValue)} className={`bg-white w-full mx-2 md:my-0 my-2 duration-500 rounded shadow-md ${dataStd.style}`}>                                       
                         <div className="flex py-6 px-8 w-full justify-between border border-gray-200 rounded">
                             <div className="">
                                 <h1 className={`text-[180%] ${dataStd.style}`}>{dataStd.value}</h1>
