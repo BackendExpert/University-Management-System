@@ -17,6 +17,21 @@ const UpdateMyPassword = () => {
             <div className='lg:text-2xl my-2 mx-4'>
                 <div className="bg-white py-4 px-6 rounded shadow-md">
                     <h1 className="text-gray-600">Update Password</h1>
+                    <div className="my-4">
+                        <form>
+                            <div className="md:grid grid-cols-2 gap-4">
+                                <div className="">
+                                    <label htmlFor="" className='lg:text-xl text-gray-500'>Current Password</label>
+                                    <input type="password" name="" id="" className="h-12 w-full rounded bg-gray-200 pl-2" required placeholder='Current Password'/>
+                                </div>
+                                <div className="">
+                                    <label htmlFor="" className='lg:text-xl text-gray-500'>New Password</label>
+                                    <input type="password" name="" id="" className="h-12 w-full rounded bg-gray-200 pl-2" required placeholder='New Password'/>
+                                </div>
+                            </div>
+
+                        </form>
+                    </div>
                 </div>
             </div>
         )
