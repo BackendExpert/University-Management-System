@@ -216,7 +216,15 @@ app.get('/GetMyDataSTD/:id', (req, res) => {
 
 app.post('/UpdatePassword/:id', (req, res) => {
     const userEmail = req.params.id
+    
+    const tableName = 'users'
+    const columnData = { Email: userEmail }
 
+    JkMysql.SelectData(connection, tableName, columnData, (result) => {
+        if(result){
+            
+        }
+    })
     
 })
 
