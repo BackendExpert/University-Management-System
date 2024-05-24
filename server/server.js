@@ -153,6 +153,14 @@ app.post('/AddStudent', (req, res) => {
         RegNo: req.body.AdmissionNo,
         NIC: req.body.nic
     }
+    JkMysql.SelectByOR(connection, tableName, columns, conditions, (result) => {
+        if(result.length === 0){
+
+        } 
+        else{
+            return res.json({Error: "Student Already in Database"})
+        }
+    })
 
 
 
