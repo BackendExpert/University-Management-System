@@ -155,7 +155,10 @@ app.post('/AddStudent', (req, res) => {
     }
     JkMysql.SelectByOR(connection, tableName, columns, conditions, (result) => {
         if(result.length === 0){
-
+            const tableName = 'students'
+            const data = {
+                
+            }
         } 
         else{
             return res.json({Error: "Student Already in Database"})
