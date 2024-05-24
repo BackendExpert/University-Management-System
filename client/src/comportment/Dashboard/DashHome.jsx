@@ -1,4 +1,4 @@
-import React, { useState } from 'react'
+import React, { useEffect, useState } from 'react'
 import { Link, useNavigate } from 'react-router-dom';
 import  secureLocalStorage  from  "react-secure-storage"
 import CountUp from 'react-countup'
@@ -6,6 +6,7 @@ import UserImg from '../../assets/SuperAdmin.png'
 
 import { BsBackpack2Fill, BsSpeedometer2, BsPersonVideo3, BsFileEarmarkText, BsPeople, BsPersonGear, BsPower, BsMortarboard, BsBuilding, BsMortarboardFill, BsPersonCheck, BsCashCoin, BsCalendarEvent } from "react-icons/bs";
 import EventsNotifications from './EventsNotifications';
+import axios from 'axios';
 
 const DashHome = () => {
     const navigate = useNavigate()
@@ -30,6 +31,15 @@ const DashHome = () => {
         {id: 2, name: "My Department", icons: <BsBuilding />, value: "Computing", style: "text-red-500"},
         {id: 3, name: "Expenses", icons: <BsCashCoin />, value: <CountUp end={10000} />, style: "text-green-500"},
     ]
+
+    // fetch student My information
+    const [MyData, SetMyData] = useState([])
+
+    useEffect(() => {
+        axios.get('http://localhost:8081/GetMyDataSTD/' + EmailUser)
+        .then(res => SetMyData(res.data))
+        .catch(err => console.log(err))
+    }, [])
 
     if(RoleUser !== null && EmailUser !== null){
         return (
