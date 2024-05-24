@@ -147,53 +147,14 @@ app.post('/AddStudent', (req, res) => {
     // console.log(req.body)
 
     const tableName = 'students'
-    const columnData = { EmailStd: req.body.email, RegNo: req.body.AdmissionNo, NIC: req.body.nic }
-    JkMysql.SelectData(connection, tableName, columnData, (result) => {
-        if(result.length === 0){
-            if(req.body.email.endsWith('@example.com')){
-                const tableName = "students"
-                const data = {
-                    EmailStd: req.body.email,
-                    stdDept: req.body.dept,
-                    Gender: req.body.gender,
-                    RegNo: req.body.AdmissionNo,
-                    NIC: req.body.nic,
-                    RegisterAt: new Date()
-                }
+    const columns = []
+    const conditions = {
+        EmailStd: req.body.email,
+        RegNo: req.body.AdmissionNo,
+        NIC: req.body.nic
+    }
 
-                JkMysql.insertData(connection, tableName, data, (result) => {
-                    if(result){
-                        bcrypt.hash(req.body.password, 10, (err, StdPass) => {
-                            if(StdPass){
-                                const tableName = "users"
-                                const data = {
-                                    username: req.body.username,
-                                    Email: req.body.email,
-                                    Password: StdPass,
-                                    Role: "Student",
-                                    join_at: new Date(),
-                                    is_active: 1,
-                                    is_lock: 0
-                                }
 
-                                JkMysql.insertData(connection, tableName, data, (result) => {
-                                    if(result){
-                                        return res.json({Status: "Success"})
-                                    }
-                                })
-                            }
-                        })
-                    }
-                })
-            }
-            else{
-                return res.json({Error: "Error on Email"})
-            }
-        }
-        else{
-            return res.json({Error: "Student already Exists"})
-        }
-    })
 })
 
 // all endpoints end
