@@ -12,21 +12,43 @@ const UpdateMyPassword = () => {
     const RoleUser = secureLocalStorage.getItem("Login1");
     const EmailUser = secureLocalStorage.getItem("login2");
 
+    const [UpdatePass, SetUpdatePass] = useState({
+        currentPass: '',
+        newPass: '',
+    })
+
+    const headleSubmit = (e) => {
+        e.preventDefault();
+        axios.post('http://localhost:8081/UpdatePassword/' + EmailUser, {UpdatePass})
+        .then(res => {
+            if(res.data.Status === "Success"){
+                alert("Password Updated Successful")
+                window.location.reload()
+            }
+            else{
+                alert(res.data.Error)
+            }
+        })
+    }
+
+
     if(RoleUser !== null && EmailUser !== null){
         return (
             <div className='lg:text-2xl my-2 mx-4'>
                 <div className="bg-white py-4 px-6 rounded shadow-md">
                     <h1 className="text-gray-600">Update Password</h1>
                     <div className="my-4">
-                        <form>
+                        <form onSubmit={headleSubmit}>
                             <div className="md:grid grid-cols-2 gap-4">
                                 <div className="">
                                     <label htmlFor="" className='lg:text-xl text-gray-500'>Current Password</label>
-                                    <input type="password" name="" id="" className="lg:h-16 my-2 h-12 w-full rounded bg-gray-200 pl-2" required placeholder='Current Password'/>
+                                    <input type="password" name="" id="" className="lg:h-16 my-2 h-12 w-full rounded bg-gray-200 pl-2" required placeholder='Current Password'
+                                    onChange={e => SetUpdatePass({...UpdatePass, currentPass:e.target.value})}/>
                                 </div>
                                 <div className="">
                                     <label htmlFor="" className='lg:text-xl text-gray-500'>New Password</label>
-                                    <input type="password" name="" id="" className="lg:h-16 my-2 h-12 w-full rounded bg-gray-200 pl-2" required placeholder='New Password'/>
+                                    <input type="password" name="" id="" className="lg:h-16 my-2 h-12 w-full rounded bg-gray-200 pl-2" required placeholder='New Password'
+                                    onChange={e => SetUpdatePass({...UpdatePass, newPass:e.target.value})}/>
                                 </div>
                             </div>
                             <div className="">
