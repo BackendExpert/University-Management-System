@@ -161,10 +161,11 @@ app.post('/AddStudent', (req, res) => {
                 EmailStd: req.body.email,
                 stdDept: req.body.dept,
                 Gender: req.body.gender,
-                NIC: req.body.nic
+                NIC: req.body.nic,
+                RegisterAt: new Date()
             }
 
-            JkMysql.insertData(columns, tableName, data, (result) => {
+            JkMysql.insertData(connection, tableName, data, (result) => {
                 if(result){
                     bcrypt.hash(req.body.password, 10, (err, StdPass) => {
                         if(StdPass){
