@@ -241,7 +241,7 @@ app.post('/UpdatePassword/:id', (req, res) => {
 
                             JkMysql.updateDataById(connection, tableName, updateColumn, idToUpdate, newData, (result) => {
                                 if(result){
-                                    const emailTO = req.body.email
+                                    const emailTO = userEmail
                                     const EmailMeSubject = "ABC Campus: Password Updated"
                                     const EmalmeBody = `You Successfully Updated the Password at : ${new Date()}`  
                                     
