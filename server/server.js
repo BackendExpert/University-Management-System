@@ -194,11 +194,17 @@ app.post('/AddStudent', (req, res) => {
             return res.json({Error: "Student Already in Database"})
         }
     })
-
-
-
-
 })
+
+// fetch data in Dashboard std my information
+// GetMyDataSTD
+
+app.get('/GetMyDataSTD/:id', (req, res) => {
+    const userEmail = req.params.id
+
+    
+})
+
 
 // all endpoints end
 
