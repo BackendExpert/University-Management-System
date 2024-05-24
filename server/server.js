@@ -216,12 +216,12 @@ app.get('/GetMyDataSTD/:id', (req, res) => {
 
 app.post('/UpdatePassword/:id', (req, res) => {
     const userEmail = req.params.id
-    
+    // console.log(req.body.UpdatePass)
     const tableName = 'users'
     const columnData = { Email: userEmail }
 
     JkMysql.SelectData(connection, tableName, columnData, (result) => {
-        if(req.body.currentPass === req.body.newPass){
+        if(req.body.UpdatePass.currentPass === req.body.UpdatePass.newPass){
             return res.json({Error: "Your new Password and Current Password same"})
         }
         else{
