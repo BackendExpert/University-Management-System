@@ -227,8 +227,21 @@ app.post('/UpdatePassword/:id', (req, res) => {
         else{
             bcrypt.compare(req.body.currentPass, result[0].Password, (err, CPass) => {
                 if(CPass){
-                    const tableName = "users"
-                    
+                    bcrypt.hash(req.body.newPass, 10, (err, PassNew) => {
+                        if(PassNew){
+                            const tableName = "users"
+                            const idToUpdate = userEmail
+                            const updateColumn = "Email"
+                            const newData = { Password: PassNew };
+
+                            JkMysql.updateDataById(connection, tableName, updateColumn, idToUpdate, newData, (result) => {
+                                if(result){
+                                    return res.json({Status: "Success"})
+                                }
+                            })
+                        }
+                    })
+
                 }
                 else{
                     return res.json({Error: "Current Password not Match"})
