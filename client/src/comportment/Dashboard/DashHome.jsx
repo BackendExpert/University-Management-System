@@ -90,20 +90,20 @@ const DashHome = () => {
                                                                     <table border={0} className='mx-2'>
                                                                         <tr className=''>
                                                                             <td className='font-semibold'>Email: </td>
-                                                                            <td className='pl-4 text-gray-500'>jehan.w@example.com </td>
+                                                                            <td className='pl-4 text-gray-500'>{EmailUser} </td>
                                                                         </tr>
                                                                         <tr>
                                                                             <td className='font-semibold'>Admission ID: </td>
-                                                                            <td className='pl-4 text-gray-500'>123456ABCD </td>
+                                                                            <td className='pl-4 text-gray-500'>{stdData.RegNo}</td>
                                                                         </tr>
                                                                         <tr>
                                                                             <td className='font-semibold'>Admission Date: </td>
-                                                                            <td className='pl-4 text-gray-500'>25/12/2021 </td>
+                                                                            <td className='pl-4 text-gray-500'>{stdData.RegisterAt} </td>
                                                                         </tr>
             
                                                                         <tr>
                                                                             <td className='font-semibold'>Gender: </td>
-                                                                            <td className='pl-4 text-gray-500'>Male </td>
+                                                                            <td className='pl-4 text-gray-500'>{stdData.Gender} </td>
                                                                         </tr>
                                                                     </table>
                                                                 )
