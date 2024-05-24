@@ -23,7 +23,8 @@ const UpdateMyPassword = () => {
         .then(res => {
             if(res.data.Status === "Success"){
                 alert("Password Updated Successful")
-                window.location.reload()
+                localStorage.clear()
+                navigate('/')
             }
             else{
                 alert(res.data.Error)
