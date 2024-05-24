@@ -185,9 +185,8 @@ app.post('/AddStudent', (req, res) => {
                                     const emailTO = req.body.email
                                     const EmailMeSubject = "About Student Account "
                                     const EmalmeBody = `Dear Stundet, Your Student Account has been Successufully Created use these email and Password. Once you Login to the System Please Change the Password from MyProfile in Dashboard, Email Address : ${req.body.email} and Password: ${req.body.password} `
-
                                     
-
+                                    JkMysql.SendEmailTo(transporter, process.env.EMAIL_USER, emailTO, EmailMeSubject, EmalmeBody)
                                     return res.json({Status: "Success"})
                                 }
                             })
