@@ -7,10 +7,10 @@ import axios from 'axios';
 
 
 const ProfileData = () => {
-`    const navigate = useNavigate()
+    const navigate = useNavigate()
     //curent login user
     const RoleUser = secureLocalStorage.getItem("Login1");
-    const EmailUser = secureLocalStorage.getItem("login2");`
+    const EmailUser = secureLocalStorage.getItem("login2");
 
     // fetch student My information
     const [MyData, SetMyData] = useState([])
