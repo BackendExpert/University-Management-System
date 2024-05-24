@@ -157,6 +157,7 @@ app.post('/AddStudent', (req, res) => {
         if(result.length === 0){
             const tableName = 'students'
             const data = {
+                RegNo: req.body.AdmissionNo,
                 
             }
         } 
