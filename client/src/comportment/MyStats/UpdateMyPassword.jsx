@@ -14,7 +14,9 @@ const UpdateMyPassword = () => {
 
     if(RoleUser !== null && EmailUser !== null){
         return (
-            <div className='lg:text-2xl'>UpdateMyPassword</div>
+            <div className='lg:text-2xl my-2 mx-4'>
+                
+            </div>
         )
     }
     else{
