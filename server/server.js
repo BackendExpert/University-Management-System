@@ -225,9 +225,9 @@ app.post('/UpdatePassword/:id', (req, res) => {
             return res.json({Error: "Your new Password and Current Password same"})
         }
         else{
-            bcrypt.compare(req.body.currentPass, result[0].Password, (err, CPass) => {
+            bcrypt.compare(req.body.UpdatePass.currentPass, result[0].Password, (err, CPass) => {
                 if(CPass){
-                    bcrypt.hash(req.body.newPass, 10, (err, PassNew) => {
+                    bcrypt.hash(req.body.UpdatePass.newPass, 10, (err, PassNew) => {
                         if(PassNew){
                             const tableName = "users"
                             const idToUpdate = userEmail
