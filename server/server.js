@@ -144,7 +144,7 @@ app.post('/SignIn', (req, res) => {
 // AddStudent
 
 app.post('/AddStudent', (req, res) => {
-    // console.log(req.body)
+    console.log(req.body)
 
     const tableName = 'students'
     const columns = []
@@ -158,8 +158,36 @@ app.post('/AddStudent', (req, res) => {
             const tableName = 'students'
             const data = {
                 RegNo: req.body.AdmissionNo,
-                
+                EmailStd: req.body.email,
+                stdDept: req.body.dept,
+                Gender: req.body.gender,
+                NIC: req.body.nic
             }
+
+            JkMysql.insertData(columns, tableName, data, (result) => {
+                if(result){
+                    bcrypt.hash(req.body.password, 10, (err, StdPass) => {
+                        if(StdPass){
+                            const tableName = "users"
+                            const data = {
+                                Email: req.body.email,
+                                username: req.body.username,
+                                Password: StdPass,
+                                Role: "Student",
+                                join_at: new Date(),
+                                is_active: 1,
+                                is_lock: 0,
+                            }
+
+                            JkMysql.insertData(connection, tableName, data, (result) => {
+                                if(result){
+                                    return res.json({Status: "Success"})
+                                }
+                            })
+                        }
+                    })
+                }
+            })
         } 
         else{
             return res.json({Error: "Student Already in Database"})
