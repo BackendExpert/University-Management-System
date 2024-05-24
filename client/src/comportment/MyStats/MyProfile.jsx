@@ -4,6 +4,7 @@ import  secureLocalStorage  from  "react-secure-storage"
 import CountUp from 'react-countup'
 import UserImg from '../../assets/SuperAdmin.png'
 import ProfileData from './ProfileData';
+import UpdateMyPassword from './UpdateMyPassword';
 
 const MyProfile = () => {
     const navigate = useNavigate()
@@ -62,6 +63,11 @@ const MyProfile = () => {
               if(buttonValue === 0){
                 return (
                   <ProfileData />
+                )
+              }
+              if(buttonValue === "UpdatePass"){
+                return (
+                  <UpdateMyPassword />
                 )
               }
             })()
