@@ -211,6 +211,15 @@ app.get('/GetMyDataSTD/:id', (req, res) => {
     }) 
 })
 
+// update the password
+// UpdatePassword
+
+app.post('/UpdatePassword/:id', (req, res) => {
+    const userEmail = req.params.id
+
+    
+})
+
 
 // all endpoints end
 
