@@ -10,6 +10,15 @@ const ProfileData = () => {
     const RoleUser = secureLocalStorage.getItem("Login1");
     const EmailUser = secureLocalStorage.getItem("login2");
 
+    // fetch student My information
+    const [MyData, SetMyData] = useState([])
+
+    useEffect(() => {
+        axios.get('http://localhost:8081/GetMyDataSTD/' + EmailUser)
+        .then(res => SetMyData(res.data.Result))
+        .catch(err => console.log(err))
+    }, [])
+
     if(RoleUser === "Student"){
         return (
             <div className="">
