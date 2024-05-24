@@ -202,7 +202,13 @@ app.post('/AddStudent', (req, res) => {
 app.get('/GetMyDataSTD/:id', (req, res) => {
     const userEmail = req.params.id
 
-    
+    const tableName = 'students'
+    const columnsData = { EmailStd: userEmail }
+    JkMysql.SearchData(connection, tableName, columnsData, (result) => {
+        if(result){
+            return res.json({Result: result})
+        }
+    }) 
 })
 
 
