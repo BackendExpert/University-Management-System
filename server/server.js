@@ -262,6 +262,12 @@ app.post('/UpdatePassword/:id', (req, res) => {
     
 })
 
+// count all Stundets
+app.get('/AllStudents', (req, res) => {
+    const tableName = 'students'
+    const 
+})
+
 
 // all endpoints end
 
