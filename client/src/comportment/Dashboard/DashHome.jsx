@@ -22,7 +22,7 @@ const DashHome = () => {
         const fetchData = async () => {
             try {
                 const StdCount = await axios.get('http://localhost:8081/AllStudents');
-                SetCountStudents(StdCount.data.UserAll);
+                SetCountStudents(StdCount.data.StdResult);
             } catch (error) {
                 console.error('Error fetching data:', error);
             }
@@ -33,7 +33,7 @@ const DashHome = () => {
 
     // dashdata
     const DashData = [
-        {id: 1, name: "Students", icon: <BsBackpack2Fill />, value: <CountUp end={20} />, style: "text-green-500"},
+        {id: 1, name: "Students", icon: <BsBackpack2Fill />, value: <CountUp end={CountStudens} />, style: "text-green-500"},
         {id: 2, name: "Lecturers", icon: <BsPersonVideo3 />, value: <CountUp end={20} />, style: "text-blue-500"},
         {id: 3, name: "Subjects", icon: <BsFileEarmarkText />, value: <CountUp end={20} />, style: "text-yellow-500"},
         {id: 4, name: "Staff", icon: <BsPeople />, value: <CountUp end={20} />, style: "text-red-500"},

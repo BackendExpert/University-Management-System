@@ -265,7 +265,13 @@ app.post('/UpdatePassword/:id', (req, res) => {
 // count all Stundets
 app.get('/AllStudents', (req, res) => {
     const tableName = 'students'
-    const 
+    const conditions = []
+
+    JkMysql.CountData(connection, tableName, conditions, (result) => {
+        if(result){
+            return res.json({StdResult: result})
+        }
+    })
 })
 
 
