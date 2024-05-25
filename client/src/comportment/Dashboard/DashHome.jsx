@@ -15,6 +15,22 @@ const DashHome = () => {
     const EmailUser = secureLocalStorage.getItem("login2");
     // const DarkMode = localStorage.getItem('darkMode');
 
+    // count superAdmin data
+    const [CountStudens, SetCountStudents] = useState(0)
+
+    useEffect(() => {
+        const fetchData = async () => {
+            try {
+                const StdCount = await axios.get('http://localhost:8081/AllStudents');
+                SetCountStudents(StdCount.data.UserAll);
+            } catch (error) {
+                console.error('Error fetching data:', error);
+            }
+
+        }
+        fetchData();
+    }, [])
+
     // dashdata
     const DashData = [
         {id: 1, name: "Students", icon: <BsBackpack2Fill />, value: <CountUp end={20} />, style: "text-green-500"},
