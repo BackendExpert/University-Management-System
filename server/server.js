@@ -206,14 +206,16 @@ app.post('/AddStudent', (req, res) => {
 
 app.get('/GetMyDataSTD/:id', (req, res) => {
     const userEmail = req.params.id
-
-    const tableName = 'students'
-    const columnsData = { EmailStd: userEmail }
-    JkMysql.SearchData(connection, tableName, columnsData, (result) => {
-        if(result){
-            return res.json({Result: result})
+    console.log(userEmail)
+    const tableName = 'students';
+    const columnsData = { EmailStd: userEmail }; // Example columns data object
+    
+    JkMysql.SelectData(connection, tableName, columnsData, (results) => {
+        if(results) {
+            // return res.json({Result: results})
+            console.log(results)
         }
-    }) 
+    })
 })
 
 // update the password

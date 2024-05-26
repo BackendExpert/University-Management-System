@@ -101,25 +101,25 @@ const DashHome = () => {
                                                     <div className="py-8 md:flex">
                                                         <img src="https://cdn-icons-png.flaticon.com/128/2641/2641333.png" alt="" className='h-[20%] w-auto'/>
                                                         {
-                                                            MyData.map((stdData, index) => {
+                                                            MyData.map((DataSTD) => {
                                                                 return (
-                                                                    <table border={0} className='mx-2'>
+                                                                    <table border={0} className='mx-2' >
                                                                         <tr className=''>
                                                                             <td className='font-semibold'>Email: </td>
                                                                             <td className='pl-4 text-gray-500'>{EmailUser} </td>
                                                                         </tr>
                                                                         <tr>
                                                                             <td className='font-semibold'>Admission ID: </td>
-                                                                            <td className='pl-4 text-gray-500'>{stdData.RegNo}</td>
+                                                                            <td className='pl-4 text-gray-500'>{DataSTD.RegNo}</td>
                                                                         </tr>
                                                                         <tr>
                                                                             <td className='font-semibold'>Admission Date: </td>
-                                                                            <td className='pl-4 text-gray-500'>{stdData.RegisterAt} </td>
+                                                                            <td className='pl-4 text-gray-500'>{DataSTD.RegisterAt} </td>
                                                                         </tr>
             
                                                                         <tr>
                                                                             <td className='font-semibold'>Gender: </td>
-                                                                            <td className='pl-4 text-gray-500'>{stdData.Gender} </td>
+                                                                            <td className='pl-4 text-gray-500'>{DataSTD.Gender} </td>
                                                                         </tr>
                                                                     </table>
                                                                 )

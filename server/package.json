@@ -17,7 +17,7 @@
     "dotenv": "^16.4.5",
     "express": "^4.19.2",
     "fs": "^0.0.1-security",
-    "jkmysql-easy": "file:jkmysql-easy-1.4.0.tgz",
+    "jkmysql-easy": "^1.4.0",
     "json2csv": "^6.0.0-alpha.2",
     "jsonwebtoken": "^9.0.2",
     "multer": "^1.4.5-lts.1",
