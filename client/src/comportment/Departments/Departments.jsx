@@ -4,6 +4,7 @@ import  secureLocalStorage  from  "react-secure-storage"
 import CountUp from 'react-countup'
 import axios from 'axios';
 import { BsBuilding, BsBuildingAdd } from 'react-icons/bs';
+import AddDept from './AddDept';
 
 const Departments = () => {
   const navigate = useNavigate()
@@ -50,6 +51,15 @@ const Departments = () => {
                 })
               }
             </div>
+            {
+              (() => {
+                if(buttonValue === "AddDept"){
+                  return (
+                    <AddDept />
+                  )
+                }
+              })()
+            }
           </div>  
       </div>
     )
