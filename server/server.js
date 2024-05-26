@@ -276,6 +276,11 @@ app.get('/AllStudents', (req, res) => {
     })
 })
 
+// AddDept
+app.post('/AddDept', (req, res) => {
+    console.log(req.body)
+})
+
 
 // all endpoints end
 
