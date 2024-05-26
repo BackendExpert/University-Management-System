@@ -18,6 +18,21 @@ const Students = () => {
         SetButtonValue(clickValue)   
     }
 
+    const [CountStudens, SetCountStudents] = useState(0)
+
+    useEffect(() => {
+        const fetchData = async () => {
+            try {
+                const StdCount = await axios.get('http://localhost:8081/AllStudents');
+                SetCountStudents(StdCount.data.StdResult);
+            } catch (error) {
+                console.error('Error fetching data:', error);
+            }
+
+        }
+        fetchData();
+    }, [])
+
     const studentData = [
       {id: 1, btnValue: "", name: "Students", value: <CountUp end={20}/>, icon: <BsPeople />, style: "text-green-500"},
       {id: 2, btnValue: "", name: "Requests", value: <CountUp end={20}/>, icon: <BsPersonGear />, style: "text-green-500"},
