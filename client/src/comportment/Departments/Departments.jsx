@@ -12,7 +12,7 @@ const Departments = () => {
   const EmailUser = secureLocalStorage.getItem("login2");
 
   const DeptData = [
-    {name: "Departments", btnValue: "AllDepts", value: <CountUp end={20} />, icos: <BsBuilding />, style: "text-blue-500"}
+    {name: "Departments", btnValue: "AllDepts", value: <CountUp end={20} />, icon: <BsBuilding />, style: "text-blue-500"}
   ]
   if(EmailUser !== null && RoleUser === "SuperAdmin"){
     return (
@@ -25,18 +25,18 @@ const Departments = () => {
               {
                 DeptData.map((Depts) => {
                   return (
-                    <div className={`h-full bg-white w-full mx-2 md:my-0 my-2 duration-500 rounded shadow-md ${stdData.style}`}>                                       
+                    <div className={`h-full bg-white w-full mx-2 md:my-0 my-2 duration-500 rounded shadow-md ${Depts.style}`}>                                       
                       <div className="lg:py-8 flex py-6 px-8 w-full justify-between border border-gray-200 rounded">
                           <div className="">
-                              <h1 className={`text-[100%] ${stdData.style}`}>{stdData.value}</h1>
-                              <p className="py-2 text-[120%] lg:text-3xl lg:mt-2">{stdData.name}</p>
+                              <h1 className={`text-[180%] ${Depts.style}`}>{Depts.value}</h1>
+                              <p className="py-2 text-[120%] lg:text-3xl lg:mt-2">{Depts.name}</p>
                           </div>
                           <div className="">
-                              <p className="lg:text-5xl text-[200%] text-gray-500">{stdData.icons}</p>
+                              <p className="lg:text-5xl text-[200%] text-gray-500">{Depts.icon}</p>
                           </div>
                       </div>
                       <div className="text-white py-4 px-8 bg-gradient-to-r from-indigo-500 via-purple-500 to-pink-500 rounded">
-                          {stdData.name} 
+                          {Depts.name} 
                       </div>
                   </div>  
                   )
