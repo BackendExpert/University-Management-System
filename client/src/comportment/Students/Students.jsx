@@ -4,6 +4,7 @@ import { Link, useNavigate } from 'react-router-dom'
 import CountUp from 'react-countup'
 import  secureLocalStorage  from  "react-secure-storage"
 import AddStudent from './AddStudent'
+import axios from 'axios'
 
 
 const Students = () => {
@@ -34,7 +35,7 @@ const Students = () => {
     }, [])
 
     const studentData = [
-      {id: 1, btnValue: "", name: "Students", value: <CountUp end={20}/>, icon: <BsPeople />, style: "text-green-500"},
+      {id: 1, btnValue: "", name: "Students", value: <CountUp end={CountStudens}/>, icon: <BsPeople />, style: "text-green-500"},
       {id: 2, btnValue: "", name: "Requests", value: <CountUp end={20}/>, icon: <BsPersonGear />, style: "text-green-500"},
       {id: 3, btnValue: "", name: "Lock Students", value: <CountUp end={20}/>, icon: <BsPersonSlash />, style: "text-green-500"},
       {id: 4, btnValue: "", name: "My Subjects", value: <CountUp end={20}/>, icon: <BsPersonSlash />, style: "text-purple-500"},
