@@ -12,7 +12,8 @@ const Departments = () => {
   const EmailUser = secureLocalStorage.getItem("login2");
 
   const DeptData = [
-    {name: "Departments", btnValue: "AllDepts", value: <CountUp end={20} />, icon: <BsBuilding />, style: "text-blue-500"}
+    {name: "Departments", btnValue: "AllDepts", value: <CountUp end={20} />, icon: <BsBuilding />, style: "text-blue-500"},
+    {name: "Add New Departments", btnValue: "AddDept", value: "#", icon: <BsBuilding />, style: "text-green-500"},
   ]
   if(EmailUser !== null && RoleUser === "SuperAdmin"){
     return (
@@ -25,7 +26,7 @@ const Departments = () => {
               {
                 DeptData.map((Depts) => {
                   return (
-                    <div className={`h-full bg-white w-full mx-2 md:my-0 my-2 duration-500 rounded shadow-md ${Depts.style}`}>                                       
+                    <div className={`cursor-pointer h-full bg-white w-full mx-2 md:my-0 my-2 duration-500 rounded shadow-md ${Depts.style}`}>                                       
                       <div className="lg:py-8 flex py-6 px-8 w-full justify-between border border-gray-200 rounded">
                           <div className="">
                               <h1 className={`text-[180%] ${Depts.style}`}>{Depts.value}</h1>
