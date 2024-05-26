@@ -3,7 +3,7 @@ import { Link, useNavigate } from 'react-router-dom';
 import  secureLocalStorage  from  "react-secure-storage"
 import CountUp from 'react-countup'
 import axios from 'axios';
-import { BsBuilding } from 'react-icons/bs';
+import { BsBuilding, BsBuildingAdd } from 'react-icons/bs';
 
 const Departments = () => {
   const navigate = useNavigate()
@@ -11,9 +11,15 @@ const Departments = () => {
   const RoleUser = secureLocalStorage.getItem("Login1");
   const EmailUser = secureLocalStorage.getItem("login2");
 
+  
+  const [buttonValue, SetButtonValue] = useState(0)
+  const HeadleButtonClick = (clickValue) => {
+      SetButtonValue(clickValue)   
+  }
+
   const DeptData = [
     {name: "Departments", btnValue: "AllDepts", value: <CountUp end={20} />, icon: <BsBuilding />, style: "text-blue-500"},
-    {name: "Add New Departments", btnValue: "AddDept", value: "#", icon: <BsBuilding />, style: "text-green-500"},
+    {name: "Add New Departments", btnValue: "AddDept", value: "#", icon: <BsBuildingAdd />, style: "text-green-500"},
   ]
   if(EmailUser !== null && RoleUser === "SuperAdmin"){
     return (
@@ -26,7 +32,7 @@ const Departments = () => {
               {
                 DeptData.map((Depts) => {
                   return (
-                    <div className={`cursor-pointer h-full bg-white w-full mx-2 md:my-0 my-2 duration-500 rounded shadow-md ${Depts.style}`}>                                       
+                    <div onClick={() => HeadleButtonClick(Depts.btnValue)} className={`cursor-pointer h-full bg-white w-full mx-2 md:my-0 my-2 duration-500 rounded shadow-md ${Depts.style}`}>                                       
                       <div className="lg:py-8 flex py-6 px-8 w-full justify-between border border-gray-200 rounded">
                           <div className="">
                               <h1 className={`text-[180%] ${Depts.style}`}>{Depts.value}</h1>
