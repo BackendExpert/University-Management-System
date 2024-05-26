@@ -279,6 +279,28 @@ app.get('/AllStudents', (req, res) => {
 // AddDept
 app.post('/AddDept', (req, res) => {
     console.log(req.body)
+
+    const tableName = 'departments'
+    const columnData = {DeptID : req.body.deptNo }
+    JkMysql.SearchData(connection, tableName, columnData, (result) => {
+        if(result.length === 0){
+            const deptData = {
+                DeptID: req.body.deptNo,
+                DeptName: req.body.deptName,
+                DeptDesc: req.body.deptDesc,
+                add_at: new Date()
+            }
+
+            JkMysql.insertData(connection, tableName, deptData, (result) => {
+                if(result) {
+                    return res.json({Status: "Success"})
+                }
+            })
+        }
+        else{
+            return res.json({Error: "Department Already in Database"})
+        }
+    })
 })
 
 
