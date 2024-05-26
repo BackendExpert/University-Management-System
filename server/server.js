@@ -212,8 +212,8 @@ app.get('/GetMyDataSTD/:id', (req, res) => {
     
     JkMysql.SelectData(connection, tableName, columnsData, (results) => {
         if(results) {
-            // return res.json({Result: results})
             console.log(results)
+            return res.json({Result: results})
         }
     })
 })
