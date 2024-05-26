@@ -206,13 +206,13 @@ app.post('/AddStudent', (req, res) => {
 
 app.get('/GetMyDataSTD/:id', (req, res) => {
     const userEmail = req.params.id
-    console.log(userEmail)
+    // console.log(userEmail)
     const tableName = 'students';
     const columnsData = { EmailStd: userEmail }; // Example columns data object
     
     JkMysql.SelectData(connection, tableName, columnsData, (results) => {
         if(results) {
-            console.log(results)
+            // console.log(results)
             return res.json({Result: results})
         }
     })
