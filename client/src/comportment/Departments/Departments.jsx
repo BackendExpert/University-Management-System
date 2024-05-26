@@ -3,6 +3,7 @@ import { Link, useNavigate } from 'react-router-dom';
 import  secureLocalStorage  from  "react-secure-storage"
 import CountUp from 'react-countup'
 import axios from 'axios';
+import { BsBuilding } from 'react-icons/bs';
 
 const Departments = () => {
   const navigate = useNavigate()
@@ -10,6 +11,9 @@ const Departments = () => {
   const RoleUser = secureLocalStorage.getItem("Login1");
   const EmailUser = secureLocalStorage.getItem("login2");
 
+  const DeptData = [
+    {name: "Departments", value: <CountUp end={20} />, icos: <BsBuilding />, style: "text-blue-500"}
+  ]
   if(EmailUser !== null && RoleUser === "SuperAdmin"){
     return (
       <div className="mx-8">
