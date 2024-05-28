@@ -78,6 +78,25 @@ const UpdateMyData = () => {
                                 />
                             </div>
                         </div>
+                        <p className="mt-4">Mother's Information</p>
+                        <hr />
+                        <div className="md:grid grid-cols-2 gap-4 my-4">
+                            <div className="">
+                                <label htmlFor="" className="text-gray-500">Mother's Name : </label>
+                                <input type="text" name="" id="" className="my-2 h-12 w-full rounded bg-gray-200 pl-2" required placeholder='Mother Name'
+                                />
+                            </div>
+                            <div className="">
+                                <label htmlFor="" className="text-gray-500">Mother's Mobile : </label>
+                                <input type="text" name="" id="" className="my-2 h-12 w-full rounded bg-gray-200 pl-2" required placeholder='Mother Mobile'
+                                />
+                            </div>
+                            <div className="">
+                                <label htmlFor="" className="text-gray-500">Mother's Email : </label>
+                                <input type="email" name="" id="" className="my-2 h-12 w-full rounded bg-gray-200 pl-2" required placeholder='Mother Email Address'
+                                />
+                            </div>
+                        </div>
                     </form>
                 </div>
             </div>
