@@ -64,7 +64,7 @@ const AllDepts = () => {
                                             </th>
                                             <th scope="row" class="px-6 py-4 text-gray-900 whitespace-nowrap dark:text-white">
                                                 <div className="flex">
-                                                    <button className='bg-blue-500 py-2 px-4 rounded text-white'>Update</button>
+                                                    <button className='bg-blue-500 py-2 px-4 rounded text-white shadow-md duration-500 hover:bg-blue-600'>Update</button>
                                                 </div>
                                             </th>
                                         </tr>
