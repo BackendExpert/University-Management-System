@@ -8,24 +8,29 @@ const AllDepts = () => {
             <hr className='pb-4 pt-2'/>
         </div>
 
-        <table className='max-w-full'>
-            <thead>
-                <tr>
-                    <th className='font-semibold'>#</th>
-                    <th>Dept Name</th>
-                    <th>Dept Description</th>
-                    <th>Action</th>
-                </tr>
-            </thead>
-            <tbody>
-                <tr>
-                    <td className='font-semibold'>1</td>
-                    <td>IT</td>
-                    <td>Information Tech</td>
-                    <th>Edit</th>
-                </tr>
-            </tbody>
-        </table>
+        <div class="overflow-x-auto my-8">
+            <table class="w-full text-sm text-left rtl:text-right text-gray-500 dark:text-gray-400">
+                <thead class="text-xs text-gray-700 uppercase bg-gray-50 dark:bg-gray-700 dark:text-gray-400">
+                    <tr>
+                        <th scope="col" class="px-6 py-3 md:block hidden">
+                            Dept No
+                        </th>
+                        <th scope="col" class="px-6 py-3">
+                            Dept Name 
+                        </th>
+                        <th scope="col" class="px-6 py-3 md:block hidden">
+                            Dept Descriptiono
+                        </th>
+                        <th scope="col" class="px-6 py-3">
+                            Action
+                        </th>
+                    </tr>            
+                </thead>
+                <tbody>
+
+                </tbody>
+            </table>
+        </div>   
 
     </div>
 
