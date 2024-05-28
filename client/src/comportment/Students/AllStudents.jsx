@@ -23,18 +23,21 @@ const AllStudents = () => {
                         <thead class="text-xs text-gray-700 uppercase bg-gray-50 dark:bg-gray-700 dark:text-gray-400">
                             <tr>
                                 <th scope="col" class="px-6 py-3">
-                                    Registation No
+                                    <p className="hidden md:table-cell">Reg No</p>
+                                    <p className="md:hidden">Student Data</p>
+                                    
+
                                 </th>
-                                <th scope="col" class="px-6 py-3">
+                                <th scope="col" class="px-6 py-3 hidden md:table-cell">
                                     Name 
                                 </th>
-                                <th scope="col" class="px-6 py-3 md:block hidden">
+                                <th scope="col" class="px-6 py-3 hidden md:table-cell">
                                     Email
                                 </th>
-                                <th scope="col" class="px-6 py-3 md:block hidden">
+                                <th scope="col" class="px-6 py-3 hidden md:table-cell">
                                     Department
                                 </th>
-                                <th scope="col" class="px-6 py-3 md:block hidden">
+                                <th scope="col" class="px-6 py-3 hidden md:table-cell">
                                     Gender
                                 </th>
                                 <th scope="col" class="px-6 py-3">
@@ -43,28 +46,7 @@ const AllStudents = () => {
                             </tr>            
                         </thead>
                         <tbody>
-                            {
-                                DeptsAll.map((dataDept, index) => {
-                                    return (
-                                        <tr key={index}>
-                                            <th scope="row" class="px-6 py-4 font-medium text-gray-900 whitespace-nowrap dark:text-white">
-                                                {dataDept.DeptID}
-                                            </th>
-                                            <th scope="row" class="px-6 py-4 text-gray-900 whitespace-nowrap dark:text-white">
-                                                {dataDept.DeptName}
-                                            </th>
-                                            <th scope="row" class="px-6 py-4 text-gray-900 whitespace-nowrap dark:text-white">
-                                                {dataDept.DeptDesc}
-                                            </th>
-                                            <th scope="row" class="px-6 py-4 text-gray-900 whitespace-nowrap dark:text-white">
-                                                <div className="flex">
-                                                    <button className='bg-blue-500 py-2 px-4 rounded text-white shadow-md duration-500 hover:bg-blue-600'>Update</button>
-                                                </div>
-                                            </th>
-                                        </tr>
-                                    )
-                                })
-                            }
+
                         </tbody>
                     </table>
                 </div>   
