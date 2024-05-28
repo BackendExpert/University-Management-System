@@ -21,7 +21,7 @@ const AllStudents = () => {
 
     if(RoleUser !== null && EmailUser !== null & RoleUser === "SuperAdmin" || RoleUser === "Hod"){
         return (
-            <div className="">
+            <div className="my-8">
                 <div className='bg-white py-4 px-8 rounded shadow-md'>
                     <h1 className="lg:text-3xl text-xl text-gray-500">Departments</h1>
                     <hr className='pb-4 pt-2'/>
@@ -34,9 +34,6 @@ const AllStudents = () => {
                                 <th scope="col" class="px-6 py-3">
                                     <p className="hidden md:table-cell">Reg No</p>
                                     <p className="md:hidden">Student Data</p>                                   
-                                </th>
-                                <th scope="col" class="px-6 py-3 hidden md:table-cell">
-                                    Name 
                                 </th>
                                 <th scope="col" class="px-6 py-3 hidden md:table-cell">
                                     Email
@@ -57,7 +54,23 @@ const AllStudents = () => {
                                 StdData.map((dataStd, index) => {
                                     return (
                                         <tr key={index}>
-                                            
+                                            <th scope="row" class="px-6 py-4 font-medium text-gray-900 whitespace-nowrap dark:text-white">
+                                                {dataStd.RegNo}
+                                            </th>
+                                            <th scope="row" class="px-6 py-4 text-gray-900 whitespace-nowrap dark:text-white">
+                                                {dataStd.EmailStd}
+                                            </th>
+                                            <th scope="row" class="px-6 py-4 text-gray-900 whitespace-nowrap dark:text-white">
+                                                {dataStd.stdDept}
+                                            </th>
+                                            <th scope="row" class="px-6 py-4 text-gray-900 whitespace-nowrap dark:text-white">
+                                                {dataStd.Gender}
+                                            </th>
+                                            <th scope="row" class="px-6 py-4 text-gray-900 whitespace-nowrap dark:text-white">
+                                                <div className="flex">
+                                                    <button>View</button>
+                                                </div>
+                                            </th>
                                         </tr>
                                     )
                                 })
