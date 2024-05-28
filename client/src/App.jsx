@@ -45,6 +45,7 @@ export default function App() {
           <Route path="Semesters" element={<PrivateRoute><Semesters /></PrivateRoute>} />
           <Route path="Exams" element={<PrivateRoute><Exams /></PrivateRoute>} />
           <Route path="Expenses" element={<PrivateRoute><Expenses /></PrivateRoute>} />
+          <Route path="/ViewStd/:id" element={<PrivateRoute><ViewStd /></PrivateRoute>} />
         </Route>
       </Routes>
     </BrowserRouter>
