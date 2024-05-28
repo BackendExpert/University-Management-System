@@ -42,7 +42,7 @@ const UpdateMyData = () => {
                         </div>
                         <div className="">
                             <label htmlFor="" className="text-gray-500">Address : </label>
-                            <input type="text" name="" id="" className="my-2 h-12 w-full rounded bg-gray-200 pl-2" required placeholder='Last Name'
+                            <input type="text" name="" id="" className="my-2 h-12 w-full rounded bg-gray-200 pl-2" required placeholder='Address'
                             />
                             <div className="md:flex">
                                 <div className="flex">
@@ -78,6 +78,11 @@ const UpdateMyData = () => {
                                 />
                             </div>
                         </div>
+                        <div className="">
+                            <label htmlFor="" className="text-gray-500">Father's Address : </label>
+                            <input type="text" name="" id="" className="my-2 h-12 w-full rounded bg-gray-200 pl-2" required placeholder='Address'
+                            />
+                        </div>
                         <p className="mt-4">Mother's Information</p>
                         <hr />
                         <div className="md:grid grid-cols-2 gap-4 my-4">
@@ -96,6 +101,11 @@ const UpdateMyData = () => {
                                 <input type="email" name="" id="" className="my-2 h-12 w-full rounded bg-gray-200 pl-2" required placeholder='Mother Email Address'
                                 />
                             </div>
+                        </div>
+                        <div className="">
+                            <label htmlFor="" className="text-gray-500">Mother's Address : </label>
+                            <input type="text" name="" id="" className="my-2 h-12 w-full rounded bg-gray-200 pl-2" required placeholder='Address'
+                            />
                         </div>
                         <div className="">
                             <button type="submit" className="my-4 text-white py-4 px-8 rounded shadow-md bg-gradient-to-r from-indigo-500 via-purple-500 to-pink-500">Update</button>
