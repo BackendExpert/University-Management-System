@@ -55,15 +55,21 @@ const AllStudents = () => {
                                     return (
                                         <tr key={index}>
                                             <th scope="row" class="px-6 py-4 font-medium text-gray-900 whitespace-nowrap dark:text-white">
-                                                {dataStd.RegNo}
+                                                <p className="hidden md:table-cell">{dataStd.RegNo}</p>
+                                                <div className="md:hidden">
+                                                    <p className="font-semibold">{dataStd.RegNo}</p>
+                                                    <p className="">{dataStd.EmailStd}</p>
+                                                    <p className="">{dataStd.stdDept}</p>
+                                                    <p className="">{dataStd.Gender}</p>
+                                                </div>
                                             </th>
-                                            <th scope="row" class="px-6 py-4 text-gray-900 whitespace-nowrap dark:text-white">
+                                            <th scope="row" class="hidden md:table-cell px-6 py-4 text-gray-900 whitespace-nowrap dark:text-white">
                                                 {dataStd.EmailStd}
                                             </th>
-                                            <th scope="row" class="px-6 py-4 text-gray-900 whitespace-nowrap dark:text-white">
+                                            <th scope="row" class="hidden md:table-cell px-6 py-4 text-gray-900 whitespace-nowrap dark:text-white">
                                                 {dataStd.stdDept}
                                             </th>
-                                            <th scope="row" class="px-6 py-4 text-gray-900 whitespace-nowrap dark:text-white">
+                                            <th scope="row" class="hidden md:table-cell px-6 py-4 text-gray-900 whitespace-nowrap dark:text-white">
                                                 {dataStd.Gender}
                                             </th>
                                             <th scope="row" class="px-6 py-4 text-gray-900 whitespace-nowrap dark:text-white">
