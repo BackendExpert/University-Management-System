@@ -1,10 +1,12 @@
 import React from 'react'
+import { useParams } from 'react-router-dom'
 
 const ViewStd = () => {
+    const id = useParams(id)
   return (
     <div className='my-4 mx-8'>
         <div className="bg-white py-4 px-6 rounded shadow-md">
-            Lorem ipsum dolor sit amet consectetur, adipisicing elit. Soluta qui nulla asperiores delectus iure tempore quibusdam voluptate minima laboriosam. Soluta nemo quisquam molestias tenetur reiciendis nesciunt saepe itaque ad amet.
+            <h1 className="">Student Data : {id}</h1>
         </div>
     </div>
   )
