@@ -49,15 +49,22 @@ const UpdateMyData = () => {
                                 </div>
                             </div>
                         </div>
-                        <div className="md:grid grid-cols-2 gap-4">
-                            <div className="my-4">
-                                <label htmlFor="" className="text-gray-500">First Name : </label>
-                                <input type="text" name="" id="" className="my-2 h-12 w-full rounded bg-gray-200 pl-2" required placeholder='First Name'
+                        <p className="mt-4">Father's Information</p>
+                        <hr />
+                        <div className="md:grid grid-cols-2 gap-4 my-4">
+                            <div className="">
+                                <label htmlFor="" className="text-gray-500">Father's Name : </label>
+                                <input type="text" name="" id="" className="my-2 h-12 w-full rounded bg-gray-200 pl-2" required placeholder='Father Name'
                                 />
                             </div>
-                            <div className="my-4">
-                                <label htmlFor="" className="text-gray-500">First Name : </label>
-                                <input type="text" name="" id="" className="my-2 h-12 w-full rounded bg-gray-200 pl-2" required placeholder='Last Name'
+                            <div className="">
+                                <label htmlFor="" className="text-gray-500">Father's Mobile : </label>
+                                <input type="text" name="" id="" className="my-2 h-12 w-full rounded bg-gray-200 pl-2" required placeholder='Father Mobile'
+                                />
+                            </div>
+                            <div className="">
+                                <label htmlFor="" className="text-gray-500">Father's Email : </label>
+                                <input type="email" name="" id="" className="my-2 h-12 w-full rounded bg-gray-200 pl-2" required placeholder='Father Email Address'
                                 />
                             </div>
                         </div>
