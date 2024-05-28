@@ -74,7 +74,9 @@ const AllStudents = () => {
                                             </th>
                                             <th scope="row" class="px-6 py-4 text-gray-900 whitespace-nowrap dark:text-white">
                                                 <div className="flex">
-                                                    <button>View</button>
+                                                    <Link to={'ViewStd/' + dataStd.RegNo}>
+                                                        <button className='bg-blue-500 py-2 px-4 rounded text-white shadow-md duration-500 hvoer:bg-blue-600'>View</button>
+                                                    </Link>                                                    
                                                 </div>
                                             </th>
                                         </tr>
