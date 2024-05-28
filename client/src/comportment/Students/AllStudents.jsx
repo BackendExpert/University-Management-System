@@ -24,9 +24,7 @@ const AllStudents = () => {
                             <tr>
                                 <th scope="col" class="px-6 py-3">
                                     <p className="hidden md:table-cell">Reg No</p>
-                                    <p className="md:hidden">Student Data</p>
-                                    
-
+                                    <p className="md:hidden">Student Data</p>                                   
                                 </th>
                                 <th scope="col" class="px-6 py-3 hidden md:table-cell">
                                     Name 
