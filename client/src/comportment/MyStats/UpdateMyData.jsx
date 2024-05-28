@@ -36,13 +36,13 @@ const UpdateMyData = () => {
                             </div>
                             <div className="">
                                 <label htmlFor="" className="text-gray-500">Landline Number : </label>
-                                <input type="text" name="" id="" className="my-2 h-12 w-full rounded bg-gray-200 pl-2" required placeholder='LandLine Number'
+                                <input type="text" name="" id="" className="my-2 h-12 w-full rounded bg-gray-200 pl-2" placeholder='LandLine Number'
                                 />
                             </div>
                         </div>
                         <div className="">
                             <label htmlFor="" className="text-gray-500">Address : </label>
-                            <input type="text" name="" id="" className="my-2 h-12 w-full rounded bg-gray-200 pl-2" required placeholder='Address'
+                            <input type="text" name="" id="" className="my-2 h-12 w-full rounded bg-gray-200 pl-2" placeholder='Address'
                             />
                             <div className="md:flex">
                                 <div className="flex">
@@ -69,18 +69,18 @@ const UpdateMyData = () => {
                             </div>
                             <div className="">
                                 <label htmlFor="" className="text-gray-500">Father's Mobile : </label>
-                                <input type="text" name="" id="" className="my-2 h-12 w-full rounded bg-gray-200 pl-2" required placeholder='Father Mobile'
+                                <input type="text" name="" id="" className="my-2 h-12 w-full rounded bg-gray-200 pl-2" placeholder='Father Mobile'
                                 />
                             </div>
                             <div className="">
                                 <label htmlFor="" className="text-gray-500">Father's Email : </label>
-                                <input type="email" name="" id="" className="my-2 h-12 w-full rounded bg-gray-200 pl-2" required placeholder='Father Email Address'
+                                <input type="email" name="" id="" className="my-2 h-12 w-full rounded bg-gray-200 pl-2" placeholder='Father Email Address'
                                 />
                             </div>
                         </div>
                         <div className="">
                             <label htmlFor="" className="text-gray-500">Father's Address : </label>
-                            <input type="text" name="" id="" className="my-2 h-12 w-full rounded bg-gray-200 pl-2" required placeholder='Address'
+                            <input type="text" name="" id="" className="my-2 h-12 w-full rounded bg-gray-200 pl-2" placeholder='Address'
                             />
                         </div>
                         <p className="mt-4">Mother's Information</p>
@@ -93,18 +93,18 @@ const UpdateMyData = () => {
                             </div>
                             <div className="">
                                 <label htmlFor="" className="text-gray-500">Mother's Mobile : </label>
-                                <input type="text" name="" id="" className="my-2 h-12 w-full rounded bg-gray-200 pl-2" required placeholder='Mother Mobile'
+                                <input type="text" name="" id="" className="my-2 h-12 w-full rounded bg-gray-200 pl-2" placeholder='Mother Mobile'
                                 />
                             </div>
                             <div className="">
                                 <label htmlFor="" className="text-gray-500">Mother's Email : </label>
-                                <input type="email" name="" id="" className="my-2 h-12 w-full rounded bg-gray-200 pl-2" required placeholder='Mother Email Address'
+                                <input type="email" name="" id="" className="my-2 h-12 w-full rounded bg-gray-200 pl-2" placeholder='Mother Email Address'
                                 />
                             </div>
                         </div>
                         <div className="">
                             <label htmlFor="" className="text-gray-500">Mother's Address : </label>
-                            <input type="text" name="" id="" className="my-2 h-12 w-full rounded bg-gray-200 pl-2" required placeholder='Address'
+                            <input type="text" name="" id="" className="my-2 h-12 w-full rounded bg-gray-200 pl-2" placeholder='Address'
                             />
                         </div>
                         <div className="">
