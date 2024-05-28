@@ -5,6 +5,7 @@ import CountUp from 'react-countup'
 import  secureLocalStorage  from  "react-secure-storage"
 import AddStudent from './AddStudent'
 import axios from 'axios'
+import AllStudents from './AllStudents'
 
 
 const Students = () => {
@@ -35,7 +36,7 @@ const Students = () => {
     }, [])
 
     const studentData = [
-      {id: 1, btnValue: "", name: "Students", value: <CountUp end={CountStudens}/>, icon: <BsPeople />, style: "text-green-500"},
+      {id: 1, btnValue: 0, name: "Students", value: <CountUp end={CountStudens}/>, icon: <BsPeople />, style: "text-green-500"},
       {id: 2, btnValue: "", name: "Requests", value: <CountUp end={20}/>, icon: <BsPersonGear />, style: "text-green-500"},
       {id: 3, btnValue: "", name: "Lock Students", value: <CountUp end={20}/>, icon: <BsPersonSlash />, style: "text-green-500"},
       {id: 4, btnValue: "", name: "My Subjects", value: <CountUp end={20}/>, icon: <BsPersonSlash />, style: "text-purple-500"},
@@ -120,6 +121,11 @@ const Students = () => {
             <div className="">
               {
                 (() => {
+                  if(buttonValue === 0){
+                    return (
+                      <AllStudents />
+                    )
+                  }
                   if(buttonValue === "AddStudent"){
                     return (
                       <AddStudent />
