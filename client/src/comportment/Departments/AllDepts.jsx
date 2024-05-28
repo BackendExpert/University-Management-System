@@ -1,9 +1,7 @@
 import React, { useEffect, useState } from 'react'
 import { Link, useNavigate } from 'react-router-dom';
 import  secureLocalStorage  from  "react-secure-storage"
-import CountUp from 'react-countup'
 import axios from 'axios';
-import { BsBuilding, BsBuildingAdd } from 'react-icons/bs';
 
 
 // DeptsView
@@ -14,6 +12,15 @@ const AllDepts = () => {
     //curent login user
     const RoleUser = secureLocalStorage.getItem("Login1");
     const EmailUser = secureLocalStorage.getItem("login2");
+
+    // get data
+    const [DeptsAll, SetDeptsAll] = useState([])
+
+    useEffect(() => {
+        axios.get('htpp://localhost:8081/DeptsView')
+        .then(res => SetDeptsAll(res.data.Result))
+        .catch(console.log(err))
+    }, [])
 
     if(RoleUser !== null && EmailUser !== null && RoleUser === "SuperAdmin"){
         return (
@@ -42,7 +49,17 @@ const AllDepts = () => {
                             </tr>            
                         </thead>
                         <tbody>
-        
+                            {
+                                DeptsAll.map((dataDept, index) => {
+                                    return (
+                                        <tr key={index}>
+                                            <td>
+                                                Hi all
+                                            </td>
+                                        </tr>
+                                    )
+                                })
+                            }
                         </tbody>
                     </table>
                 </div>   
