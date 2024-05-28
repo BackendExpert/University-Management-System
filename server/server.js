@@ -315,6 +315,10 @@ app.get('/AllDepts', (req, res) => {
     })
 })
 
+// all departments
+app.get('/DeptsView', (req, res) => {
+    
+})
 
 // all endpoints end
 
