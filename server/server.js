@@ -278,7 +278,7 @@ app.get('/AllStudents', (req, res) => {
 
 // AddDept
 app.post('/AddDept', (req, res) => {
-    console.log(req.body)
+    // console.log(req.body)
 
     const tableName = 'departments'
     const columnData = {DeptID : req.body.deptNo }
@@ -301,6 +301,11 @@ app.post('/AddDept', (req, res) => {
             return res.json({Error: "Department Already in Database"})
         }
     })
+})
+
+// AllDepts
+app.get('/AllDepts', (req, res) => {
+    
 })
 
 
