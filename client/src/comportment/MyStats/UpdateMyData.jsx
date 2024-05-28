@@ -19,14 +19,24 @@ const UpdateMyData = () => {
 
                     <form action="">
                         <div className="md:grid grid-cols-2 gap-4">
-                            <div className="my-4">
+                            <div className="">
                                 <label htmlFor="" className="text-gray-500">First Name : </label>
                                 <input type="text" name="" id="" className="my-2 h-12 w-full rounded bg-gray-200 pl-2" required placeholder='First Name'
                                 />
                             </div>
-                            <div className="my-4">
+                            <div className="">
                                 <label htmlFor="" className="text-gray-500">First Name : </label>
                                 <input type="text" name="" id="" className="my-2 h-12 w-full rounded bg-gray-200 pl-2" required placeholder='Last Name'
+                                />
+                            </div>
+                            <div className="">
+                                <label htmlFor="" className="text-gray-500">Moble Number (Whatsapp) : </label>
+                                <input type="text" name="" id="" className="my-2 h-12 w-full rounded bg-gray-200 pl-2" required placeholder='Mobile (Whatsapp)'
+                                />
+                            </div>
+                            <div className="">
+                                <label htmlFor="" className="text-gray-500">Landline Number : </label>
+                                <input type="text" name="" id="" className="my-2 h-12 w-full rounded bg-gray-200 pl-2" required placeholder='LandLine Number'
                                 />
                             </div>
                         </div>
