@@ -18,8 +18,23 @@ const Departments = () => {
       SetButtonValue(clickValue)   
   }
 
+  const [CountDets, SetCountDets] = useState(0)
+
+  useEffect(() => {
+    const fetchData = async () => {
+        try {
+            const deptCount = await axios.get('http://localhost:8081/AllDepts');
+            SetCountDets(deptCount.data.StdResult);
+        } catch (error) {
+            console.error('Error fetching data:', error);
+        }
+
+    }
+    fetchData();
+}, [])
+
   const DeptData = [
-    {name: "Departments", btnValue: "AllDepts", value: <CountUp end={20} />, icon: <BsBuilding />, style: "text-blue-500"},
+    {name: "Departments", btnValue: "AllDepts", value: <CountUp end={CountDets} />, icon: <BsBuilding />, style: "text-blue-500"},
     {name: "Add New Departments", btnValue: "AddDept", value: "#", icon: <BsBuildingAdd />, style: "text-green-500"},
   ]
   if(EmailUser !== null && RoleUser === "SuperAdmin"){
