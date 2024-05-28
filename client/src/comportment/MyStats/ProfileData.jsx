@@ -97,7 +97,38 @@ const ProfileData = () => {
               </div>
               <div className="md:mx-4 mx-0 w-full md:my-0 my-4">
                 <div className="bg-white py-4 px-8  rounded shadow-md">
-                  ashdkjh
+                {
+                      MyData.map((stdData, index) => {
+                        return (
+                          <table border={0} className='mx-2 lg:text-2xl'>
+                            <tr className='h-12'>
+                                <td className='font-semibold'>First Name: </td>
+                                <td className='pl-4 text-gray-500'>{stdData.Fname}</td>
+                            </tr>
+                            <tr className='h-12'>
+                                <td className='font-semibold'>Last Name : </td>
+                                <td className='pl-4 text-gray-500'>{stdData.Lname}</td>
+                            </tr>
+                            <tr className='h-12'>
+                                <td className='font-semibold'>NIC : </td>
+                                <td className='pl-4 text-gray-500'>{stdData.NIC}</td>
+                            </tr>
+                            <tr className='h-12'>
+                                <td className='font-semibold'>Address : </td>
+                                <td className='pl-4 text-gray-500'>{stdData.Address}</td>
+                            </tr>
+                            <tr className='h-12'>
+                                <td className='font-semibold'>Whatsapp : </td>
+                                <td className='pl-4 text-gray-500'>{stdData.Address}</td>
+                            </tr>
+                            <tr className='h-12'>
+                                <td className='font-semibold'>landLine : </td>
+                                <td className='pl-4 text-gray-500'>{stdData.Address}</td>
+                            </tr>
+                        </table>
+                        )
+                      })
+                    }      
                 </div>
               </div>
             </div>
