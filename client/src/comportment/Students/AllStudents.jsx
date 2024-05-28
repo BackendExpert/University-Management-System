@@ -53,7 +53,15 @@ const AllStudents = () => {
                             </tr>            
                         </thead>
                         <tbody>
-
+                            {
+                                StdData.map((dataStd, index) => {
+                                    return (
+                                        <tr key={index}>
+                                            
+                                        </tr>
+                                    )
+                                })
+                            }
                         </tbody>
                     </table>
                 </div>   
