@@ -17,9 +17,9 @@ const AllDepts = () => {
     const [DeptsAll, SetDeptsAll] = useState([])
 
     useEffect(() => {
-        axios.get('htpp://localhost:8081/DeptsView')
+        axios.get('http://localhost:8081/DeptsView')
         .then(res => SetDeptsAll(res.data.Result))
-        .catch(console.log(err))
+        .catch(err => console.log(err)) 
     }, [])
 
     if(RoleUser !== null && EmailUser !== null && RoleUser === "SuperAdmin"){
@@ -53,9 +53,12 @@ const AllDepts = () => {
                                 DeptsAll.map((dataDept, index) => {
                                     return (
                                         <tr key={index}>
-                                            <td>
-                                                Hi all
-                                            </td>
+                                            <th scope="row" class="px-6 py-4 font-medium text-gray-900 whitespace-nowrap dark:text-white">
+                                                {dataDept.DeptID}
+                                            </th>
+                                            <th scope="row" class="px-6 py-4 font-medium text-gray-900 whitespace-nowrap dark:text-white">
+                                                {dataDept.DeptName}
+                                            </th>
                                         </tr>
                                     )
                                 })
