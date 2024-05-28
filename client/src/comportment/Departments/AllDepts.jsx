@@ -30,7 +30,7 @@ const AllDepts = () => {
                     <hr className='pb-4 pt-2'/>
                 </div>
         
-                <div class="overflow-x-auto my-8">
+                <div class="overflow-x-auto my-8 bg-white">
                     <table class="w-full text-sm text-left rtl:text-right text-gray-500 dark:text-gray-400">
                         <thead class="text-xs text-gray-700 uppercase bg-gray-50 dark:bg-gray-700 dark:text-gray-400">
                             <tr>
@@ -56,8 +56,16 @@ const AllDepts = () => {
                                             <th scope="row" class="px-6 py-4 font-medium text-gray-900 whitespace-nowrap dark:text-white">
                                                 {dataDept.DeptID}
                                             </th>
-                                            <th scope="row" class="px-6 py-4 font-medium text-gray-900 whitespace-nowrap dark:text-white">
+                                            <th scope="row" class="px-6 py-4 text-gray-900 whitespace-nowrap dark:text-white">
                                                 {dataDept.DeptName}
+                                            </th>
+                                            <th scope="row" class="px-6 py-4 text-gray-900 whitespace-nowrap dark:text-white">
+                                                {dataDept.DeptDesc}
+                                            </th>
+                                            <th scope="row" class="px-6 py-4 text-gray-900 whitespace-nowrap dark:text-white">
+                                                <div className="flex">
+                                                    <button>Update</button>
+                                                </div>
                                             </th>
                                         </tr>
                                     )
