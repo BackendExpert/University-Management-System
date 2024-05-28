@@ -5,6 +5,7 @@ import CountUp from 'react-countup'
 import axios from 'axios';
 import { BsBuilding, BsBuildingAdd } from 'react-icons/bs';
 import AddDept from './AddDept';
+import AllDepts from './AllDepts';
 
 const Departments = () => {
   const navigate = useNavigate()
@@ -34,7 +35,7 @@ const Departments = () => {
 }, [])
 
   const DeptData = [
-    {name: "Departments", btnValue: "AllDepts", value: <CountUp end={CountDets} />, icon: <BsBuilding />, style: "text-blue-500"},
+    {name: "Departments", btnValue: 0, value: <CountUp end={CountDets} />, icon: <BsBuilding />, style: "text-blue-500"},
     {name: "Add New Departments", btnValue: "AddDept", value: "#", icon: <BsBuildingAdd />, style: "text-green-500"},
   ]
   if(EmailUser !== null && RoleUser === "SuperAdmin"){
@@ -68,6 +69,11 @@ const Departments = () => {
             </div>
             {
               (() => {
+                if(buttonValue === 0){
+                  return (
+                    <AllDepts />
+                  )
+                }
                 if(buttonValue === "AddDept"){
                   return (
                     <AddDept />
