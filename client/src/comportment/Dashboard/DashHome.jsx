@@ -17,12 +17,20 @@ const DashHome = () => {
 
     // count superAdmin data
     const [CountStudens, SetCountStudents] = useState(0)
+    const [CountDets, SetCountDets] = useState(0)
 
     useEffect(() => {
         const fetchData = async () => {
             try {
                 const StdCount = await axios.get('http://localhost:8081/AllStudents');
                 SetCountStudents(StdCount.data.StdResult);
+            } catch (error) {
+                console.error('Error fetching data:', error);
+            }
+
+            try {
+                const deptCount = await axios.get('http://localhost:8081/AllDepts');
+                SetCountDets(deptCount.data.StdResult);
             } catch (error) {
                 console.error('Error fetching data:', error);
             }
@@ -38,7 +46,7 @@ const DashHome = () => {
         {id: 3, name: "Subjects", icon: <BsFileEarmarkText />, value: <CountUp end={20} />, style: "text-yellow-500"},
         {id: 4, name: "Staff", icon: <BsPeople />, value: <CountUp end={20} />, style: "text-red-500"},
         {id: 5, name: "Courses", icon: <BsMortarboard />, value: <CountUp end={20} />, style: "text-purple-500"},
-        {id: 6, name: "Departments", icon: <BsBuilding />, value: <CountUp end={20} />, style: "text-yellow-500"},
+        {id: 6, name: "Departments", icon: <BsBuilding />, value: <CountUp end={CountDets} />, style: "text-yellow-500"},
         {id: 7, name: "Events", icon: <BsCalendarEvent />, value: <CountUp end={20} />, style: "text-yellow-500"},        
     ]
 
