@@ -305,7 +305,14 @@ app.post('/AddDept', (req, res) => {
 
 // AllDepts
 app.get('/AllDepts', (req, res) => {
-    
+    const tableName = 'departments'
+    const conditions = []
+
+    JkMysql.CountData(connection, tableName, conditions, (result) => {
+        if(result){
+            return res.json({StdResult: result})
+        }
+    })
 })
 
 
