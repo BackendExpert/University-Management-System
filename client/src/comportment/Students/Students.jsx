@@ -37,7 +37,7 @@ const Students = () => {
 
     const studentData = [
       {id: 1, btnValue: 0, name: "Students", value: <CountUp end={CountStudens}/>, icon: <BsPeople />, style: "text-green-500"},
-      {id: 2, btnValue: "", name: "Requests", value: <CountUp end={20}/>, icon: <BsPersonGear />, style: "text-green-500"},
+      // {id: 2, btnValue: "", name: "Requests", value: <CountUp end={20}/>, icon: <BsPersonGear />, style: "text-green-500"},
       {id: 3, btnValue: "", name: "Lock Students", value: <CountUp end={20}/>, icon: <BsPersonSlash />, style: "text-green-500"},
       {id: 4, btnValue: "", name: "My Subjects", value: <CountUp end={20}/>, icon: <BsPersonSlash />, style: "text-purple-500"},
       {id: 5, btnValue: "", name: "My Semesters", value: <CountUp end={20}/>, icon: <BsPersonSlash />, style: "text-green-500"},
@@ -52,7 +52,7 @@ const Students = () => {
             </div>
     
             <div className="">
-              <div className="md:grid grid-cols-4 gap-4">
+              <div className="md:grid grid-cols-3 gap-4">
                 {
                   studentData.map((dataStd) => {
                     if(RoleUser === "SuperAdmin") {
