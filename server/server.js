@@ -326,6 +326,18 @@ app.get('/DeptsView', (req, res) => {
     })
 })
 
+// StdView
+app.get('/StdView', (req, res) => {
+    const tableName = 'students'
+
+    JkMysql.SelectAllData(connection, tableName, (result) => {
+        if(result) {
+            return res.json({Result: result})
+        }
+    })
+})
+
+
 // all endpoints end
 
 app.listen(PORT, () => console.log(`Server is Running on PORT ${PORT}`));
