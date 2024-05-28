@@ -35,7 +35,7 @@ const UpdateMyPassword = () => {
 
     if(RoleUser !== null && EmailUser !== null){
         return (
-            <div className='lg:text-2xl my-2 mx-4'>
+            <div className='lg:text-2xl my-2'>
                 <div className="bg-white py-4 px-6 rounded shadow-md">
                     <h1 className="text-gray-600">Update Password</h1>
                     <div className="my-4">
