@@ -86,9 +86,13 @@ const AddStudent = () => {
                             </select>
                         </div>
                         <div className="">
-                            <label htmlFor="" className='lg:text-xl text-gray-500'>Department: </label>
-                            <input type="text" name="" id="" className="h-12 rounded pl-2 border-none bg-gray-200 w-full my-2" required placeholder='Enter Department'
-                            onChange={e => SetStdData({...StdData, dept:e.target.value})}/>
+                        <label htmlFor="" className='lg:text-xl text-gray-500'>Select Department</label>
+                            <select name="" id="" className='h-12 rounded pl-2 border-none bg-gray-200 w-full my-2'
+                            onChange={e => SetStdData({...StdData, gender:e.target.value})} required>
+                                <option value=''>Select Option</option>
+                                <option value="male">Male</option>
+                                <option value="female">Female</option>
+                            </select>
                         </div>
                         <div className="">
                             <label htmlFor="" className='lg:text-xl text-gray-500'>Admission No: </label>
