@@ -10,6 +10,15 @@ const AllStudents = () => {
     const RoleUser = secureLocalStorage.getItem("Login1");
     const EmailUser = secureLocalStorage.getItem("login2");
 
+    // get std data
+    const [StdData, SetStdData] = useState([])
+
+    useEffect(() => {
+        axios.post('http://localhost:8081/StdView')
+        .then(res => SetStdData(res.data.Result))
+        .catch(err => console.log(err))
+    }, [])
+
     if(RoleUser !== null && EmailUser !== null & RoleUser === "SuperAdmin" || RoleUser === "Hod"){
         return (
             <div className="">
