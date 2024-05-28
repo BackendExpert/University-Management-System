@@ -30,6 +30,11 @@ const UpdateMyData = () => {
                                 />
                             </div>
                         </div>
+                        <div className="">
+                            <label htmlFor="" className="text-gray-500">First Name : </label>
+                            <input type="text" name="" id="" className="my-2 h-12 w-full rounded bg-gray-200 pl-2" required placeholder='Last Name'
+                            />
+                        </div>
                     </form>
                 </div>
             </div>
