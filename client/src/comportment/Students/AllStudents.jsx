@@ -14,7 +14,7 @@ const AllStudents = () => {
     const [StdData, SetStdData] = useState([])
 
     useEffect(() => {
-        axios.post('http://localhost:8081/StdView')
+        axios.get('http://localhost:8081/StdView')
         .then(res => SetStdData(res.data.Result))
         .catch(err => console.log(err))
     }, [])
