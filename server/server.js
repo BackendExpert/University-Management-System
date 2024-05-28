@@ -317,7 +317,13 @@ app.get('/AllDepts', (req, res) => {
 
 // all departments
 app.get('/DeptsView', (req, res) => {
-    
+    const tableName = 'departments'
+
+    JkMysql.SelectAllData(connection, tableName, (result) => {
+        if(result) {
+            return res.json({Result: result})
+        }
+    })
 })
 
 // all endpoints end
