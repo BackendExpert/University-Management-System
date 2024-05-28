@@ -97,6 +97,9 @@ const UpdateMyData = () => {
                                 />
                             </div>
                         </div>
+                        <div className="">
+                            <button type="submit" className="my-4 text-white py-4 px-8 rounded shadow-md bg-gradient-to-r from-indigo-500 via-purple-500 to-pink-500">Update</button>
+                        </div>
                     </form>
                 </div>
             </div>
