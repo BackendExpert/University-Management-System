@@ -19,7 +19,7 @@ import Notifications from "./comportment/MyStats/Notifications";
 import Semesters from "./comportment/Semesters/Semesters";
 import Exams from "./comportment/Exams/Exams";
 import Expenses from "./comportment/Expenses/Expenses";
-
+import ViewStd from "./comportment/Students/ViewStd";
 
 export default function App() {
   return (
@@ -45,7 +45,7 @@ export default function App() {
           <Route path="Semesters" element={<PrivateRoute><Semesters /></PrivateRoute>} />
           <Route path="Exams" element={<PrivateRoute><Exams /></PrivateRoute>} />
           <Route path="Expenses" element={<PrivateRoute><Expenses /></PrivateRoute>} />
-          <Route path="/ViewStd/:id" element={<PrivateRoute><ViewStd /></PrivateRoute>} />
+          <Route path="ViewStd/:id" element={<PrivateRoute><ViewStd /></PrivateRoute>} />
         </Route>
       </Routes>
     </BrowserRouter>
