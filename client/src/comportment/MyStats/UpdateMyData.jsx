@@ -31,9 +31,23 @@ const UpdateMyData = () => {
                             </div>
                         </div>
                         <div className="">
-                            <label htmlFor="" className="text-gray-500">First Name : </label>
+                            <label htmlFor="" className="text-gray-500">Address : </label>
                             <input type="text" name="" id="" className="my-2 h-12 w-full rounded bg-gray-200 pl-2" required placeholder='Last Name'
                             />
+                            <div className="md:flex">
+                                <div className="flex">
+                                    <input type="checkbox" name="" id="" className='px-4'/>
+                                    <p className="px-2">                                        
+                                        Set as Address Father's Address                                    
+                                    </p>
+                                </div>
+                                <div className="flex">
+                                    <input type="checkbox" name="" id="" className='px-4'/>
+                                    <p className="px-2">                                        
+                                        Set as Address Mother's Address                                    
+                                    </p>
+                                </div>
+                            </div>
                         </div>
                     </form>
                 </div>
