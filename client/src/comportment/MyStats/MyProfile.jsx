@@ -5,6 +5,7 @@ import CountUp from 'react-countup'
 import UserImg from '../../assets/SuperAdmin.png'
 import ProfileData from './ProfileData';
 import UpdateMyPassword from './UpdateMyPassword';
+import UpdateMyData from './UpdateMyData';
 
 const MyProfile = () => {
     const navigate = useNavigate()
@@ -68,6 +69,11 @@ const MyProfile = () => {
               if(buttonValue === "UpdatePass"){
                 return (
                   <UpdateMyPassword />
+                )
+              }
+              if(buttonValue === "UpdateMyData"){
+                return (
+                  <UpdateMyData />
                 )
               }
             })()
