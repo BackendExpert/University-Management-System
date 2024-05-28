@@ -113,6 +113,10 @@ const ProfileData = () => {
                                     <td className='pl-4 text-gray-500'>{stdData.Mmobile}</td>
                                 </tr>
                                 <tr className='h-12'>
+                                    <td className='font-semibold'>Email : </td>
+                                    <td className='pl-4 text-gray-500'>{stdData.MEmail}</td>
+                                </tr>
+                                <tr className='h-12'>
                                     <td className='font-semibold'>Address : </td>
                                     <td className='pl-4 text-gray-500'>{stdData.MAddress}</td>
                                 </tr>
@@ -139,6 +143,10 @@ const ProfileData = () => {
                                 <tr className='h-12'>
                                     <td className='font-semibold'>Mobile Number : </td>
                                     <td className='pl-4 text-gray-500'>{stdData.Fmobile}</td>
+                                </tr>
+                                <tr className='h-12'>
+                                    <td className='font-semibold'>Email : </td>
+                                    <td className='pl-4 text-gray-500'>{stdData.FEmail}</td>
                                 </tr>
                                 <tr className='h-12'>
                                     <td className='font-semibold'>Address : </td>
