@@ -89,9 +89,13 @@ const AddStudent = () => {
                         <label htmlFor="" className='lg:text-xl text-gray-500'>Select Department</label>
                             <select name="" id="" className='h-12 rounded pl-2 border-none bg-gray-200 w-full my-2'
                             onChange={e => SetStdData({...StdData, gender:e.target.value})} required>
-                                <option value=''>Select Option</option>
-                                <option value="male">Male</option>
-                                <option value="female">Female</option>
+                                {
+                                    DataDept.map((stdDept) => {
+                                        return (
+                                            <option value={stdDept.name}>{stdDept.name}</option>
+                                        )
+                                    })
+                                }
                             </select>
                         </div>
                         <div className="">
