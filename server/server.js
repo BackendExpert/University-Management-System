@@ -337,6 +337,16 @@ app.get('/StdView', (req, res) => {
     })
 })
 
+// DeptStd
+app.get('/DeptStd', (req, res) => {
+    const tableName = 'departments'
+
+    JkMysql.SelectAllData(connection, tableName, (result) => {
+        if(result) {
+            return res.json({Result: result})
+        }
+    })
+})
 
 // all endpoints end
 
