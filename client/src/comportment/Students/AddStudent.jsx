@@ -12,6 +12,15 @@ const AddStudent = () => {
     const EmailUser = secureLocalStorage.getItem("login2");
     const DarkMode = localStorage.getItem('darkMode');
 
+    // fetch department data for add student
+
+    const [DataDept, SetDataDept] = useState([])
+
+    useEffect(() => {
+        axios.get('http://localhost:8081/DeptStd')
+        .then(res => SetDataDept(res.data.Result))
+        .catch(err => console.log(err))
+    }, [])
     // student data
     const [StdData, SetStdData] = useState({
         username: '',
@@ -36,6 +45,8 @@ const AddStudent = () => {
             }
         })
     }
+
+    
 
     if(RoleUser !== null && EmailUser !== null && RoleUser !== "Student"){
         return (
