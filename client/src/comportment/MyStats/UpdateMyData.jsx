@@ -10,6 +10,8 @@ const UpdateMyData = () => {
     const RoleUser = secureLocalStorage.getItem("Login1");
     const EmailUser = secureLocalStorage.getItem("login2");
 
+    const [StdUpdateData, SetStdUpdateData] = useState([])
+
     if(RoleUser !== null && EmailUser !== null){
         return (
             <div className='lg:text-2xl my-2 '>
