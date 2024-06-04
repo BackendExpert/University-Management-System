@@ -32,7 +32,7 @@ const ProfileData = () => {
                     {
                       MyData.map((stdData, index) => {
                         return (
-                          <table border={0} className='mx-2 lg:text-2xl'>
+                          <table border={0} className='mx-2 lg:text-xl'>
                             <tr className=''>
                                 <td className='font-semibold'>Email: </td>
                                 <td className='pl-4 text-gray-500'>{EmailUser}</td>
@@ -63,7 +63,7 @@ const ProfileData = () => {
                   {
                       MyData.map((stdData, index) => {
                         return (
-                          <table border={0} className='mx-2 lg:text-2xl'>
+                          <table border={0} className='mx-2 lg:text-xl'>
                             <tr className='h-12'>
                                 <td className='font-semibold'>First Name: </td>
                                 <td className='pl-4 text-gray-500'>{stdData.Fname}</td>
@@ -103,7 +103,7 @@ const ProfileData = () => {
                           <div className="">
                             <p className="">Mother's Information</p>
                             <hr />
-                              <table border={0} className='mx-2 lg:text-2xl'>
+                              <table border={0} className='mx-2 lg:text-xl'>
                                 <tr className='h-12'>
                                     <td className='font-semibold'>Mother's Name: </td>
                                     <td className='pl-4 text-gray-500'>{stdData.MotherName}</td>
@@ -135,7 +135,7 @@ const ProfileData = () => {
                           <div className="">
                             <p className="">Father's Information</p>
                             <hr />
-                              <table border={0} className='mx-2 lg:text-2xl'>
+                              <table border={0} className='mx-2 lg:text-xl'>
                                 <tr className='h-12'>
                                     <td className='font-semibold'>Father's Name: </td>
                                     <td className='pl-4 text-gray-500'>{stdData.FatherName}</td>
